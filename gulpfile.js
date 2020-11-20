@@ -28,7 +28,7 @@ const src = {
     lib: './src/lib/**/*',
     fonts: './src/fonts/**/*',
     ttfFonts: './src/fonts/**/*.ttf',
-    html: ['./src/*.html', "!src/_*.html"]
+    html: ['./src/*.html']
 
 }
 
@@ -56,6 +56,7 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(concat(`style.css`))
     .pipe(webpcss({webpClass: '.webp', noWebpClass: '.no-webp'}))
+        .pipe(sourcemaps.write('/srcmaps/'))
         .pipe(gulp.dest(build.css))
     .pipe(cleanCSS({
         level: 2 
@@ -65,7 +66,6 @@ function styles() {
                 extname: ".min.css"
             })
         )
-    .pipe(sourcemaps.write('/srcmaps/'))
     .pipe(gulp.dest(build.css))
     .pipe(browserSync.stream())
 }
@@ -152,7 +152,8 @@ function watch() {
     browserSync.init({
         server: {
             baseDir: "./",
-            index: 'build/index.html'
+            index: 'build/index.html',
+            directory: true
         }
     });
     // SASS

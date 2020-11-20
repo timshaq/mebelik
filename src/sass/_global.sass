@@ -4,7 +4,7 @@
 	padding: 0
 	margin: 0
 	border: 0
-	font-family: 'Myriad Pro', Arial, Helvetica, sans-serif
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif
 *, *:before,*:after
 	-moz-box-sizing: border-box
 	-webkit-box-sizing: border-box
@@ -51,8 +51,22 @@ h1,h2,h3,h4,h5,h6
 
 /*    <GLOBAL>    */
 
-.fix-container 
-	max-width: 1040px
+\:root
+	--white: rgba(255,255,255, 1)
+	--white10: rgba(255,255,255, .1)
+	--white60: rgba(255,255,255, .6)
+	--blue: #0B9EC7
+	--red: #FF5D46
+	--gray: #F9F9F9
+	--placeholder-color: #ADADAD
+	--black: #333333
+	--black30: rgba(51,51,51,.3)
+	--black60: rgba(51,51,51,.6)
+	--black02: #272727
+	--green: #9ED53F
+
+.fix-cont 
+	max-width: 1170px
 	min-width: 320px
 	margin: 0 auto
 	height: 100%
@@ -62,25 +76,25 @@ h1,h2,h3,h4,h5,h6
 
 
 @media(max-width:1440px) 
-	.fix-container 
+	.fix-cont 
 		max-width: 1140px
 	
 
 
 @media(max-width:1200px) 
-	.fix-container 
+	.fix-cont 
 		max-width: 970px
 	
 
 
 @media(max-width:992px) 
-	.fix-container 
+	.fix-cont 
 		max-width: 750px
 	
 
 
 @media(max-width:767px) 
-	.fix-container 
+	.fix-cont 
 		max-width: none
 	
 

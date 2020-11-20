@@ -1,0 +1,168 @@
+.header
+	&__row
+		display: flex
+		justify-content: space-between
+		&.inform
+			padding: 30px 0
+		&.navigation
+	&__logo
+		display: flex
+		align-items: center
+		& .header__logo-ph
+	&__col
+		justify-content: center
+		align-items: center
+		&.header__logo
+			width: 19%
+		&.header__search
+			width: 38%
+		&.header__contacts
+			width: 13%
+		&.header__controls
+			width: 12%
+	&__search
+		display: flex
+		justify-content: center
+		align-items: center
+	&__search-form
+		background-color: var(--gray)
+		padding: 15px 6px 15px 15px
+		height: 51px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-radius: 7px
+	&__search-label
+		width: 100%
+	&__search-input
+		background-color: var(--gray)
+		width: 100%
+		font-style: normal
+		font-weight: 300
+		font-size: 15px
+		line-height: 20px
+		color: var(--placeholder-color)
+	&__search-submit
+		width: 39px
+		height: 39px
+		background-color: var(--blue)
+		border-radius: 5px
+	&__contacts
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+	&__contacts-workhours
+		font-style: normal
+		font-weight: normal
+		font-size: 13px
+		line-height: 18px
+		color: var(--black60)
+	&__contacts-tooltip
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 19px
+		color: var(--black60)
+		cursor: pointer
+		position: relative
+		&:after
+			content: url('../img/icon__arrow.svg')
+			width: 10px
+			height: 5px
+			object-fit: cover
+			position: absolute
+			top: 0
+			right: -5px
+			transform: translate(100%, -50%)
+		&:hover
+			color: var(--black)
+			& .tooltip-list
+				visibility: visible
+				opacity: 1
+				z-index: 2
+				transition: all linear .4s
+		& .tooltip-list
+			position: absolute
+			background-color: var(--white)
+			left: 50%
+			transform: translate(-50%,0)
+			width: 130px
+			padding: 10px
+			display: flex
+			flex-direction: column
+			visibility: hidden
+			opacity: 0
+			z-index: -1
+			transition: all linear .2s
+			& button, a
+				margin: 10px 0
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				line-height: 19px
+				opacity: .6
+				&:hover
+					opacity: 1
+	&__contacts-tel
+	&__tel-link
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 27px
+		color: var(--black60)
+	&__controls
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__control
+
+	&__control-btn
+		position: relative
+		width: 27px
+		height: 27px
+	&__control-indicator
+		position: absolute
+		top: 0
+		right: 0
+		transform: translate(50%,-50%)
+		font-family: Roboto
+		font-style: normal
+		font-weight: bold
+		font-size: 12px
+		line-height: 14px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: var(--red)
+		width: 18px
+		height: 18px
+		border-radius: 100%
+		color: var(--white)
+	&__navigation-bg
+		background-color: var(--gray)
+		padding: 10px 0
+	&__nav-list
+		width: 100%
+		display: flex
+		justify-content: space-between
+	&__nav-item
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__nav-icon
+		width: 36px
+		height: 36px
+		object-fit: cover
+		margin-bottom: 5px
+	&__nav-link
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 18px
+		line-height: 25px
+		text-align: center
+		text-transform: uppercase
+		color: var(--black)
