@@ -28,7 +28,7 @@ const src = {
     lib: './src/lib/**/*',
     fonts: './src/fonts/**/*',
     ttfFonts: './src/fonts/**/*.ttf',
-    html: './src/*.html'
+    html: ['./src/*.html', "!src/_*.html"]
 
 }
 
@@ -36,7 +36,7 @@ const src = {
 const build = {
     
     js: './build/js/',
-    css: './build/sass/',
+    css: './build/css/',
     img: './build/img/',
     lib: './build/lib/',
     fonts: './build/fonts/',
@@ -146,14 +146,13 @@ function html() {
         .pipe(fileinclude())
         .pipe(webphtml())
         .pipe(gulp.dest(build.html))
-        .pipe(browsersync.stream())
 }
 
 function watch() {
     browserSync.init({
         server: {
             baseDir: "./",
-            index: 'src/index.html'
+            index: 'build/index.html'
         }
     });
     // SASS
