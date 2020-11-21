@@ -13,9 +13,6 @@ const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
-const webp = require('gulp-webp');
-const webphtml = require('gulp-webp-html');
-const webpcss = require("gulp-webpcss");
 const changed = require('gulp-changed');
 const fileinclude = require("gulp-file-include");
 
@@ -55,7 +52,6 @@ function styles() {
     .pipe(autopref())
     .pipe(sourcemaps.init())
     .pipe(concat(`style.css`))
-    .pipe(webpcss({webpClass: '.webp', noWebpClass: '.no-webp'}))
         .pipe(sourcemaps.write('/srcmaps/'))
         .pipe(gulp.dest(build.css))
     .pipe(cleanCSS({
@@ -119,20 +115,16 @@ function fonts() {
 
 function compress () {
     return gulp.src(src.img)
-    .pipe(changed(build.img))
-        .pipe(
-            webp({
-                quality: 70
-            }))
-        .pipe(gulp.dest(build.img))
+    // .pipe(changed(build.img))
+    //     .pipe(gulp.dest(build.img))
         
-    .pipe(gulp.src(src.img))
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            interlaced: true,
-            optimizationlevel: 5
-        }))
+    // .pipe(gulp.src(src.img))
+    //     .pipe(imagemin({
+    //         progressive: true,
+    //         svgoPlugins: [{removeViewBox: false}],
+    //         interlaced: true,
+    //         optimizationlevel: 5
+    //     }))
         .pipe(gulp.dest(build.img))
     .pipe(browserSync.stream())
 }
@@ -144,7 +136,6 @@ function clean() {
 function html() {
     return gulp.src(src.html)
         .pipe(fileinclude())
-        .pipe(webphtml())
         .pipe(gulp.dest(build.html))
 }
 

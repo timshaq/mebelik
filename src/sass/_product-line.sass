@@ -1,0 +1,280 @@
+.product-line
+	margin: 60px 0
+	&__fix-cont
+		position: relative
+	&__title_h2
+		&.hot
+			&:after
+				content: url('../img/title_hot.svg')
+				width: 29px
+				height: 29px
+				object-fit: cover
+	&__slider
+		display: flex
+		justify-content: space-between
+		padding-top: 30px
+	&__slide
+		width: 270px
+		border-radius: 5px
+		border: 1px solid var(--black05)
+		padding: 20px
+		position: relative
+		&:hover
+			box-shadow: 0px 0px 20px -5px var(--box-shadow)
+			& .product-line__sale,
+			& .product-line__status,
+			& .product-line__price-old,
+			& .product-line__ph
+				opacity: 0
+				transition: all linear .2s
+				visibility: hidden
+				position: absolute
+			& .product-line__btn,
+			& .product-line__options,
+			& .product-line__phcont-slider
+				opacity: 1
+				transition: all linear .2s
+				visibility: visible
+				position: relative
+				transform: translate(0,0)
+			& .product-line__price
+				justify-content: space-between
+	&__sale,
+	&__status,
+	&__price-old,
+	&__ph
+		opacity: 1
+		transition: all linear 0s
+		visibility: visible
+	&__btn,
+	&__options,
+	&__phcont-slider
+		opacity: 0
+		transition: all linear 0s
+		visibility: hidden
+		transform: translate(120%,0)
+		position: absolute
+	&__sale
+		position: absolute
+		top: 0
+		left: 0
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 22px
+		color: var(--white)
+		border-radius: 5px
+		background-color: var(--red)
+		padding: 6px 10px
+	&__status
+		position: absolute
+		top: 10px
+		right: 10px
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 18px
+		line-height: 25px
+		color: var(--green)
+	&__wish
+		position: absolute
+		top: 180px
+		right: 15px
+		width: 24px
+		height: 24px
+		z-index: 2
+		& .heart_active
+			fill: transparent
+		& .heart_disable
+		&.active
+			& .heart_active
+				fill: var(--red)
+			& .heart_disable
+				fill: transparent
+	&__phcont
+		width: 230px
+		height: 180px
+		min-width: 0
+	&__ph
+		width: 230px
+		height: 180px
+		object-fit: cover
+	&__phcont-slider
+		min-width: 0
+		& .swiper-pagination-bullet
+			width: 40px
+			height: 4px
+			background: #F2F2F2
+			opacity: 1
+			border-radius: 5px
+		& .swiper-pagination-bullet-active
+			background: var(--blue)
+			backdrop-filter: blur(15px)
+			opacity: 1
+		& .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+			bottom: 58px
+	&__phcont-slide
+	&__slide-info
+
+	&__slide-title
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-top: 20px
+		margin-bottom: 15px
+	&__rating
+	&__slide-presence
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 16px
+		color: var(--black60)
+		padding-right: 17px
+		position: relative
+	&__presence-status
+		width: 10px
+		height: 10px
+		position: absolute
+		top: 0
+		right: 0
+	&__star
+
+	&__price
+		margin-top: 15px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__price-now
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 22px
+		line-height: 30px
+		color: var(--black)
+	&__price-old
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 150%
+		text-decoration-line: line-through
+		color: var(--black30)
+		margin-left: 7px
+	&__btn
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 15px
+		line-height: 155%
+		color: var(--white)
+		background-color: var(--blue)
+		padding: 7px 36px
+		border-radius: 5px
+	&__options
+		margin-top: 11px
+	&__options-title
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin: 10px 0
+	&__colors-row
+		display: flex
+		justify-content: space-between
+		margin: 10px 0 20px 0
+	&__colors-label
+		position: relative
+	&__colors-input
+	&__colors-color
+		width: 100%
+		height: 100%
+		position: relative
+		border-radius: 5px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		overflow: hidden
+		background-color: var(--white)
+	&__colors-color2
+		height: 40px
+		width: 40px
+		background-color: var(--white)
+		transform: rotate(45deg) translate(0,0)
+		position: absolute
+		bottom: -19px
+		right: -19px
+	&__size-row
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+	&__colors-status
+		width: 30px
+		height: 30px
+		position: relative
+	&__colors-input
+		width: 0
+		height: 0
+		position: absolute
+		top: 0
+		right: 0
+		&:checked + div
+			position: relative
+			&:after
+				content: url('../img/input_checked.svg')
+				width: 19px
+				height: 19px
+				object-fit: cover
+				position: absolute
+				top: 40%
+				right: 10px
+				transform: translate(100%,0)
+				z-index: 3
+	&__size-label
+		position: relative
+	&__size-input
+		width: 0
+		height: 0
+		position: absolute
+		top: 0
+		right: 0
+		&:checked + span
+			position: relative
+			&:after
+				content: url('../img/input_checked.svg')
+				width: 19px
+				height: 19px
+				object-fit: cover
+				position: absolute
+				top: 40%
+				right: -5px
+				transform: translate(0,-50%)
+	&__size-text
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		padding-right: 24px
+	&__link-block
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 30px
+	&__link
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		display: flex
+		align-items: center
+		text-align: center
+		color: var(--blue)

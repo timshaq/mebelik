@@ -268,37 +268,37 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   function srcJsScriptJs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _webpTest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./webpTest */ \"./src/js/webpTest.js\");\n\r\n\r\n\r\n\r\nObject(_webpTest__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/js/sliders.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
     /***/
   },
 
   /***/
-  "./src/js/webpTest.js":
-  /*!****************************!*\
-    !*** ./src/js/webpTest.js ***!
-    \****************************/
+  "./src/js/sliders.js":
+  /*!***************************!*\
+    !*** ./src/js/sliders.js ***!
+    \***************************/
 
   /*! exports provided: default */
 
   /***/
-  function srcJsWebpTestJs(module, __webpack_exports__, __webpack_require__) {
+  function srcJsSlidersJs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function() {\r\n\r\nfunction testWebP(callback) {\r\n\r\n\tvar webP = new Image();\r\n\r\n\twebP.onload = webP.onerror = function () {\r\n\t\tcallback(webP.height == 2);\r\n\t};\r\n\r\n\twebP.src = \"data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA\";\r\n\r\n}\r\n\r\ntestWebP(function (support) {\r\n\r\n\tif (support == true) {\r\n\t\tdocument.querySelector('body')\r\n\t\t.classList.add('webp');\r\n\t} else {\r\n\t\tdocument.querySelector('body')\r\n\t\t.classList.add('no-webp');\r\n\t}\r\n\r\n});\r\n\r\n});\n\n//# sourceURL=webpack:///./src/js/webpTest.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function() {\r\n\tconsole.log('sliders')\r\n\r\n\r\n\r\n\r\n\r\nconst previewSlider = new Swiper('.preview.swiper-container', {\r\n  slidesPerView: 1,\r\n  loopedSlides: 1,\r\n  spaceBetween: 50,\r\n  loop: true,\r\n  pagination: {\r\n    el: '.swiper-pagination',\r\n    type: 'bullets',\r\n    clickable: true,\r\n  }\r\n\r\n})\r\n\r\nconst productDetailSliders = new Swiper('.product-line__phcont-slider.swiper-container', {\r\n  slidesPerView: 1,\r\n  pagination: {\r\n    el: '.swiper-pagination',\r\n    type: 'bullets',\r\n    clickable: true,\r\n  }\r\n\r\n})\r\n\r\nconst brandsSlider = new Swiper('.brands__slider', {\r\n  slidesPerView: 6,\r\n  slidesPerColumn: 1,\r\n  navigation: {\r\n    nextEl: '.brands .slider-controls .slider-controls__btn.next',\r\n    prevEl: '.brands .slider-controls .slider-controls__btn.prev',\r\n    hideOnClick: true,\r\n  },\r\n\r\n})\r\n\r\nconst salesSlider = new Swiper('.sales .sales__col.slider .swiper-container', {\r\n  slidesPerView: 2,\r\n  spaceBetween: 30,\r\n  navigation: {\r\n    nextEl: '.sales .sales__col.slider .sales__slider-arrow.next',\r\n    prevEl: '.sales .sales__col.slider .sales__slider-arrow.prev',\r\n    hideOnClick: true,\r\n  },\r\n\r\n})\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/js/sliders.js?");
     /***/
   },
 
   /***/
   0:
-  /*!*****************************************************!*\
-    !*** multi ./src/js/script.js ./src/js/webpTest.js ***!
-    \*****************************************************/
+  /*!****************************************************!*\
+    !*** multi ./src/js/script.js ./src/js/sliders.js ***!
+    \****************************************************/
 
   /*! no static exports found */
 
   /***/
   function _(module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\script.js */\"./src/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\webpTest.js */\"./src/js/webpTest.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/script.js_./src/js/webpTest.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\script.js */\"./src/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\sliders.js */\"./src/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/script.js_./src/js/sliders.js?");
     /***/
   }
   /******/

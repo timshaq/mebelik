@@ -129,3 +129,12 @@
 		width: 100%
 		height: 100%
 		object-fit: cover
+	& .swiper-pagination-bullet
+		background: var(--white50)
+		opacity: 1
+	& .swiper-pagination-bullet-active
+		background: var(--active-bullet-color)
+		backdrop-filter: blur(15px)
+		opacity: 1
+	& .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+		bottom: 10px

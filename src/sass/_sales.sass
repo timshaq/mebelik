@@ -1,0 +1,113 @@
+.sales
+	margin: 60px 0
+	&__row
+		display: flex
+		justify-content: space-between
+		padding-top: 30px
+	&__col
+		&.slider
+			width: 66%
+			display: flex
+			justify-content: space-between
+			position: relative
+		&.sales__offer
+			width: 24%
+	&__slide
+		border-radius: 10px
+		border: 1px solid var(--black10)
+		display: flex
+		justify-content: space-between
+		padding: 15px
+		width: 48%
+		&:hover
+			& .sales__slide-link
+				color: var(--red)
+			& .sales__slide-ph
+				transform: scale(1.1)
+				transition: all linear .4s
+	&__slide-phcont
+		border-radius: 8px
+		overflow: hidden
+		width: 130px
+		height: 130px
+	&__slide-ph
+		width: 100%
+		height: 100%
+		object-fit: cover
+		transform: scale(1)
+		transition: all linear .2s
+	&__slide-text
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-left: 15px
+		width: 53%
+	&__slide-title
+		font-family: Roboto
+		font-style: normal
+		font-weight: 600
+		font-size: 15px
+		line-height: 150%
+		color: var(--black)
+	&__slide-props
+		display: flex
+		justify-content: space-between
+	&__slide-link
+		font-family: Roboto
+		font-style: normal
+		font-weight: 500
+		font-size: 14px
+		line-height: 16px
+		color: var(--blue)
+	&__slide-date
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 16px
+		text-align: right
+		color: var(--black60)
+	&__slider-arrow
+		border-radius: 7px
+		background-color: var(--gray)
+		width: 41px
+		height: 41px
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		&.next
+			top: 50%
+			right: -30px
+			transform: translate(100%,-50%)
+		&.prev
+			top: 50%
+			left: -120px
+			transform: translate(100%,-50%)
+			z-index: 2
+		& .arrow
+			stroke: var(--blue)
+		&.swiper-button-disabled
+			& .arrow
+				stroke: var(--black30)
+	&__slider-icon
+	&__offer
+		border-radius: 10px
+		background-color: var(--red)
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__offer-ph
+		width: 58px
+		height: 58px
+		object-fit: cover
+		margin-bottom: 16px
+	&__offer-title
+		font-family: Oswald
+		font-style: normal
+		font-weight: 500
+		font-size: 21px
+		line-height: 31px
+		text-align: center
+		color: var(--white)

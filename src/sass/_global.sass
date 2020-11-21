@@ -54,18 +54,22 @@ h1,h2,h3,h4,h5,h6
 \:root
 	--white: rgba(255,255,255, 1)
 	--white10: rgba(255,255,255, .1)
+	--white50: rgba(255,255,255, .5)
 	--white60: rgba(255,255,255, .6)
 	--blue: #0B9EC7
 	--red: #FF5D46
 	--gray: #F9F9F9
 	--placeholder-color: #ADADAD
 	--black: #333333
+	--black05: rgba(51,51,51,.05)
 	--black10: rgba(51,51,51,.1)
 	--black30: rgba(51,51,51,.3)
 	--black60: rgba(51,51,51,.6)
 	--black02: #272727
 	--green: #9ED53F
 	--green-dark: #80B721
+	--box-shadow: rgba(0, 0, 0, 0.13)
+	--active-bullet-color: rgba(0, 122, 173, 0.35)
 .fix-cont 
 	max-width: 1170px
 	min-width: 320px
@@ -106,4 +110,29 @@ h1,h2,h3,h4,h5,h6
 	font-size: 28px
 	line-height: 41px
 	color: var(--black)
+	text-align: left
+
+.slider-controls
+	position: absolute
+	top: 0
+	right: 0
+	display: flex
+	justify-content: space-between
+	width: 97px
+	&__btn
+		width: 41px
+		height: 41px
+		border-radius: 7px
+		background-color: var(--gray)
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		&.white-bg
+			background-color: var(--white)
+		& .arrow
+			stroke: var(--blue)
+		&.swiper-button-disabled
+			& .arrow
+				stroke: var(--black30)
 /*    </GLOBAL>    */

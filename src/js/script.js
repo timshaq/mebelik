@@ -1,10 +1,9 @@
 "use strict";
 
-import webpTest from './webpTest';
-
-webpTest();
+import sliders from './sliders.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
+	sliders();
 
 });
