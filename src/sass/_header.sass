@@ -14,6 +14,19 @@
 			// animation: .2s fadeout linear
 		& .header__navigation-bg
 			padding: 20px 0
+	&__burger.header__col
+		width: 33px
+		height: 24px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		display: none
+	&__burger-item
+		height: 4px
+		width: 100%
+		background-color: var(--blue)
+		border-radius: 2px
 	&__row
 		display: flex
 		justify-content: space-between
@@ -214,6 +227,8 @@
 		visibility: hidden
 		z-index: -2
 		transition: all linear .2s
+		max-height: 407px
+		overflow: auto
 	&__more-col
 		width: 170px
 		display: flex
@@ -227,10 +242,12 @@
 			flex-direction: column
 			justify-content: flex-start
 			align-items: center
-			position: relative
+			position: sticky
+			top: 30px
+			right: 30px
 	&__more-list
-		&:not(:nth-child(1))
-			margin-top: 40px
+		&:not(:last-child)
+			margin-bottom: 40px
 	&__more-list-title, &__more-list-title-link
 		font-family: Open Sans
 		font-style: normal

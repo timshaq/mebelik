@@ -13,6 +13,23 @@
 		display: flex
 		justify-content: space-between
 		padding-top: 30px
+		min-width: 0
+		& .swiper-container.overflow-dis
+			overflow: visible
+		& .swiper-slide
+			width: 270px !important
+			opacity: 0
+			visibility: hidden
+			transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out
+			&-active
+				opacity: 1
+				visibility: visible
+				& + .swiper-slide,
+				& + .swiper-slide + .swiper-slide,
+				& + .swiper-slide + .swiper-slide + .swiper-slide
+					opacity: 1
+					visibility: visible
+
 	&__slide
 		width: 270px
 		border-radius: 5px

@@ -131,19 +131,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-@media (max-width: 1440px) {
-  .fix-cont {
-    max-width: 1140px;
-  }
 }
 
 @media (max-width: 1200px) {
   .fix-cont {
     max-width: 970px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -235,6 +229,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .header.active .header__navigation-bg {
   padding: 20px 0;
+}
+
+.header__burger.header__col {
+  width: 33px;
+  height: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: none;
+}
+
+.header__burger-item {
+  height: 4px;
+  width: 100%;
+  background-color: var(--blue);
+  border-radius: 2px;
 }
 
 .header__row {
@@ -608,6 +632,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -2;
   -webkit-transition: all linear .2s;
   transition: all linear .2s;
+  max-height: 407px;
+  overflow: auto;
 }
 
 .header__more-col {
@@ -645,11 +671,14 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+  right: 30px;
 }
 
-.header__more-list:not(:nth-child(1)) {
-  margin-top: 40px;
+.header__more-list:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 .header__more-list-title, .header__more-list-title-link {
@@ -890,6 +919,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: calc(30px + 197px);
 }
 
+.preview .swiper-container {
+  overflow: visible;
+}
+
+.preview .swiper-slide {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+}
+
+.preview .swiper-slide-active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .preview__slide-cont {
   height: 350px;
   background-color: var(--gray);
@@ -921,11 +966,14 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  aligh-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding-left: 30px;
 }
 
@@ -995,6 +1043,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 155%;
   text-transform: uppercase;
   color: var(--black);
+  width: 340px;
 }
 
 .preview__slide-subtitle {
@@ -1013,6 +1062,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 40px;
 }
 
 .preview__slide-btn {
@@ -1131,9 +1181,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category-card__item:hover .category-card__ph {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all linear .4s;
   transition: all linear .4s;
 }
@@ -1193,6 +1243,31 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 30px;
+  min-width: 0;
+}
+
+.product-line__slider .swiper-container.overflow-dis {
+  overflow: visible;
+}
+
+.product-line__slider .swiper-slide {
+  width: 270px !important;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+}
+
+.product-line__slider .swiper-slide-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-line__slider .swiper-slide-active + .swiper-slide,
+.product-line__slider .swiper-slide-active + .swiper-slide + .swiper-slide,
+.product-line__slider .swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide {
+  opacity: 1;
+  visibility: visible;
 }
 
 .product-line__slide {
