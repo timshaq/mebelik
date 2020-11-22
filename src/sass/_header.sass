@@ -1,10 +1,19 @@
 .header
-	// position: fixed
-	// top: 0
-	// left: 0
-	// width: 100%
-	// z-index: 20
-	// background-color: var(--white)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 20
+	background-color: var(--white)
+	&.active
+		& .header__nav-icon
+			opacity: 0
+			visibility: hidden
+			z-index: -2
+			position: absolute
+			// animation: .2s fadeout linear
+		& .header__navigation-bg
+			padding: 20px 0
 	&__row
 		display: flex
 		justify-content: space-between
@@ -93,7 +102,8 @@
 			position: absolute
 			background-color: var(--white)
 			left: 50%
-			transform: translate(-50%,0)
+			bottom: -5px
+			transform: translate(-50%,100%)
 			width: 130px
 			padding: 10px
 			display: flex
@@ -102,6 +112,8 @@
 			opacity: 0
 			z-index: -1
 			transition: all linear .2s
+			box-shadow: 0px 0px 20px -5px var(--box-shadow)
+			border-radius: 5px
 			& button, a
 				margin: 10px 0
 				font-style: normal
@@ -155,14 +167,24 @@
 		display: flex
 		justify-content: space-between
 	&__nav-item
-		display: flex
-		flex-direction: column
-		align-items: center
+		&:hover
+			& .header__nav-more
+				opacity: 1
+				visibility: visible
+				z-index: 20
+				transition: all linear .2s
+			& .header__nav-icon-path
+				stroke: var(--blue)
+			& .header__nav-link
+				color: var(--red)
+
 	&__nav-icon
 		width: 36px
 		height: 36px
 		object-fit: cover
 		margin-bottom: 5px
+	&__nav-icon-path
+		stroke: var(--black30)
 	&__nav-link
 		font-family: Open Sans Condensed
 		font-style: normal
@@ -172,9 +194,13 @@
 		text-align: center
 		text-transform: uppercase
 		color: var(--black)
+		display: flex
+		flex-direction: column
+		align-items: center
 	&__nav-more
 		display: flex
 		justify-content: space-between
+		align-items: stretch
 		position: absolute
 		bottom: -10px
 		left: 50%
@@ -182,10 +208,26 @@
 		background-color: var(--white)
 		box-shadow: 0px 0px 20px -5px var(--box-shadow)
 		width: 1230px
-		display: none
+		padding: 30px
+		border-radius: 5px
+		opacity: 0
+		visibility: hidden
+		z-index: -2
+		transition: all linear .2s
 	&__more-col
 		width: 170px
+		display: flex
+		flex-direction: column
 		&.sale
+			width: 300px
+			height: 347px
+			border-radius: 10px
+			background-color: var(--gray)
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+			position: relative
 	&__more-list
 		&:not(:nth-child(1))
 			margin-top: 40px
@@ -208,9 +250,9 @@
 			bottom: -10px
 			left: 0
 	&__more-list-item
-
+		&:not(:first-child)
+			margin-top: 7px
 	&__more-subtitle
-
 	&__more-link
 		font-family: Open Sans
 		font-style: normal
@@ -218,29 +260,128 @@
 		font-size: 14px
 		line-height: 150%
 		color: var(--black60)
-	&__more-title
-
-	&__more-title-link
+	&__more-title, &__more-title-link
 		font-family: Open Sans
 		font-style: normal
 		font-weight: bold
 		font-size: 14px
 		line-height: 150%
 		color: var(--black)
+		margin-top: auto
 	&__more-sale-brand
-
+		position: absolute
+		top: 23px
+		left: 25px
 	&__more-sale-brand-ph
-
+		max-height: 31px
 	&__more-sale-ticket
-
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 18px
+		line-height: 155%
+		text-transform: uppercase
+		color: var(--white)
+		background-color: var(--red)
+		position: absolute
+		top: 20px
+		right: -20px
+		padding: 6px 27px
+		&:before
+			content: ''
+			width: 20px
+			height: 20px
+			position: absolute
+			top: 0
+			left: -20px
+			border-top: 20px solid var(--red)
+			border-left: 20px solid transparent
+		&:after
+			content: ''
+			width: 20px
+			height: 20px
+			position: absolute
+			bottom: 0
+			left: -20px
+			border-bottom: 20px solid var(--red)
+			border-left: 20px solid transparent
+	&__more-sale--ticket-triangle
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 20px
+		height: 20px
+		position: absolute
+		bottom: -20px
+		right: 0px
+		border-top: 20px solid var(--red-dark)
+		border-right: 20px solid transparent
 	&__more-sale-ph
-
+		max-height: 150px
+		margin-top: auto
 	&__more-sale-title
-
+		margin: 15px 0 32px
+		font-family: Open Sans
+		font-style: normal
+		font-weight: bold
+		font-size: 14px
+		line-height: 150%
+		color: var(--black)
+		text-align: center
+		padding: 0 10px
 	&__more-sale-price
-
+		display: flex
+		align-items: flex-end
+		margin-bottom: 31px
 	&__more-sale-percent
-
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 22px
+		display: flex
+		align-items: center
+		text-align: center
+		color: var(--white)
+		border-radius: 5px
+		background-color: var(--red)
+		padding: 2px 9px
+		position: absolute
+		top: 0
+		right: 8px
+		transform: translate(100%,-100%)
 	&__more-sale-now
-
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 28px
+		line-height: 38px
+		color: var(--black)
+		position: relative
 	&__more-sale-old
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 150%
+		text-decoration-line: line-through
+		color: var(--black30)
+		margin-left: 7px
+
+@keyframes fadeout
+	0%
+	90%
+		opacity: 0
+		position: absolute
+		visibility: hidden
+	100%
+		display: none
+
+@keyframes fadeinStaticBlock
+	0%
+	10%
+		display: block
+	100%
+		opacity: 1
+		position: static
+		visibility: visible

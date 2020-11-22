@@ -25,7 +25,8 @@ const src = {
     lib: './src/lib/**/*',
     fonts: './src/fonts/**/*',
     ttfFonts: './src/fonts/**/*.ttf',
-    html: ['./src/*.html']
+    html: ['./src/*.html'],
+    htmlComponents: './src/html/**/*.html'
 
 }
 
@@ -154,6 +155,7 @@ function watch() {
     gulp.watch(src.lib, libraries)
     gulp.watch(src.fonts, fonts)
     gulp.watch(src.html, html).on('change', browserSync.reload);
+    gulp.watch(src.htmlComponents, html).on('change', browserSync.reload);
 }
 
 

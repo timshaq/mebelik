@@ -18,15 +18,13 @@ const previewSlider = new Swiper('.preview.swiper-container', {
 
 })
 
-const productDetailSliders = new Swiper('.product-line__phcont-slider.swiper-container', {
+const productLineInsideSliders = new Swiper('.product-line__phcont-slider .swiper-container', {
   slidesPerView: 1,
-  spaceBetween: 50,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
     clickable: true,
   }
-
 })
 
 const brandsSlider = new Swiper('.brands__slider', {

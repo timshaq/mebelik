@@ -211,10 +211,7 @@
 			font-weight: 300
 			font-size: 15px
 			line-height: 18px
-			color: var(--white)
-			opacity: .6
-			&:hover
-				opacity: 1
+			color: var(--white60)
 			&:nth-child(2)
 				margin-left: 24px
 				&:before
@@ -223,8 +220,11 @@
 					transform: translateX(-50%)
 					left: -10px
 					opacity: 1
+			&:hover
+				& a
+					color: var(--white)
 			& a
-				color: var(--white)
+				color: var(--white60)
 		&__payment-list
 			display: flex
 		&__payment-item
