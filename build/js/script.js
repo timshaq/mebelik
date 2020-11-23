@@ -257,6 +257,22 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 /******/
 {
   /***/
+  "./src/js/mobNavigation.js":
+  /*!*********************************!*\
+    !*** ./src/js/mobNavigation.js ***!
+    \*********************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcJsMobNavigationJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function() {\r\n\r\n\tconst getVW = () => {\r\n\t\treturn (window.innerWidth > 0) ? window.innerWidth : screen.width;\r\n\t}\r\n\t\tconst navLink = document.querySelectorAll('.header__nav-item')\r\n\r\n\t\r\n\t\tnavLink.forEach(link => {\r\n\t\t\tvar ul2 = link.querySelector('.header__more-list')\r\n\t\t\tconsole.log(ul2)\r\n\t\t\tlink.addEventListener('click', function(ev) {\r\n\t\t\t\t\r\n\t\t\t\t\tev.preventDefault()\r\n\t\t\t\t\tif (ev.target === this || ev.target === this.children[0]) {\r\n\t\t\t\t\t\tlink.classList.contains('open')\r\n\t\t\t\t\t\t? link.classList.remove('open')\r\n\t\t\t\t\t\t: link.classList.add('open')\r\n\t\t\t\t\t} else if (ev.target.classList.contains('header__more-list') || ev.target.classList.contains('header__more-list-title-link')) {\r\n\t\t\t\t\t\tul2.classList.contains('open')\r\n\t\t\t\t\t\t? ul2.classList.remove('open')\r\n\t\t\t\t\t\t: ul2.classList.add('open')\r\n\t\t\t\t\t} else if (ev.target.classList.contains('header__more-link')) {\r\n\t\t\t\t\t\tdocument.location.href = ev.target.getAttribute('href');\r\n\t\t\t\t\t}\r\n\t\t\t})\r\n\t\t})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/js/mobNavigation.js?");
+    /***/
+  },
+
+  /***/
   "./src/js/script.js":
   /*!**************************!*\
     !*** ./src/js/script.js ***!
@@ -268,7 +284,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   function srcJsScriptJs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/js/sliders.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/js/sliders.js\");\n/* harmony import */ var _mobNavigation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mobNavigation.js */ \"./src/js/mobNavigation.js\");\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n\tObject(_mobNavigation_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\r\n\r\n\r\n\r\n\twindow.addEventListener('resize', function(event){\r\n\t  Object(_mobNavigation_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\r\n\t  console.log('resize')\r\n\t});\r\n\r\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
     /***/
   },
 
@@ -290,15 +306,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   /***/
   0:
-  /*!****************************************************!*\
-    !*** multi ./src/js/script.js ./src/js/sliders.js ***!
-    \****************************************************/
+  /*!******************************************************************************!*\
+    !*** multi ./src/js/mobNavigation.js ./src/js/script.js ./src/js/sliders.js ***!
+    \******************************************************************************/
 
   /*! no static exports found */
 
   /***/
   function _(module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\script.js */\"./src/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\sliders.js */\"./src/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/script.js_./src/js/sliders.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\mobNavigation.js */\"./src/js/mobNavigation.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\script.js */\"./src/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\mebelik\\src\\js\\sliders.js */\"./src/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/mobNavigation.js_./src/js/script.js_./src/js/sliders.js?");
     /***/
   }
   /******/

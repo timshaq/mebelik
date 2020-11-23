@@ -81,6 +81,8 @@
 		flex-direction: column
 		justify-content: space-between
 		align-items: center
+		&.j-center
+			justify-content: center
 	&__contacts-workhours
 		font-style: normal
 		font-weight: normal
@@ -175,27 +177,55 @@
 	&__navigation-bg
 		background-color: var(--gray)
 		padding: 10px 0
+		@media(max-width:320px)
+			background-color: var(--white)
 	&__nav-list
 		width: 100%
 		display: flex
 		justify-content: space-between
+		@media(max-width:320px)
+			flex-direction: column
+			align-items: flex-start
+			justify-content: space-between
 	&__nav-item
 		&:hover
-			& .header__nav-more
-				opacity: 1
-				visibility: visible
-				z-index: 20
-				transition: all linear .2s
-			& .header__nav-icon-path
-				stroke: var(--blue)
-			& .header__nav-link
-				color: var(--red)
-
+			@media(min-width:321px)
+				& .header__nav-more
+					opacity: 1
+					visibility: visible
+					z-index: 20
+					transition: all linear .2s
+				& .header__nav-icon-path
+					stroke: var(--blue)
+				& .header__nav-link
+					color: var(--red)
+		@media(max-width:320px)
+			position: relative
+			width: 100%
+			&:after
+				content: url('../img/icon__arrow.svg')
+				position: absolute
+				top: 0
+				right: 0
+				width: 20px
+				height: 20px
+				transform: rotate(-90deg) translate(0,0)
+			&.open
+				&:after
+					transform: rotate(0deg) translate(0,0)
+				& .header__nav-more
+					display: block
+					transition: all linear .2s
+					z-index: 20
+					visibility: visible
+					opacity: 1
 	&__nav-icon
 		width: 36px
 		height: 36px
 		object-fit: cover
 		margin-bottom: 5px
+		@media(max-width:320px)
+			display: none
 	&__nav-icon-path
 		stroke: var(--black30)
 	&__nav-link
@@ -210,6 +240,11 @@
 		display: flex
 		flex-direction: column
 		align-items: center
+		@media(max-width:320px)
+			align-items: flex-start
+			font-size: 16px
+			line-height: 155%
+			text-transform: capitalize
 	&__nav-more
 		display: flex
 		justify-content: space-between
@@ -229,10 +264,21 @@
 		transition: all linear .2s
 		max-height: 407px
 		overflow: auto
+		@media(max-width:320px)
+			width: 100%
+			flex-direction: column
+			box-shadow: none
+			max-height: none
+			padding: 0
+			transform: none
+			position: static
+			display: none
 	&__more-col
 		width: 170px
 		display: flex
 		flex-direction: column
+		@media(max-width:320px)
+			width: 100%
 		&.sale
 			width: 300px
 			height: 347px
@@ -245,9 +291,33 @@
 			position: sticky
 			top: 30px
 			right: 30px
+			@media(max-width:320px)
+				display: none
 	&__more-list
 		&:not(:last-child)
 			margin-bottom: 40px
+			@media(max-width:320px)
+				margin-bottom: 0
+		@media(max-width:320px)
+			padding-left: 10px
+			width: 100%
+			position: relative
+			&:after
+				content: url('../img/icon__arrow.svg')
+				position: absolute
+				bottom: auto
+				left: auto
+				top: 0
+				right: 0
+				width: 20px
+				height: 20px
+				background-color: transparent
+				transform: rotate(-90deg) translate(0,0)
+			&.open
+				&:after
+					transform: rotate(0deg) translate(0,0)
+				& .header__more-list-item
+					display: block
 	&__more-list-title, &__more-list-title-link
 		font-family: Open Sans
 		font-style: normal
@@ -257,6 +327,8 @@
 		color: var(--black)
 		position: relative
 		margin-bottom: 25px
+		@media(max-width:320px)
+			margin-bottom: 15px
 	&__more-list-title
 		&:after
 			content: ''
@@ -266,9 +338,14 @@
 			background-color: var(--black15)
 			bottom: -10px
 			left: 0
+			@media(max-width:320px)
+				display: none
 	&__more-list-item
 		&:not(:first-child)
 			margin-top: 7px
+		@media(max-width:320px)
+			display: none
+			padding-left: 20px
 	&__more-subtitle
 	&__more-link
 		font-family: Open Sans
@@ -385,20 +462,24 @@
 		color: var(--black30)
 		margin-left: 7px
 
-@keyframes fadeout
-	0%
-	90%
-		opacity: 0
-		position: absolute
-		visibility: hidden
-	100%
-		display: none
-
-@keyframes fadeinStaticBlock
-	0%
-	10%
-		display: block
-	100%
-		opacity: 1
-		position: static
-		visibility: visible
+	&__tabs
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 7px
+		padding-bottom: 7px
+		background-color: var(--gray)
+	&__tab
+	&__tab-btn
+		font-family: Open Sans
+		font-style: normal
+		font-weight: 600
+		font-size: 13px
+		line-height: 18px
+		padding: 9px 20px
+		color: var(--black30)
+		background-color: var(--black05)
+		border-radius: 5px
+		&.active
+			background-color: var(--blue)
+			color: var(--white)
