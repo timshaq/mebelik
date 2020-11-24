@@ -4,19 +4,25 @@
 		display: flex
 		justify-content: space-between
 		padding-top: 30px
+		@media(max-width:$tab)
+			flex-direction: column
 	&__col
 		&.slider
 			width: 66%
 			display: flex
 			justify-content: space-between
 			position: relative
+			@media(max-width:$tab)
+				width: 100%
 		&.sales__offer
 			width: 24%
+			@media(max-width:$tab)
+				width: 100%
 	&__slide
 		border-radius: 10px
 		border: 1px solid var(--black10)
 		display: flex
-		justify-content: space-between
+		justify-content: flex-start
 		padding: 15px
 		width: 48%
 		&:hover
@@ -25,11 +31,22 @@
 			& .sales__slide-ph
 				transform: scale(1.1)
 				transition: all linear .4s
+		@media(max-width:$tab)
+			padding: 10px
+		@media(max-width:$mob)
+			padding: 10px 10px 46px
+			height: 136px
 	&__slide-phcont
 		border-radius: 8px
 		overflow: hidden
 		width: 130px
 		height: 130px
+		@media(max-width:$tab)
+			width: 113px
+			height: 113px
+		@media(max-width:$mob)
+			width: 80px
+			height: 80px
 	&__slide-ph
 		width: 100%
 		height: 100%
@@ -42,6 +59,8 @@
 		justify-content: space-between
 		margin-left: 15px
 		width: 53%
+		@media(max-width:$mob)
+			width: 56%
 	&__slide-title
 		font-family: Roboto
 		font-style: normal
@@ -49,9 +68,19 @@
 		font-size: 15px
 		line-height: 150%
 		color: var(--black)
+		@media(max-width:$mob)
+			font-size: 14px
+			line-height: 140%
+			font-weight: normal
 	&__slide-props
 		display: flex
 		justify-content: space-between
+		@media(max-width:$mob)
+			width: 215px
+			position: absolute
+			bottom: 15px
+			left: 15px
+			padding-right: 5px
 	&__slide-link
 		font-family: Roboto
 		font-style: normal
@@ -67,6 +96,8 @@
 		line-height: 16px
 		text-align: right
 		color: var(--black60)
+		@media(max-width:$mob)
+			order: -1
 	&__slider-arrow
 		border-radius: 7px
 		background-color: var(--gray)
@@ -76,6 +107,8 @@
 		justify-content: center
 		align-items: center
 		position: absolute
+		@media(max-width:$tab)
+			display: none
 		&.next
 			top: 50%
 			right: -30px
@@ -98,11 +131,23 @@
 		flex-direction: column
 		justify-content: center
 		align-items: center
+		@media(max-width:$tab)
+			margin-top: 30px
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			padding: 15px 0
 	&__offer-ph
 		width: 58px
 		height: 58px
 		object-fit: cover
 		margin-bottom: 16px
+		@media(max-width:$tab)
+			width: 31px
+			height: 31px
+			margin-right: 10px
+			margin-bottom: 0
+		@media(max-width:$mob)
 	&__offer-title
 		font-family: Oswald
 		font-style: normal
@@ -111,3 +156,14 @@
 		line-height: 31px
 		text-align: center
 		color: var(--white)
+		@media(max-width:$tab)
+			font-size: 18px
+	& .fix-cont
+		position: relative
+	& .slider-controls
+		display: none
+		@media(max-width:$tab)
+			display: flex
+		@media(max-width:$mob)
+			display: none
+

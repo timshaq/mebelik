@@ -5,25 +5,19 @@ const desktop = 1200;
 const tablet = 768;
 const mobile = 0;
 
-
-
 const previewSlider = new Swiper('.preview.swiper-container', {
 	width: 1170,
 	slidesPerView: 1,
 	loopedSlides: 1,
 	spaceBetween: 50,
 	loop: true,
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets',
 		clickable: true,
 	},
 	breakpoints: {
-		0: {
+		320: {
 			width: 320,
 			spaceBetween: 0,
 			pagination: {
@@ -37,6 +31,30 @@ const previewSlider = new Swiper('.preview.swiper-container', {
 		1200: {
 			width: 1170,
 			autoplay: false,
+		},
+
+	},
+
+})
+
+const newsSlider = new Swiper('.news .news__row.swiper-container', {
+	watchOverflow: true,
+	slidesPerView: 4,
+	spaceBetween: 30,
+	breakpoints: {
+		320: {
+			slidesPerView: 1.2,
+			spaceBetween: 10,
+		},
+		420: {
+			slidesPerView: 2,
+			spaceBetween: 10,
+		},
+		650: {
+			slidesPerView: 3,
+		},
+		1200: {
+			slidesPerView: 4,
 		},
 
 	},
@@ -63,7 +81,7 @@ productLinelist.forEach(line => {
 		},
 		breakpoints: {
 			0: {
-				width: 320,
+				width: 290,
 				slidesPerView: 2,
 				spaceBetween: 10,
 				allowTouchMove: true,
@@ -71,6 +89,7 @@ productLinelist.forEach(line => {
 			768: {
 				width: 708,
 				slidesPerView: 3,
+				spaceBetween: 30,
 			},
 			1200: {
 				width: 1170,
@@ -92,7 +111,9 @@ const productLineInsideSliders = new Swiper('.product-line__phcont-slider .swipe
   },
 	breakpoints: {
 		0: {
-			allowTouchMove: false,
+			allowTouchMove: true,
+			loop: true,
+			slidesPerView: 1,
 		},
 	},
 })
@@ -105,16 +126,66 @@ const brandsSlider = new Swiper('.brands__slider', {
 		prevEl: '.brands .slider-controls .slider-controls__btn.prev',
 		hideOnClick: true,
 	},
+	breakpoints: {
+		0: {
+			allowTouchMove: true,
+			slidesPerView: 1.8,
+			spaceBetween: 10,
+		},
+		768: {
+			slidesPerView: 4.35,
+			spaceBetween: 0,
+			navigation: {
+				nextEl: '.sales .slider-controls .slider-controls__btn.next',
+				prevEl: '.sales .slider-controls .slider-controls__btn.prev',
+				hideOnClick: true,
+			},
+		},
+		1200: {
+			navigation: {
+				nextEl: '.sales .sales__col.slider .sales__slider-arrow.next',
+				prevEl: '.sales .sales__col.slider .sales__slider-arrow.prev',
+				hideOnClick: true,
+			},
+		},
+	},
 
 })
 
 const salesSlider = new Swiper('.sales .sales__col.slider .swiper-container', {
 	slidesPerView: 2,
 	spaceBetween: 30,
-	navigation: {
-		nextEl: '.sales .sales__col.slider .sales__slider-arrow.next',
-		prevEl: '.sales .sales__col.slider .sales__slider-arrow.prev',
-		hideOnClick: true,
+	breakpoints: {
+		320: {
+			allowTouchMove: true,
+			slidesPerView: 1.2,
+			spaceBetween: 10,
+		},
+		480: {
+			allowTouchMove: true,
+			slidesPerView: 1.5,
+			spaceBetween: 10,
+		},
+		650: {
+			slidesPerView: 1.9,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 30,
+			navigation: {
+				nextEl: '.sales .slider-controls .slider-controls__btn.next',
+				prevEl: '.sales .slider-controls .slider-controls__btn.prev',
+				hideOnClick: true,
+			},
+		},
+		1200: {
+			slidesPerView: 2,
+			navigation: {
+				nextEl: '.sales .sales__col.slider .sales__slider-arrow.next',
+				prevEl: '.sales .sales__col.slider .sales__slider-arrow.prev',
+				hideOnClick: true,
+			},
+		},
 	},
 
 })

@@ -59,7 +59,8 @@ h1,h2,h3,h4,h5,h6
 	--white10: rgba(255,255,255, .1)
 	--white50: rgba(255,255,255, .5)
 	--white60: rgba(255,255,255, .6)
-	--blue: #0B9EC7
+	--blue: rgba(11,158,199,1)
+	--blue60: rgba(11,158,199,.6)
 	--red: #FF5D46
 	--red-dark: #CC5626
 	--gray: #F9F9F9
@@ -68,6 +69,7 @@ h1,h2,h3,h4,h5,h6
 	--black05: rgba(51,51,51,.05)
 	--black10: rgba(51,51,51,.1)
 	--black15: rgba(51,51,51,.15)
+	--black20: rgba(51,51,51,.2)
 	--black30: rgba(51,51,51,.3)
 	--black60: rgba(51,51,51,.6)
 	--black02: #272727
@@ -102,7 +104,9 @@ h1,h2,h3,h4,h5,h6
 	line-height: 41px
 	color: var(--black)
 	text-align: left
-
+	@media(max-width:$mob)
+		font-size: 20px
+		line-height: 30px
 .slider-controls
 	position: absolute
 	top: 0
@@ -110,6 +114,8 @@ h1,h2,h3,h4,h5,h6
 	display: flex
 	justify-content: space-between
 	width: 97px
+	@media(max-width:$mob)
+		display: none
 	&__btn
 		width: 41px
 		height: 41px
@@ -126,4 +132,35 @@ h1,h2,h3,h4,h5,h6
 		&.swiper-button-disabled
 			& .arrow
 				stroke: var(--black30)
+.arrow-up
+	width: 70px
+	height: 70px
+	border-radius: 100%
+	background-color: var(--blue60)
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	bottom: 40px
+	right: 9%
+	opacity: 0
+	visibility: hidden
+	z-index: -1
+	transition: all linear .2s
+	&.active
+		opacity: .5
+		z-index: 20
+		visibility: visible
+		transition: all linear .3s
+		&:hover
+			opacity: 1
+	&__circle
+		width: 50px
+		height: 50px
+		border-radius: 100%
+		background-color: var(--blue60)
+		display: flex
+		justify-content: center
+		align-items: center
+	&__arrow
 /*    </GLOBAL>    */

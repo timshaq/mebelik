@@ -6,17 +6,32 @@
 		display: flex
 		justify-content: space-between
 		margin-top: 40px
+		@media(max-width:$mob)
+			flex-direction: column
+			align-items: center
+			justify-content: flex-start
 	&__item
 		width: 21%
 		display: flex
 		flex-direction: column
 		justify-content: flex-start
 		align-items: center
+		@media(max-width:$tab)
+			width: 216px
+		@media(max-width:$mob)
+			&:not(:first-child)
+				margin-top: 30px
 	&__ph
 		width: 140px
 		height: 140px
 		object-fit: cover
 		margin-bottom: 20px
+		@media(max-width:$tab)
+			width: 110px
+			height: 110px
+		@media(max-width:$mob)
+			width: 100px
+			height: 100px
 	&__article
 		font-family: Roboto
 		font-style: normal
@@ -25,3 +40,5 @@
 		line-height: 150%
 		color: var(--black)
 		text-align: center
+		@media(max-width:$tab)
+			font-size: 14px

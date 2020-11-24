@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-	window.addEventListener('resize', function(event){
-	  mobNavigation()
-	  console.log('resize')
-	});
+	// window.addEventListener('resize', function(event){
+	//   mobNavigation()
+	//   console.log('resize')
+	// });
 
 });

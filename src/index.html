@@ -260,8 +260,6 @@
 					Шкафы
 				</h3>
 			</a>
-		</div>
-		<div class="category__row">
 			<a href="#" class="category__item">
 				<img src="img/category2__img_07.svg" alt="" class="category__ph">
 				<h3 class="category__title_h3">
@@ -335,79 +333,81 @@
 		<h2 class="news__title_h2 title_h2">
 			Новости
 		</h2>
-		<div class="news__row">
-			<a href="#" class="news__item">
-				<div class="news__phcont">
-					<img src="img/news__01.svg" alt="" class="news__ph">
-				</div>
-				<div class="news__text">
-					<h3 class="news__title_h3">
-						Non aliquet ac, gravida sollicitudin dictumst in enim, malesuada. 
-					</h3>
-					<div class="news__props">
-						<span class="news__date">
-							15.09.2020
-						</span>
-						<span href="" class="news__link">
-							Подробнее
-						</span>
+		<div class="news__row swiper-container">
+			<div class="swiper-wrapper">
+				<div class="news__item swiper-slide">
+					<div class="news__phcont">
+						<img src="img/news__01.svg" alt="" class="news__ph">
+					</div>
+					<div class="news__text">
+						<h3 class="news__title_h3">
+							Non aliquet ac, gravida sollicitudin dictumst in enim, malesuada. 
+						</h3>
+						<div class="news__props">
+							<span class="news__date">
+								15.09.2020
+							</span>
+							<a href="#" href="" class="news__link">
+								Подробнее
+							</a>
+						</div>
 					</div>
 				</div>
-			</a>
-			<a href="#" class="news__item">
-				<div class="news__phcont">
-					<img src="img/news__02.svg" alt="" class="news__ph">
-				</div>
-				<div class="news__text">
-					<h3 class="news__title_h3">
-						Non aliquet ac, gravida sollicitudin dictumst in enim, malesuada. 
-					</h3>
-					<div class="news__props">
-						<span class="news__date">
-							15.09.2020
-						</span>
-						<span class="news__link">
-							Подробнее
-						</span>
+				<div class="news__item swiper-slide">
+					<div class="news__phcont">
+						<img src="img/news__02.svg" alt="" class="news__ph">
+					</div>
+					<div class="news__text">
+						<h3 class="news__title_h3">
+							Non aliquet ac, gravida sollicitudin dictumst in enim, malesuada. 
+						</h3>
+						<div class="news__props">
+							<span class="news__date">
+								15.09.2020
+							</span>
+							<a href="#" class="news__link">
+								Подробнее
+							</a>
+						</div>
 					</div>
 				</div>
-			</a>
-			<a href="#" class="news__item">
-				<div class="news__phcont">
-					<img src="img/news__03.svg" alt="" class="news__ph">
-				</div>
-				<div class="news__text">
-					<h3 class="news__title_h3">
-						Non aliquet ac, gravida sollicitudin dictumst in enim, malesuada. 
-					</h3>
-					<div class="news__props">
-						<span class="news__date">
-							15.09.2020
-						</span>
-						<span class="news__link">
-							Подробнее
-						</span>
+				<div class="news__item swiper-slide">
+					<div class="news__phcont">
+						<img src="img/news__03.svg" alt="" class="news__ph">
+					</div>
+					<div class="news__text">
+						<h3 class="news__title_h3">
+							Non aliquet ac, gravida sollicitudin dictumst in enim, malesuada. 
+						</h3>
+						<div class="news__props">
+							<span class="news__date">
+								15.09.2020
+							</span>
+							<a href="#" class="news__link">
+								Подробнее
+							</a>
+						</div>
 					</div>
 				</div>
-			</a>
-			<a href="#" class="news__item">
-				<div class="news__phcont">
-					<img src="img/news__04.svg" alt="" class="news__ph">
-				</div>
-				<div class="news__text">
-					<h3 class="news__title_h3">
-						Non aliquet ac, gravida sollicitudin dictumst in enim, malesuada. 
-					</h3>
-					<div class="news__props">
-						<span class="news__date">
-							15.09.2020
-						</span>
-						<span class="news__link">
-							Подробнее
-						</span>
+				<div class="news__item swiper-slide">
+					<div class="news__phcont">
+						<img src="img/news__04.svg" alt="" class="news__ph">
+					</div>
+					<div class="news__text">
+						<h3 class="news__title_h3">
+							Non aliquet ac, gravida sollicitudin dictumst in enim, malesuada. 
+						</h3>
+						<div class="news__props">
+							<span class="news__date">
+								15.09.2020
+							</span>
+							<a href="#" class="news__link">
+								Подробнее
+							</a>
+						</div>
 					</div>
 				</div>
-			</a>
+			</div>
 		</div>
 	</div>
 </section>
@@ -517,6 +517,18 @@
 				</h3>
 			</div>
 		</div>
+		<div class="slider-controls">
+			<button class="slider-controls__btn prev">
+				<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="arrow" d="M6 11.5L1 6.5L6 1.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+			<button class="slider-controls__btn next active">
+				<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="arrow" d="M1 1.5L6 6.5L1 11.5" stroke="#0B9EC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+		</div>
 	</div>
 </section>
 
@@ -584,6 +596,7 @@
 </main>
 
 @@include('html/footer.html')
+@@include('html/arrow-up.html')
 
 </body>
 
