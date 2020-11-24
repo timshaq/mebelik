@@ -14,6 +14,8 @@
 		height: 350px
 		background-color: var(--gray)
 		position: relative
+		@media(max-width:$mob)
+			height: 359px
 	&__slide
 		width: 100%
 		height: 100%
@@ -22,6 +24,9 @@
 		display: flex
 		position: relative
 		border-radius: 10px
+		@media(max-width:$mob)
+			flex-direction: column
+			background-color: var(--gray)
 	&__slide-card
 		width: 40%
 		z-index: 2
@@ -30,6 +35,14 @@
 		justify-content: flex-end
 		align-items: flex-start
 		padding-left: 30px
+		@media(max-width:$tab)
+			width: 48%
+		@media(max-width:$mob)
+			order: 2
+			width: 100%
+			padding-left: 15px
+			padding-right: 15px
+			margin-top: auto
 	&__status
 		position: absolute
 		top: 30px
@@ -53,6 +66,10 @@
 			right: -20px
 			border-top: 20px solid var(--green)
 			border-right: 20px solid transparent
+			@media(max-width:$mob)
+				left: -20px
+				border-right: 0
+				border-left: 20px solid transparent
 		&:after
 			content: ''
 			width: 20px
@@ -62,6 +79,15 @@
 			right: -20px
 			border-bottom: 20px solid var(--green)
 			border-right: 20px solid transparent
+			@media(max-width:$mob)
+				left: -20px
+				border-right: 0
+				border-left: 20px solid transparent
+		@media(max-width:$mob)
+			right: -7px
+			left: auto
+			padding: 6px 19px 6px 27px
+			top: 23px
 	&__status_triangle
 		width: 20px
 		height: 20px
@@ -70,14 +96,35 @@
 		left: 0px
 		border-top: 20px solid var(--green-dark)
 		border-left: 20px solid transparent
+		@media(max-width:$mob)
+			width: 7px
+			height: 7px
+			border-top: 7px solid var(--green-dark)
+			border-left: 0
+			border-right: 7px solid transparent
+			left: auto
+			right: 0
+			bottom: -7px
 	&__brand
 		position: absolute
 		top: 30px
 		left: 42.5%
 		transform: translateX(-50%)
 		z-index: 3
+		@media(max-width:$tab)
+			left: 52%
+		@media(max-width:$mob)
+			height: 24px
+			max-height: 24px
+			max-width: 135px
+			transform: none
+			left: 15px
+			top: 155px
 	&__brand-ph
-
+		width: 100%
+		height: 100%
+		object-fit: contain
+		object-position: left
 	&__slide-title
 		font-family: Open Sans Condensed
 		font-style: normal
@@ -87,6 +134,9 @@
 		text-transform: uppercase
 		color: var(--black)
 		width: 340px
+		@media(max-width:$mob)
+			font-size: 18px
+			max-width: 100%
 	&__slide-subtitle
 		font-family: Open Sans
 		font-style: normal
@@ -96,9 +146,15 @@
 		color: var(--black60)
 		margin-top: 12px
 		margin-bottom: 45px
+		@media(max-width:$mob)
+			font-size: 13px
+			margin-top: 7px
+			margin-bottom: 20px
 	&__slide-row
 		display: flex
 		margin-bottom: 40px
+		@media(max-width:$mob)
+			margin-bottom: 20px
 	&__slide-btn
 		font-family: Open Sans Condensed
 		font-style: normal
@@ -135,6 +191,17 @@
 			left: 0
 			border-top: 350px solid var(--gray)
 			border-right: 130px solid transparent
+			@media(max-width:$mob)
+				border-top: 0
+				border-bottom: 50px solid var(--gray)
+				border-right: 290px solid transparent
+				top: auto
+				bottom: 0
+		@media(max-width:$tab)
+			width: 52%
+		@media(max-width:$mob)
+			width: 100%
+			height: 180px
 	&__slide-ph
 		width: 100%
 		height: 100%
@@ -142,9 +209,13 @@
 	& .swiper-pagination-bullet
 		background: var(--white50)
 		opacity: 1
+		@media(max-width:$tab)
+			width: 8px
+			height: 8px
 	& .swiper-pagination-bullet-active
-		background: var(--active-bullet-color)
-		backdrop-filter: blur(15px)
+		background: var(--blue)
 		opacity: 1
 	& .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
 		bottom: 10px
+		@media(max-width:$tab)
+			left: 25%
