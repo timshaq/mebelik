@@ -3,60 +3,62 @@
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 !function (e) {
-  var s = {};
+  var t = {};
 
-  function r(l) {
-    if (s[l]) return s[l].exports;
-    var i = s[l] = {
-      i: l,
+  function s(n) {
+    if (t[n]) return t[n].exports;
+    var i = t[n] = {
+      i: n,
       l: !1,
       exports: {}
     };
-    return e[l].call(i.exports, i, i.exports, r), i.l = !0, i.exports;
+    return e[n].call(i.exports, i, i.exports, s), i.l = !0, i.exports;
   }
 
-  r.m = e, r.c = s, r.d = function (e, s, l) {
-    r.o(e, s) || Object.defineProperty(e, s, {
+  s.m = e, s.c = t, s.d = function (e, t, n) {
+    s.o(e, t) || Object.defineProperty(e, t, {
       enumerable: !0,
-      get: l
+      get: n
     });
-  }, r.r = function (e) {
+  }, s.r = function (e) {
     "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
       value: "Module"
     }), Object.defineProperty(e, "__esModule", {
       value: !0
     });
-  }, r.t = function (e, s) {
-    if (1 & s && (e = r(e)), 8 & s) return e;
-    if (4 & s && "object" == _typeof(e) && e && e.__esModule) return e;
-    var l = Object.create(null);
-    if (r.r(l), Object.defineProperty(l, "default", {
+  }, s.t = function (e, t) {
+    if (1 & t && (e = s(e)), 8 & t) return e;
+    if (4 & t && "object" == _typeof(e) && e && e.__esModule) return e;
+    var n = Object.create(null);
+    if (s.r(n), Object.defineProperty(n, "default", {
       enumerable: !0,
       value: e
-    }), 2 & s && "string" != typeof e) for (var i in e) {
-      r.d(l, i, function (s) {
-        return e[s];
+    }), 2 & t && "string" != typeof e) for (var i in e) {
+      s.d(n, i, function (t) {
+        return e[t];
       }.bind(null, i));
     }
-    return l;
-  }, r.n = function (e) {
-    var s = e && e.__esModule ? function () {
+    return n;
+  }, s.n = function (e) {
+    var t = e && e.__esModule ? function () {
       return e["default"];
     } : function () {
       return e;
     };
-    return r.d(s, "a", s), s;
-  }, r.o = function (e, s) {
-    return Object.prototype.hasOwnProperty.call(e, s);
-  }, r.p = "", r(r.s = 2);
-}([function (e, s, r) {
+    return s.d(t, "a", t), t;
+  }, s.o = function (e, t) {
+    return Object.prototype.hasOwnProperty.call(e, t);
+  }, s.p = "", s(s.s = 3);
+}([function (e, t, s) {
   "use strict";
 
-  r.r(s), s["default"] = function () {};
-}, function (e, s, r) {
+  s.r(t), t["default"] = function () {
+    header.classList.remove("search"), window.scrollY >= 200 ? (header.classList.add("active"), header.classList.add("not-search")) : (header.classList.remove("active"), header.classList.remove("not-search"));
+  };
+}, function (e, t, s) {
   "use strict";
 
-  r.r(s), s["default"] = function () {
+  s.r(t), t["default"] = function () {
     console.log("sliders");
     new Swiper(".preview.swiper-container", {
       slidesPerView: 1,
@@ -103,17 +105,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }
     });
     document.querySelectorAll(".product-line").forEach(function (e) {
-      var s = e.querySelector(".product-line__slider .swiper-container"),
-          r = e.querySelector(".slider-controls__btn.next"),
-          l = e.querySelector(".slider-controls__btn.prev");
-      new Swiper(s, {
+      var t = e.querySelector(".product-line__slider .swiper-container"),
+          s = e.querySelector(".slider-controls__btn.next"),
+          n = e.querySelector(".slider-controls__btn.prev");
+      new Swiper(t, {
         slidesPerView: 4,
         slidesPerColumn: 1,
         spaceBetween: 30,
         allowTouchMove: !1,
         navigation: {
-          nextEl: r,
-          prevEl: l,
+          nextEl: s,
+          prevEl: n,
           hideOnClick: !0
         },
         breakpoints: {
@@ -233,15 +235,63 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }
     });
   };
-}, function (e, s, r) {
-  r(0), r(3), e.exports = r(1);
-}, function (e, s, r) {
+}, function (e, t, s) {
   "use strict";
 
-  r.r(s);
-  var l = r(1),
-      i = r(0);
+  s.r(t), t["default"] = function () {
+    document.getElementById("toggleSearch").addEventListener("click", function () {
+      header.classList.add("search"), header.classList.remove("not-search");
+    });
+  };
+}, function (e, t, s) {
+  s(4), s(0), s(5), s(6), s(1), e.exports = s(2);
+}, function (e, t) {}, function (e, t, s) {
+  "use strict";
+
+  s.r(t), t["default"] = function () {};
+}, function (e, t, s) {
+  "use strict";
+
+  s.r(t);
+  var n = s(1),
+      i = s(0),
+      r = s(2);
   document.addEventListener("DOMContentLoaded", function () {
-    Object(l["default"])(), Object(i["default"])();
+    var e = document.getElementById("header");
+    Object(n["default"])(), window.addEventListener("scroll", function (e) {
+      var t = window.scrollY;
+      console.log(t), Object(i["default"])();
+    }), Object(i["default"])(), Object(r["default"])();
+    document.querySelectorAll(".header__nav-item").forEach(function (e) {
+      e.addEventListener("click", function (t) {
+        if (t.preventDefault(), console.log("ev"), console.log(t.target), (window.innerWidth > 0 ? window.innerWidth : screen.width) <= 768) if (t.preventDefault(), t.target === this || t.target === this.children[0]) console.log("this"), console.log(this), e.classList.contains("open") ? e.classList.remove("open") : e.classList.add("open");else if (t.target.classList.contains("header__more-title-link") || t.target.classList.contains("header__more-title")) {
+          var s;
+          "A" === t.target.tagName && (s = t.target.getAttribute("href")), "H2" === t.target.tagName && (s = t.target.children[0].getAttribute("href")), s && (location.href = s);
+        } else if (t.target.classList.contains("header__more-list") || t.target.classList.contains("header__more-list-title-link") || t.target.classList.contains("header__more-list-title")) {
+          var n = t.target;
+          "A" === n.tagName && (n = n.parentElement.parentElement), "H2" === n.tagName && (n = n.parentElement), n.classList.contains("open") ? n.classList.remove("open") : n.classList.add("open");
+        } else (t.target.classList.contains("header__more-link") || t.target.classList.contains("header__more-subtitle")) && ("H3" === t.target.tagName && (location.href = t.target.children[0].getAttribute("href")), "A" === t.target.tagName && (location.href = t.target.getAttribute("href")));
+      });
+    });
+    document.getElementById("burger-btn").addEventListener("click", function () {
+      e.classList.contains("menu-open") ? (e.classList.remove("menu-open"), e.classList.remove("active"), e.classList.remove("not-search")) : (e.classList.add("menu-open"), e.classList.add("active"), e.classList.add("not-search"));
+    });
+    var t = document.getElementById("catalog-tab"),
+        s = document.getElementById("help-tab"),
+        l = document.getElementById("login-tab"),
+        a = document.getElementById("catalog-tab-list"),
+        o = document.getElementById("help-tab-list"),
+        c = document.getElementById("login-tab-cont"),
+        d = [t, s, l],
+        u = [a, o, c];
+    d.forEach(function (e, t) {
+      e.addEventListener("click", function () {
+        d.forEach(function (e) {
+          return e.classList.remove("active");
+        }), d[t].classList.add("active"), u.forEach(function (e) {
+          return e.style.display = "none";
+        }), u[t].style.display = "flex";
+      });
+    });
   });
 }]);

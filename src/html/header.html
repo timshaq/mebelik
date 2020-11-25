@@ -1,10 +1,12 @@
-<header class="header">
-	<div class="fix-cont">
+<header class="header" id="header">
+	<div class="fix-cont inform">
 		<div class="header__row inform">
 			<div class="header__burger header__col">
-				<div class="header__burger-item"></div>
-				<div class="header__burger-item"></div>
-				<div class="header__burger-item"></div>
+				<button class="header__burger-btn" id="burger-btn">
+					<div class="header__burger-item"></div>
+					<div class="header__burger-item"></div>
+					<div class="header__burger-item"></div>
+				</button>
 			</div>
 			<div class="header__logo header__col">
 				<img src="img/logo.svg" alt="" class="header__logo-ph">
@@ -15,11 +17,14 @@
 						<input id="search-input" type="text" class="header__search-input" placeholder="Например: диван...">
 					</label>
 					<button type="submit" class="header__search-submit">
-						<img src="img/icon__search.svg" alt="">
+						<img class="search-icon" src="img/icon__search.svg" alt="">
 					</button>
 				</form>
+				<button id="toggleSearch" type="button" class="header__fake-search">
+					<img src="img/search_blue.svg" alt="">
+				</button>
 			</div>
-			<div class="header__contacts header__col j-center">
+			<div class="header__contacts header__col j-center tab-dis">
 				<div class="header__contacts-workhours">
 					Пн - Сб с 9:00 до 20:00
 				</div>
@@ -32,7 +37,7 @@
 					</div>
 				</div> -->
 			</div>
-			<div class="header__contacts header__col">
+			<div class="header__contacts header__col tab-dis">
 				<div class="header__contacts-tel">
 					<a href="tel:89991234567" class="header__tel-link">
 						8 (999) 123 45 67
@@ -48,12 +53,17 @@
 				</div>
 			</div>
 			<div class="header__controls header__col">
-				<div class="header__control">
+				<div class="header__control tel">
+					<a href="tel:89991234567" title="Позвонить" class="header__control-btn">
+						<img src="img/icon__tel.svg" alt="">
+					</a>
+				</div>
+				<div class="header__control profile">
 					<button title="Профиль" class="header__control-btn">
 						<img src="img/icon__profile.svg" alt="Профиль">
 					</button>
 				</div>
-				<div class="header__control">
+				<div class="header__control wish">
 					<button title="Избраное" class="header__control-btn">
 						<img src="img/icon__wish.svg" alt="">
 						<div class="header__control-indicator">
@@ -61,7 +71,7 @@
 						</div>
 					</button>
 				</div>
-				<div class="header__control">
+				<div class="header__control cart">
 					<button title="Корзина" class="header__control-btn">
 						<img src="img/icon__cart.svg" alt="">
 						<div class="header__control-indicator">
@@ -73,25 +83,27 @@
 		</div>
 	</div>
 	<div class="header__navigation-bg">
-		<ul class="header__tabs fix-cont">
-			<li class="header__tab">
-				<button class="header__tab-btn active">
-					Товары
-				</button>
-			</li>
-			<li class="header__tab">
-				<button class="header__tab-btn">
-					Помощь
-				</button>
-			</li>
-			<li class="header__tab">
-				<button class="header__tab-btn">
-					Войти
-				</button>
-			</li>
+		<ul class="header__tabs">
+			<div class="fix-cont">
+				<li class="header__tab">
+					<button class="header__tab-btn active" id="catalog-tab">
+						Товары
+					</button>
+				</li>
+				<li class="header__tab">
+					<button class="header__tab-btn" id="help-tab">
+						Помощь
+					</button>
+				</li>
+				<li class="header__tab">
+					<button class="header__tab-btn" id="login-tab">
+						Войти
+					</button>
+				</li>
+			</div>
 		</ul>
 		<nav class="header__row navigation fix-cont">
-			<ul class="header__nav-list">
+			<ul id="catalog-tab-list" class="header__nav-list">
 				<li class="header__nav-item">
 					<a href="#" class="header__nav-link">
 						<svg class="header__nav-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1937,6 +1949,27 @@
 					</div>
 				</li>
 			</ul>
+
+			<ul id="help-tab-list" class="header__nav-list help-list">
+				<li class="header__help-item">
+					<a href="#" class="header__help-link">
+						Помощь 1
+					</a>
+				</li>
+				<li class="header__help-item">
+					<a href="#" class="header__help-link">
+						Помощь 2
+					</a>
+				</li>
+				<li class="header__help-item">
+					<a href="#" class="header__help-link">
+						Помощь 3
+					</a>
+				</li>
+			</ul>
+			<div id="login-tab-cont" class="header__login-cont">
+				login content
+			</div>
 		</nav>
 	</div>
 		
