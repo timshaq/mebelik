@@ -57,6 +57,8 @@
 		&__row
 			display: flex
 			justify-content: space-between
+			@media(max-width:$tab)
+				flex-wrap: wrap
 			&_hr
 				margin-top: 80px
 				position: relative
@@ -75,10 +77,19 @@
 			&.col_left
 				width: 24%
 				align-items: center
+				@media(max-width:$tab)
+					width: 340px
 			&.col_links
-				width: 9%
+				width: 11%
+				@media(max-width:$tab)
+					width: 33%
+					order: 2
+					align-items: center
+					margin-top: 60px
 			&.col_right
 				width: 18%
+				@media(max-width:$tab)
+					width: 270px
 		&__logo
 			width: 270px
 			height: 45px
@@ -98,6 +109,8 @@
 			padding: 0 37px
 			justify-content: space-between
 			margin-top: 20px
+			@media(max-width:$tab)
+				padding: 0 70px
 		&__social-item
 		&__social-link
 			font-family: Roboto
@@ -185,6 +198,8 @@
 					width: 20px
 					height: 20px
 					left: -7px
+					@media(max-width:$tab)
+						left: 35px
 			&.mail
 				&:before
 					content: url('../img/icon__mail.svg')
@@ -202,9 +217,14 @@
 			display: flex
 			&_left
 				width: 65%
+				@media(max-width:$tab)
+					width: 100%
+					justify-content: space-between
 			&_right
 				width: 35%
 				justify-content: flex-end
+				@media(max-width:$tab)
+					display: none
 		&__small
 			font-family: Roboto
 			font-style: normal
