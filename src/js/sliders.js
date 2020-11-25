@@ -6,10 +6,9 @@ const tablet = 768;
 const mobile = 0;
 
 const previewSlider = new Swiper('.preview.swiper-container', {
-	width: 1170,
 	slidesPerView: 1,
 	loopedSlides: 1,
-	spaceBetween: 50,
+	spaceBetween: 1000,
 	loop: true,
 	pagination: {
 		el: '.swiper-pagination',
@@ -18,18 +17,14 @@ const previewSlider = new Swiper('.preview.swiper-container', {
 	},
 	breakpoints: {
 		320: {
-			width: 320,
-			spaceBetween: 0,
 			pagination: {
 				el: null,
 			},
 		},
 		768: {
-			width: 708,
 			autoplay: false,
 		},
 		1200: {
-			width: 1170,
 			autoplay: false,
 		},
 
@@ -69,7 +64,6 @@ productLinelist.forEach(line => {
 	const nextBtn = line.querySelector('.slider-controls__btn.next');
 	const prevBtn = line.querySelector('.slider-controls__btn.prev');
 	const productLineSliders = new Swiper(slider, {
-		width: 1170,
 		slidesPerView: 4,
 		slidesPerColumn: 1,
 		spaceBetween: 30,
@@ -81,18 +75,34 @@ productLinelist.forEach(line => {
 		},
 		breakpoints: {
 			0: {
-				width: 290,
 				slidesPerView: 2,
 				spaceBetween: 10,
 				allowTouchMove: true,
 			},
-			768: {
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+				allowTouchMove: true,
+			},
+			550: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+				allowTouchMove: true,
+			},
+			700: {
+				width: 673,
+				slidesPerView: 3.2,
+				spaceBetween: 30,
+			},
+			735: {
 				width: 708,
 				slidesPerView: 3,
 				spaceBetween: 30,
 			},
 			1200: {
 				width: 1170,
+				slidesPerView: 4,
+				spaceBetween: 30,
 			},
 
 		},

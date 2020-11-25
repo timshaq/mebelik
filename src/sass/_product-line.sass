@@ -16,8 +16,9 @@
 		min-width: 0
 		& .swiper-container.overflow-dis
 			overflow: visible
+			@media(max-width:$mob)
+				overflow: hidden
 		& .swiper-slide
-			width: 270px !important
 			opacity: 0
 			visibility: hidden
 			transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out
@@ -30,19 +31,12 @@
 				& + .swiper-slide + .swiper-slide
 					opacity: 1
 					visibility: visible
-					@media(max-width:$mob)
-						opacity: 0
-						visibility: hidden
 				& + .swiper-slide + .swiper-slide + .swiper-slide
 					opacity: 1
 					visibility: visible
-					@media(max-width:$tab)
-						opacity: 0
-						visibility: hidden
-			@media(max-width:$tab)
-				width: 216px !important
 			@media(max-width:$mob)
-				width: 140px !important
+				opacity: 1
+				visibility: visible
 
 	&__slide
 		width: 270px
@@ -73,6 +67,10 @@
 					justify-content: space-between
 		@media(max-width:$tab)
 			padding: 10px
+		@media(max-width:$mob)
+			display: flex
+			flex-direction: column
+			align-items: center
 	// &__sale,
 	// &__status,
 	// &__price-old,

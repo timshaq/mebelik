@@ -2,18 +2,19 @@
 	margin-top: calc(30px + 197px)
 	& .swiper-container
 		overflow: visible
-	& .swiper-slide
-		opacity: 0
-		visibility: hidden
-		transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out
-		&-active
-			opacity: 1
-			visibility: visible
+	// & .swiper-slide
+	// 	opacity: 0
+	// 	visibility: hidden
+	// 	transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out
+	// 	&-active
+	// 		opacity: 1
+	// 		visibility: visible
 	&__slider
 	&__slide-cont
 		height: 350px
 		background-color: var(--gray)
 		position: relative
+		border-radius: 8px
 		@media(max-width:$mob)
 			height: 359px
 	&__slide
@@ -194,7 +195,7 @@
 			@media(max-width:$mob)
 				border-top: 0
 				border-bottom: 50px solid var(--gray)
-				border-right: 290px solid transparent
+				border-right: 100vw solid transparent
 				top: auto
 				bottom: 0
 		@media(max-width:$tab)
