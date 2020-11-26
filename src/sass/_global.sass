@@ -60,6 +60,7 @@ h1,h2,h3,h4,h5,h6
 	--white50: rgba(255,255,255, .5)
 	--white60: rgba(255,255,255, .6)
 	--blue: rgba(11,158,199,1)
+	--blue10: rgba(11,158,199,.1)
 	--blue60: rgba(11,158,199,.6)
 	--red: #FF5D46
 	--red-dark: #CC5626
@@ -78,6 +79,17 @@ h1,h2,h3,h4,h5,h6
 	--box-shadow: rgba(0, 0, 0, 0.13)
 	--active-bullet-color: rgba(0, 122, 173, 0.35)
 	--ul-toggle: #3C3C3C
+
+*
+	&::-webkit-scrollbar
+		width: 6px
+	&::-webkit-scrollbar-thumb
+		background-color: var(--blue)
+		border-radius: 10px
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-track-piece,
+		background-color: var(--blue10)
+
 .fix-cont 
 	max-width: 1170px
 	min-width: 320px

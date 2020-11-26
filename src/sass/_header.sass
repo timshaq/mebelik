@@ -70,6 +70,9 @@
 					overflow: auto
 				& .header__nav-list
 					justify-content: flex-start
+					display: none
+					&.open
+						display: flex
 			& .header__burger
 				position: relative
 				& .header__burger-item
@@ -624,3 +627,60 @@
 			color: var(--white)
 	& .help-list, &__login-cont
 		display: none
+	&__login-cont
+		flex-direction: column
+		width: 230px
+		margin: 0 auto
+		padding: 15px 0
+		display: none
+		&.open
+			@media(max-width:$tab)
+			display: flex
+	&__login-title
+		font-family: Oswald
+		font-style: normal
+		font-weight: 500
+		font-size: 24px
+		line-height: 36px
+		color: var(--black)
+		text-align: center
+	&__login-form
+		display: flex
+		flex-direction: column
+	&__login-input
+		background-color: var(--gray)
+		padding: 13px
+		border-radius: 5px
+		color: var(--black60)
+		margin: 15px 0
+		&::placeholder
+			color: var(--black60)
+	&__login-submit, &__login-registration
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 15px
+		line-height: 155%
+		text-transform: uppercase
+		background-color: var(--blue)
+		padding: 9px 30px
+		color: var(--white)
+		border-radius: 5px
+	&__login-row
+		display: flex
+		width: 100%
+		justify-content: space-between
+		margin: 15px 0
+	&__login-label
+
+	&__login-check
+
+	&__login-forgot
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 140%
+		color: var(--blue)
+	&__login-registration
+		width: 100%

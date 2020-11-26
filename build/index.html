@@ -124,7 +124,7 @@
 			</div>
 		</ul>
 		<nav class="header__row navigation fix-cont">
-			<ul id="catalog-tab-list" class="header__nav-list">
+			<ul id="catalog-tab-list" class="header__nav-list open">
 				<li class="header__nav-item">
 					<a href="#" class="header__nav-link">
 						<svg class="header__nav-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1989,7 +1989,28 @@
 				</li>
 			</ul>
 			<div id="login-tab-cont" class="header__login-cont">
-				login content
+				<h3 class="header__login-title">
+					Авторизация
+				</h3>
+				<from class="header__login-form">
+					<input type="text" name="login" class="header__login-input" placeholder="login">
+					<input type="password" class="header__login-input" placeholder="password">
+					<button class="header__login-submit">
+						Войти
+					</button>
+					<div class="header__login-row">
+						<label for="" class="header__login-label">
+							<input type="checkbox" class="header__login-check">
+							Запомнить
+						</label>
+						<a href="#" class="header__login-forgot">
+							Забыли пароль?
+						</a>
+					</div>
+					<button class="header__login-registration">
+						Регистрация
+					</button>
+				</from>
 			</div>
 		</nav>
 	</div>

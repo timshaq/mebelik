@@ -57,7 +57,7 @@ const newsSlider = new Swiper('.news .news__row.swiper-container', {
 })
 
 var productLinelist = document.querySelectorAll('.product-line');
-// productLinelist = Array.prototype.slice.call(productLinelist);
+productLinelist = Array.prototype.slice.call(productLinelist);
 
 productLinelist.forEach(line => {
 	const slider = line.querySelector('.product-line__slider .swiper-container');
@@ -128,6 +128,7 @@ const productLineInsideSliders = new Swiper('.product-line__phcont-slider .swipe
 	},
 })
 
+
 const brandsSlider = new Swiper('.brands__slider', {
 	slidesPerView: 6,
 	slidesPerColumn: 1,
@@ -145,18 +146,10 @@ const brandsSlider = new Swiper('.brands__slider', {
 		768: {
 			slidesPerView: 4.35,
 			spaceBetween: 0,
-			navigation: {
-				nextEl: '.sales .slider-controls .slider-controls__btn.next',
-				prevEl: '.sales .slider-controls .slider-controls__btn.prev',
-				hideOnClick: true,
-			},
 		},
 		1200: {
-			navigation: {
-				nextEl: '.sales .sales__col.slider .sales__slider-arrow.next',
-				prevEl: '.sales .sales__col.slider .sales__slider-arrow.prev',
-				hideOnClick: true,
-			},
+			slidesPerView: 6,
+			spaceBetween: 0,
 		},
 	},
 

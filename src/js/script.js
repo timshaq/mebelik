@@ -117,8 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			tab.addEventListener('click', function() {
 				tabList.forEach(tab => tab.classList.remove('active'))
 				tabList[i].classList.add('active')
-				tabContList.forEach(cont => cont.style.display = 'none')
-				tabContList[i].style.display = 'flex'
+				tabContList.forEach(cont => cont.classList.remove('open'))
+				tabContList[i].classList.add('open')
 			})
 
 		})
