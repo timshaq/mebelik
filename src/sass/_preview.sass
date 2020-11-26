@@ -137,6 +137,13 @@
 		@media(max-width:$mob)
 			font-size: 18px
 			max-width: 100%
+			overflow: hidden
+			text-overflow: ellipsis
+			display: -webkit-box
+			-webkit-box-orient: vertical
+			-webkit-line-clamp: 2
+			line-height: 28px
+			max-height: 56px
 	&__slide-subtitle
 		font-family: Open Sans
 		font-style: normal
