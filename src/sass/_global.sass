@@ -89,7 +89,12 @@ h1,h2,h3,h4,h5,h6
 	&::-webkit-scrollbar-track,
 	&::-webkit-scrollbar-track-piece,
 		background-color: var(--blue10)
-
+main
+	margin-top: calc(30px + 197px)
+	@media(max-width:$tab)
+		margin-top: calc(30px + 138px)
+	@media(max-width:$mob)
+		margin-top: calc(15px + 127px)
 .fix-cont 
 	max-width: 1170px
 	min-width: 320px
@@ -117,6 +122,7 @@ h1,h2,h3,h4,h5,h6
 	line-height: 41px
 	color: var(--black)
 	text-align: left
+	text-transform: capitalize
 	@media(max-width:$mob)
 		font-size: 20px
 		line-height: 30px
@@ -160,6 +166,7 @@ h1,h2,h3,h4,h5,h6
 	visibility: hidden
 	z-index: -1
 	transition: all linear .2s
+	cursor: pointer
 	&.active
 		opacity: .5
 		z-index: 20

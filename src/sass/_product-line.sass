@@ -381,6 +381,7 @@
 		width: 30px
 		height: 30px
 		position: relative
+		display: block
 		@media(max-width:$mob)
 			width: 13px
 			height: 13px
@@ -390,7 +391,7 @@
 		position: absolute
 		top: 0
 		right: 0
-		&:checked + div
+		&:checked + span
 			position: relative
 			@media(min-width:$mob+1)
 				&:after
@@ -430,9 +431,10 @@
 				object-fit: cover
 				position: absolute
 				top: 40%
-				right: -5px
+				right: 5px
 				transform: translate(0,-50%)
 	&__size-text
+		display: block
 		font-family: Open Sans
 		font-style: normal
 		font-weight: normal

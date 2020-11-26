@@ -53,7 +53,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   "use strict";
 
   s.r(t), t["default"] = function () {
-    header.classList.remove("search"), window.scrollY >= 200 ? (header.classList.add("active"), header.classList.add("not-search")) : (header.classList.remove("active"), header.classList.remove("not-search"));
+    var e = document.getElementById("arrow-up");
+    header.classList.remove("search"), window.scrollY >= 200 ? (header.classList.add("active"), header.classList.add("not-search"), e.classList.add("active")) : (header.classList.remove("active"), header.classList.remove("not-search"), e.classList.remove("active")), e.addEventListener("click", function () {
+      return window.scrollTo(0, 0);
+    });
   };
 }, function (e, t, s) {
   "use strict";
@@ -280,7 +283,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           "A" === s.target.tagName && (n = s.target.getAttribute("href")), "H2" === s.target.tagName && (n = s.target.children[0].getAttribute("href")), n && (location.href = n);
         } else if (s.target.classList.contains("header__more-list") || s.target.classList.contains("header__more-list-title-link") || s.target.classList.contains("header__more-list-title")) {
           var i = s.target;
-          "A" === i.tagName && (i = i.parentElement.parentElement), "H2" === i.tagName && (i = i.parentElement), i.classList.contains("open") ? i.classList.remove("open") : i.classList.add("open");
+          "A" === i.tagName && (i = i.parentElement.parentElement.parentElement), "H2" === i.tagName && (i = i.parentElement.parentElement), i.classList.contains("open") ? i.classList.remove("open") : i.classList.add("open");
         } else (s.target.classList.contains("header__more-link") || s.target.classList.contains("header__more-subtitle")) && ("H3" === s.target.tagName && (location.href = s.target.children[0].getAttribute("href")), "A" === s.target.tagName && (location.href = s.target.getAttribute("href")));
       });
     });
@@ -288,12 +291,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       t.classList.contains("menu-open") ? (t.classList.remove("menu-open"), t.classList.remove("active"), t.classList.remove("not-search")) : (t.classList.add("menu-open"), t.classList.add("active"), t.classList.add("not-search"));
     });
     var s = document.getElementById("catalog-tab"),
-        o = document.getElementById("help-tab"),
-        a = document.getElementById("login-tab"),
+        a = document.getElementById("help-tab"),
+        o = document.getElementById("login-tab"),
         c = document.getElementById("catalog-tab-list"),
         d = document.getElementById("help-tab-list"),
         u = document.getElementById("login-tab-cont"),
-        p = [s, o, a],
+        p = [s, a, o],
         w = [c, d, u];
     p.forEach(function (e, t) {
       e.addEventListener("click", function () {

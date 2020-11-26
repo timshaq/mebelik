@@ -7,8 +7,7 @@ import toggleSearchBlock from './toggleSearchBlock.js';
 import footerUlToggle from './footerUlToggle.js';
 document.addEventListener("DOMContentLoaded", function () {
 
-	var header = document.getElementById('header')
-
+	var header = document.getElementById('header');
 	var getVW;
 
 	if (window.innerWidth > 0) {
@@ -65,8 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 					} else if (ev.target.classList.contains('header__more-list') || ev.target.classList.contains('header__more-list-title-link') || ev.target.classList.contains('header__more-list-title')) {
 						var target = ev.target;
-						if (target.tagName === 'A') target = target.parentElement.parentElement;
-						if (target.tagName === 'H2') target = target.parentElement;
+						if (target.tagName === 'A') target = target.parentElement.parentElement.parentElement;
+						if (target.tagName === 'H2') target = target.parentElement.parentElement;
 						target.classList.contains('open')
 						? target.classList.remove('open')
 						: target.classList.add('open');

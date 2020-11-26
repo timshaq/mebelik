@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+
+	<title>Catalog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css">
+
+	<script src="lib/swiper/swiper-bundle.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+
+	<script src="js/script.min.js"></script>
+
+</head>
+
+<body id="body">
+
+@@include('html/header.html')
+
+<main>
+
+<div class="catalog-cont">
+	<div class="filter">
+		
+	</div>
+	<div class="col-right">
+		<ul class="breadscrumb">
+			<li class="breadscrumb-item">
+				Главная
+			</li>
+			<li class="breadscrumb-item">
+				Каталог
+			</li>
+			<li class="breadscrumb-item">
+				Спальня
+			</li>
+		</ul>
+		<section class="product-list">
+			<h1 class="product-list__title_h1">
+				Мебель для спальни
+			</h1>
+			<p class="product-list__article">
+				Интернет-магазин “Мебелик” предлагает приобрести недорогие мебель для спальни по ценам от производителя. Возможна покупка в кредит. Гарантия 1 год на всю продукцию. Осуществляем доставку по всей России.
+			</p>
+			<div class="product-list__sort-bar sort-bar">
+				<span class="sort-bar__count">
+					356 шт.
+				</span>
+				<label for="sortby" class="sort-bar__label">
+					<span class="sort-bar__select-text">
+						Сортировать по:
+					</span>
+					<select name="sortby" id="sortby" class="sort-bar__select">
+						<option value="1" selected class="sort-bar__option">
+							популярности
+						</option>
+						<option value="2" class="sort-bar__option">
+							возрастанию цены
+						</option>
+						<option value="3" class="sort-bar__option">
+							снижению цены
+						</option>
+					</select>
+				</label>
+			</div>
+			<div class="product-list__list">
+				@@include('html/catalog/product-list__items.html')
+			</div>
+			<div class="product-list__pagination-cont">
+				<a href="#" class="product-list__link-more">
+					Показать еще
+				</a>
+				<div class="product-list__pagination pagination">
+					<a href="#" class="pagination__link prev">
+						<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 11.5L0.999999 6.5L6 1.5" stroke="#838383" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+					<a href="#" class="pagination__link active">1</a>
+					<a href="#" class="pagination__link">2</a>
+					<a href="#" class="pagination__link">3</a>
+					<span class="pagination__elipsis">...</span>
+					<a href="#" class="pagination__link next active">
+						<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1L6 6L1 11" stroke="#E1E1E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<h2 class="product-list__title_h2 title_h2">
+				Мебель для спальни
+			</h2>
+			<p class="product-list__article">
+				Интернет-магазин «Мебелик» предлагает купить в Москве недорогие, но удобные мебель для спальни. В каталоге представлены модели от российских производителей. Мебель для спальни представлены в широком ассортименте 840 моделей в интернет-магазине «ЛегкоМаркет»;
+			</p>
+			<p class="product-list__article">
+				Цены варьируются от 1550 до 227590 рублей; У нас можно сравнить цены на мебель для спальни, прочитать характеристики и отзывы покупателей; Купить мебель для спальни с гарантией по выгодным условиям покупки (в том числе в кредит или рассрочку);
+			</p>
+		</section>
+	</div>
+</div>
+
+</main>
+
+@@include('html/footer.html')
+@@include('html/arrow-up.html')
+
+</body>
+
+
+
+</html>
