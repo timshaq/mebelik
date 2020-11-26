@@ -4,12 +4,30 @@ import sliders from './sliders.js';
 // import mobNavigation from './mobNavigation.js';
 import headerActiveClass from './headerActiveClass.js';
 import toggleSearchBlock from './toggleSearchBlock.js';
-
+import footerUlToggle from './footerUlToggle.js';
 document.addEventListener("DOMContentLoaded", function () {
 
 	var header = document.getElementById('header')
 
+	var getVW;
+
+	if (window.innerWidth > 0) {
+		 getVW = window.innerWidth
+	} else {
+		 getVW = screen.width;
+	}
+
+	window.addEventListener('resize', function(event){
+		if (window.innerWidth > 0) {
+			 getVW = window.innerWidth
+		} else {
+			 getVW = screen.width;
+		}
+	  console.log('resize')
+	});
+
 	sliders();
+	footerUlToggle(getVW);
 
 	// mobNavigation()
 
@@ -22,14 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	headerActiveClass()
 
 	toggleSearchBlock()
-
-	// window.addEventListener('resize', function(event){
-	//   mobNavigation()
-	//   console.log('resize')
-	// });
-	const getVW = () => {
-		return (window.innerWidth > 0) ? window.innerWidth : screen.width;
-	}
 		const navLink = document.querySelectorAll('.header__nav-item')
 
 	
@@ -39,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 						console.log('ev')
 						console.log(ev.target)
 
-				if (getVW() <= 768) {
+				if (getVW <= 768) {
 					ev.preventDefault()
 					if (ev.target === this || ev.target === this.children[0]) {
 						console.log('this')
