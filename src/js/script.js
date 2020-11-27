@@ -121,4 +121,40 @@ document.addEventListener("DOMContentLoaded", function () {
 			})
 
 		})
+
+		const priceSlider = document.getElementById('price-slider')
+		const priceFrom = document.getElementById('price-from')
+		const priceTo = document.getElementById('price-to')
+		const priceMax = +document.getElementById('price-cont').getAttribute('data-max')
+
+		noUiSlider.create(priceSlider, {
+			start: [0, priceMax],
+			range: {
+				'min': [0],
+				'max': [priceMax]
+			},
+			format: {
+		        // 'to' the formatted value. Receives a number.
+				to: function (value) {
+					return Math.round(+value);
+				},
+		        // 'from' the formatted value.
+		        // Receives a string, should return a number.
+				from: function (value) {
+					return Math.round(+value);
+				}
+			},
+		});
+		
+		priceSlider.noUiSlider.on('update', function(val) {
+			console.log('noUiSlider upd.')
+			console.log(val)
+			// priceFrom.value = new Intl.NumberFormat().format(+val[0])
+			// priceTo.value = new Intl.NumberFormat().format(+val[1])
+			priceFrom.value = val[0]
+			priceTo.value = val[1]
+		})
+
+
+
 });

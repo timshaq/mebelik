@@ -1,0 +1,326 @@
+.catalog-cont
+	&__fix-cont
+		display: flex
+		justify-content: space-between
+.col-right
+
+.breadscrumb
+	display: flex
+.breadscrumb-item
+	font-family: Open Sans
+	font-style: normal
+	font-weight: normal
+	font-size: 14px
+	line-height: 150%
+	color: var(--black60)
+	&:not(:first-child)
+		margin-left: 5px
+		position: relative
+		&:before
+			content: '/'
+.product-list
+	width: 870px
+	@media(max-width:$tab)
+		width: 100%
+		& .product-line__slide
+			width: 216px
+	&__title_h1
+		font-family: Oswald
+		font-style: normal
+		font-weight: 500
+		font-size: 28px
+		line-height: 41px
+		color: var(--black)
+	&__article
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 170%
+		color: var(--black60)
+		margin-top: 10px
+		&.article2
+			margin-top: 20px
+	&__sort-bar
+		border-radius: 10px
+		background-color: var(--gray)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 15px
+		margin-top: 20px
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		& .product-line__slide
+			margin-top: 30px
+	&__pagination-cont
+		margin-top: 30px
+		display: flex
+		align-items: center
+	&__link-more
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 27px
+		color: var(--blue)
+		width: 55.2873%
+		text-align: right
+	&__pagination
+		width: 44.7126%
+.pagination
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&__link, &__elipsis
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 150%
+		color: var(--black)
+		margin: 0 13px
+		&.active
+			color: var(--blue)
+		&.next,
+		&.prev
+			width: 41px
+			height: 41px
+			border-radius: 7px
+			background-color: var(--gray)
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 0
+			& .arrow
+				stroke: var(--dis-arrow-pag)
+			&.active
+				& .arrow
+					stroke: var(--act-arrow-pag)
+
+.sort-bar
+	&__count
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 140%
+		color: var(--black60)
+	&__label
+
+	&__select-text
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 140%
+		color: var(--black60)
+	&__select
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 140%
+		color: var(--blue)
+		background-color: transparent
+	&__option
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 140%
+		color: var(--blue)
+.filter
+	width: 270px
+	@media(max-width:$tab)
+		display: none
+	&__item
+
+	&__item-title
+		font-family: Open Sans
+		font-style: normal
+		font-weight: 600
+		font-size: 16px
+		line-height: 150%
+		color: var(--black)
+		border-radius: 10px
+		background-color: var(--gray)
+		padding: 13px
+		position: relative
+		margin-bottom: 20px
+		margin-top: 20px
+		&:before
+			content: url('../img/filter__arrow.svg')
+			position: absolute
+			right: 20px
+			top: 50%
+			transform: translateY(-50%) rotate(180deg)
+		&.open
+			&:before
+				transform: translateY(-50%) rotate(0deg)
+	&__item-links-ul
+
+	&__item-links-li
+		margin: 15px 0
+	&__item-links-link
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+	&__item-colors
+
+	&__item-subtitle
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-top: 20px
+		margin-bottom: 10px
+	&__item-colors-ul
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		flex-wrap: wrap
+		&.wood
+			display: block
+			& .filter__item-colors-label
+				display: flex
+				align-items: center
+				margin: 10px 0
+				& .filter__item-colors-color
+					background-image: url('../img/filter__pattern.svg')
+					background-size: 15px 20px
+					background-repeat: no-repeat
+					background-position: center
+				& .filter__item-colors-name
+					margin-left: 10px
+				& input
+					width: 0
+					height: 0
+					visibility: hidden
+					opacity: 0
+					&:checked
+						& + .filter__item-colors-color
+							position: relative
+							&:before
+								content: url('../img/input_checked.svg')
+								position: absolute
+								bottom: 0
+								right: -10px
+	&__item-colors-li
+		&:not(:last-child)
+			margin-right: 15px
+	&__item-colors-label
+		& input
+			width: 0
+			height: 0
+			visibility: hidden
+			opacity: 0
+			&:checked
+				& + .filter__item-colors-color
+					position: relative
+					&:before
+						content: url('../img/input_checked.svg')
+						position: absolute
+						bottom: 0
+						right: -10px
+	&__item-colors-color
+		display: block
+		width: 30px
+		height: 30px
+		border-radius: 5px
+		&.border
+			border: 1px solid var(--black10)
+	&__item-colors-name
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 19px
+		color: var(--black60)
+	&__item-price
+		display: flex
+		justify-content: space-between
+	&__item-price-from, &__item-price-to
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 19px
+		color: var(--black60)
+		border-radius: 5px
+		width: 46%
+		border: 1px solid var(--black10)
+		padding: 12px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__item-price-to
+	&__item-price-input
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 19px
+		color: var(--black60)
+	&__item-check-ul
+
+	&__item-check-li
+		margin: 15px 0
+	&__item-check-label
+		display: flex
+		align-items: center
+	&__item-check-input
+		width: 0
+		height: 0
+		visibility: hidden
+		opacity: 0
+		&:checked + .filter__item-check-fake
+			position: relative
+			&:before
+				content: url('../img/catalog__check.svg')
+				position: absolute
+				width: 14px
+				height: 13px
+				bottom: 3px
+				right: 2px
+	&__item-check-fake
+		width: 21px
+		height: 21px
+		display: block
+		border-radius: 5px
+		background-color: #F2F2F2
+	&__item-check-name
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-left: 10px
+	&__item-more-link
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black)
+	&__submit
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 155%
+		border-radius: 5px
+		color: var(--white)
+		background-color: var(--blue)
+		padding: 10px 28px
+		margin-top: 30px
+.wood
+

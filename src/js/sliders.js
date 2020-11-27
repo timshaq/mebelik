@@ -68,6 +68,7 @@ productLinelist.forEach(line => {
 		slidesPerColumn: 1,
 		spaceBetween: 30,
 		allowTouchMove: false,
+		watchOverflow: true,
 		navigation: {
 			nextEl: nextBtn,
 			prevEl: prevBtn,

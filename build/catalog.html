@@ -7,8 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css">
-
 	<script src="lib/swiper/swiper-bundle.min.js"></script>
+
+	<link rel="stylesheet" href="lib/nouislider/nouislider.min.css">
+	<script src="lib/nouislider/nouislider.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 
@@ -2120,51 +2122,409 @@
 <main>
 
 <div class="catalog-cont">
-	<div class="filter">
-		
-	</div>
-	<div class="col-right">
-		<ul class="breadscrumb">
-			<li class="breadscrumb-item">
-				Главная
-			</li>
-			<li class="breadscrumb-item">
-				Каталог
-			</li>
-			<li class="breadscrumb-item">
-				Спальня
-			</li>
-		</ul>
-		<section class="product-list">
-			<h1 class="product-list__title_h1">
-				Мебель для спальни
-			</h1>
-			<p class="product-list__article">
-				Интернет-магазин “Мебелик” предлагает приобрести недорогие мебель для спальни по ценам от производителя. Возможна покупка в кредит. Гарантия 1 год на всю продукцию. Осуществляем доставку по всей России.
-			</p>
-			<div class="product-list__sort-bar sort-bar">
-				<span class="sort-bar__count">
-					356 шт.
-				</span>
-				<label for="sortby" class="sort-bar__label">
-					<span class="sort-bar__select-text">
-						Сортировать по:
-					</span>
-					<select name="sortby" id="sortby" class="sort-bar__select">
-						<option value="1" selected class="sort-bar__option">
-							популярности
-						</option>
-						<option value="2" class="sort-bar__option">
-							возрастанию цены
-						</option>
-						<option value="3" class="sort-bar__option">
-							снижению цены
-						</option>
-					</select>
-				</label>
-			</div>
-			<div class="product-list__list">
+	<div class="catalog-cont__fix-cont fix-cont">
+		<form class="filter">
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Мебель для спальни
+				</h3>
+
+				<ul class="filter__item-links-ul">
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Кровати для спальни
+						</a>
+					</li>
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Прикроватные тумбы
+						</a>
+					</li>
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Туалетные столики-консоли
+						</a>
+					</li>
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Зеркала для спальни
+						</a>
+					</li>
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Вешалки для спальни
+						</a>
+					</li>
+				</ul>
 				
+			</div>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Цвет
+				</h3>
+				<div class="filter__item-colors">
+					<div class="filter__item-subtitle">
+						Все цвета:
+					</div>
+					<ul class="filter__item-colors-ul">
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #CCCCCC" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #D2B48C" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #663300" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #0000FF" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #000000" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #33CC00" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #FF99FF" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #6600CC" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #FF0000" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #FF9933" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #FFFF00" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #311F0E" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<div class="filter__item-colors">
+					<div class="filter__item-subtitle">
+						Дерево:
+					</div>
+					<ul class="filter__item-colors-ul wood">
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="wood-color">
+								<span style="background-color: #CCCCCC" class="filter__item-colors-color">
+								</span>
+								<span class="filter__item-colors-name">Светлое дерево</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="wood-color">
+								<span style="background-color: #FFFFFF" class="filter__item-colors-color border">
+								</span>
+								<span class="filter__item-colors-name">Белый</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="wood-color">
+								<span style="background-color: #8C5838" class="filter__item-colors-color">
+								</span>
+								<span class="filter__item-colors-name">Коричневое дерево</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="wood-color">
+								<span style="background-color: #503A2C" class="filter__item-colors-color">
+								</span>
+								<span class="filter__item-colors-name">Венге</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Цена
+				</h3>
+				<div class="filter__item-price" data-max="72536" id="price-cont">
+					<div class="filter__item-price-from">от
+						<input class="filter__item-price-input" type="number" value="11485" id="price-from">
+					</div>
+					<div class="filter__item-price-to">до
+						<input class="filter__item-price-input" type="number" value="56550" id="price-to">
+					</div>
+				</div>
+				<div class="filter__item-price-slider" id="price-slider"></div>
+				
+			</div>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Стиль
+				</h3>
+
+				<ul class="filter__item-check-ul">
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Кантри
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Хай-тек
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Эко
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Скандинавский
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Классический
+							</span>
+						</label>
+					</li>
+				</ul>
+
+				<button type="button" class="filter__item-more-link">
+					Показать еще
+				</button>
+			</div>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Материал
+				</h3>
+
+				<ul class="filter__item-check-ul">
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Искусственный мех">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Искусственный мех
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Сатин">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Сатин
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Спанбонд">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Спанбонд
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Рогожка">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Рогожка
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Микрофибра">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Микрофибра
+							</span>
+						</label>
+					</li>
+				</ul>
+
+				<button type="button" class="filter__item-more-link">
+					Показать еще
+				</button>
+			</div>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Размер спального места
+				</h3>
+
+				<ul class="filter__item-check-ul">
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="70х160 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								70х160 см
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="80х190 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								80х190 см
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="70х190 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								70х190 см
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="80х200 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								80х200 см
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="140х190 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								140х190 см
+							</span>
+						</label>
+					</li>
+				</ul>
+
+				<button type="button" class="filter__item-more-link">
+					Показать еще
+				</button>
+			</div>
+			<button type="reset" class="filter__submit">
+				Сбросить фильтр
+			</button>
+		</form>
+		<div class="col-right">
+			<ul class="breadscrumb">
+				<li class="breadscrumb-item">
+					Главная
+				</li>
+				<li class="breadscrumb-item">
+					Каталог
+				</li>
+				<li class="breadscrumb-item">
+					Спальня
+				</li>
+			</ul>
+			<section class="product-list">
+				<h1 class="product-list__title_h1">
+					Мебель для спальни
+				</h1>
+				<p class="product-list__article">
+					Интернет-магазин “Мебелик” предлагает приобрести недорогие мебель для спальни по ценам от производителя. Возможна покупка в кредит. Гарантия 1 год на всю продукцию. Осуществляем доставку по всей России.
+				</p>
+				<div class="product-list__sort-bar sort-bar">
+					<span class="sort-bar__count">
+						356 шт.
+					</span>
+					<label for="sortby" class="sort-bar__label">
+						<span class="sort-bar__select-text">
+							Сортировать по:
+						</span>
+						<select name="sortby" id="sortby" class="sort-bar__select">
+							<option value="1" selected class="sort-bar__option">
+								популярности
+							</option>
+							<option value="2" class="sort-bar__option">
+								возрастанию цены
+							</option>
+							<option value="3" class="sort-bar__option">
+								снижению цены
+							</option>
+						</select>
+					</label>
+				</div>
+				<div class="product-list__list">
+					
 				
 			 	<div class="product-line__slide">
 			 		<div class="product-line__sale">-20%</div>
@@ -4289,40 +4649,1145 @@
 			 	</div>
 
 			 	
-			</div>
-			<div class="product-list__pagination-cont">
-				<a href="#" class="product-list__link-more">
-					Показать еще
-				</a>
-				<div class="product-list__pagination pagination">
-					<a href="#" class="pagination__link prev">
-						<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M6 11.5L0.999999 6.5L6 1.5" stroke="#838383" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</a>
-					<a href="#" class="pagination__link active">1</a>
-					<a href="#" class="pagination__link">2</a>
-					<a href="#" class="pagination__link">3</a>
-					<span class="pagination__elipsis">...</span>
-					<a href="#" class="pagination__link next active">
-						<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M1 1L6 6L1 11" stroke="#E1E1E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</a>
 				</div>
-			</div>
-			<h2 class="product-list__title_h2 title_h2">
-				Мебель для спальни
-			</h2>
-			<p class="product-list__article">
-				Интернет-магазин «Мебелик» предлагает купить в Москве недорогие, но удобные мебель для спальни. В каталоге представлены модели от российских производителей. Мебель для спальни представлены в широком ассортименте 840 моделей в интернет-магазине «ЛегкоМаркет»;
-			</p>
-			<p class="product-list__article">
-				Цены варьируются от 1550 до 227590 рублей; У нас можно сравнить цены на мебель для спальни, прочитать характеристики и отзывы покупателей; Купить мебель для спальни с гарантией по выгодным условиям покупки (в том числе в кредит или рассрочку);
-			</p>
-		</section>
+				<div class="product-list__pagination-cont">
+					<a href="#" class="product-list__link-more">
+						Показать еще
+					</a>
+					<div class="product-list__pagination pagination">
+						<a href="#" class="pagination__link prev">
+							<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="arrow" d="M6 11.5L0.999999 6.5L6 1.5" stroke="#838383" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+						<a href="#" class="pagination__link active">1</a>
+						<a href="#" class="pagination__link">2</a>
+						<a href="#" class="pagination__link">3</a>
+						<span class="pagination__elipsis">...</span>
+						<a href="#" class="pagination__link next active">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="arrow" d="M1 1L6 6L1 11" stroke="#E1E1E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<h2 class="product-list__title_h2 title_h2">
+					Мебель для спальни
+				</h2>
+				<p class="product-list__article article2">
+					Интернет-магазин «Мебелик» предлагает купить в Москве недорогие, но удобные мебель для спальни. В каталоге представлены модели от российских производителей. Мебель для спальни представлены в широком ассортименте 840 моделей в интернет-магазине «ЛегкоМаркет»;
+				</p>
+				<p class="product-list__article article2">
+					Цены варьируются от 1550 до 227590 рублей; У нас можно сравнить цены на мебель для спальни, прочитать характеристики и отзывы покупателей; Купить мебель для спальни с гарантией по выгодным условиям покупки (в том числе в кредит или рассрочку);
+				</p>
+			</section>
+		</div>
 	</div>
 </div>
+
+
+
+<section class="product-line special-offer">
+	<div class="fix-cont product-line__fix-cont">
+		 <h2 class="product-line__title_h2 title_h2">
+		 	Хиты продаж в категории
+		 </h2>
+		 <div class="product-line__slider">
+
+			<div class="swiper-container overflow-dis">
+			    <div class="swiper-wrapper">
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+			    </div>
+			</div>
+		 	
+		 </div>
+		 <div class="product-line__link-block">
+		 	<a href="#" class="product-line__link">
+		 		Показать все предложения
+		 	</a>
+		 </div>
+		<div class="slider-controls">
+			<button class="slider-controls__btn prev ">
+				<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="arrow" d="M6 11.5L1 6.5L6 1.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+			<button class="slider-controls__btn next">
+				<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="arrow" d="M1 1.5L6 6.5L1 11.5" stroke="#0B9EC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+		</div>
+	</div>
+</section>
+
+
+<section class="product-line special-offer">
+	<div class="fix-cont product-line__fix-cont">
+		 <h2 class="product-line__title_h2 title_h2">
+		 	Недавно просмотренные
+		 </h2>
+		 <div class="product-line__slider">
+
+			<div class="swiper-container overflow-dis">
+			    <div class="swiper-wrapper">
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+				 	<div class="product-line__slide swiper-slide">
+				 		<div class="product-line__sale">-20%</div>
+				 		<div class="product-line__status">хит</div>
+				 		<button type="button" class="product-line__wish active">
+				 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+								<path class="heart_active" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353Z" fill="#FF5D46"/>
+
+
+								<g opacity="0.3">
+								<path class="heart_disable" d="M17.2969 1.4353C15.201 1.4353 13.2576 2.40669 12 4.02918C10.7424 2.40669 8.79895 1.4353 6.70312 1.4353C3.00698 1.4353 0 4.44229 0 8.13843C0 9.7904 0.606234 11.3775 1.707 12.6074C2.80177 13.8306 12.0218 22.5648 12.0218 22.5648C12.0218 22.5648 21.1704 13.8615 22.293 12.6074C23.3938 11.3775 24 9.7904 24 8.13843C24 4.44229 20.993 1.4353 17.2969 1.4353ZM2.75484 11.6695C1.88517 10.6979 1.40625 9.44385 1.40625 8.13843C1.40625 5.21769 3.78239 2.84155 6.70312 2.84155C8.66367 2.84155 10.4556 3.91743 11.3797 5.64937L12 6.8121L12.6203 5.64932C13.5443 3.91743 15.3363 2.84155 17.2969 2.84155C20.2176 2.84155 22.5938 5.21769 22.5938 8.13843C22.5938 9.44385 22.1148 10.6979 21.2452 11.6695C20.321 12.702 13.8394 18.9081 11.9998 20.6663C9.6653 18.4362 3.62062 12.6368 2.75484 11.6695V11.6695Z" fill="#333333"/>
+								</g>
+
+							</svg>
+				 		</button>
+				 		<div class="product-line__phcont">
+				 			<img src="img/cross__img_01.svg" alt="" class="product-line__ph">
+				 			<div class="product-line__phcont-slider">
+								<div class="swiper-container">
+								    <div class="swiper-wrapper">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+						 				<img src="img/cross__img_01.svg" alt="" class="product-line__phcont-slide swiper-slide-inside">
+								    </div>
+								    <div class="swiper-pagination"></div>
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="product-line__slide-info">
+				 			<h3 class="product-line__slide-title">
+				 				Кухонный стол для маленькой кухни Боровичи Стол обеденный раскладной прямая ножка
+				 			</h3>
+				 			<div class="product-line__slide-inform">
+					 			<div class="product-line__rating">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 				<img src="img/icon__rating_red.svg" alt="" class="product-line__star">
+					 			</div>
+				 				<div class="product-line__slide-presence">
+				 					В наличии
+				 					<div class="product-line__presence-status" style="background: #62C752"></div>
+				 				</div>
+				 			</div>
+				 			<div class="product-line__price">
+				 				<span class="product-line__price-now">2 800.-</span>
+				 				<span class="product-line__price-old">3 360.-</span>
+				 				<button class="product-line__btn">
+				 					Купить
+				 				</button>
+				 			</div>
+				 			<div class="product-line__options">
+				 				<span class="product-line__options-title">
+				 					Варианты цвета:
+				 				</span>
+				 				<div class="product-line__colors-row">
+			 						<label title="Бежево-коричневый" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #DBC9BC" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Два Коричневых" class="product-line__colors-label">
+			 							<input checked type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+					 							<span style="background-color: #85665B" class="product-line__colors-color2"></span>
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Коричневый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #544645" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+			 						<label title="Бежевый" class="product-line__colors-label">
+			 							<input type="radio" name="color" class="product-line__colors-input">
+			 							<span class="product-line__colors-status">
+				 							<span style="background-color: #DBC9BC" class="product-line__colors-color">
+				 							</span>
+			 							</span>
+			 						</label>
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input checked type="radio" name="size" value="160х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								160x200 см
+			 							</span>
+			 						</label>
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="140х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								140х200 см
+			 							</span>
+			 						</label>
+				 					
+				 				</div>
+				 				<div class="product-line__size-row">
+			 						<label class="product-line__size-label">
+			 							<input type="radio" name="size" value="90х200 см" class="product-line__size-input">
+			 							<span class="product-line__size-text">
+			 								90х200 см
+			 							</span>
+			 						</label>
+				 				</div>
+				 			</div>
+				 		</div>
+				 	</div>
+			    </div>
+			</div>
+		 	
+		 </div>
+		 <div class="product-line__link-block">
+		 	<a href="#" class="product-line__link">
+		 		Показать все предложения
+		 	</a>
+		 </div>
+		<div class="slider-controls">
+			<button class="slider-controls__btn prev ">
+				<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="arrow" d="M6 11.5L1 6.5L6 1.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+			<button class="slider-controls__btn next">
+				<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="arrow" d="M1 1.5L6 6.5L1 11.5" stroke="#0B9EC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+		</div>
+	</div>
+</section>
 
 </main>
 

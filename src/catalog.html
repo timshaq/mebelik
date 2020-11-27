@@ -7,8 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css">
-
 	<script src="lib/swiper/swiper-bundle.min.js"></script>
+
+	<link rel="stylesheet" href="lib/nouislider/nouislider.min.css">
+	<script src="lib/nouislider/nouislider.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 
@@ -24,85 +26,447 @@
 <main>
 
 <div class="catalog-cont">
-	<div class="filter">
-		
-	</div>
-	<div class="col-right">
-		<ul class="breadscrumb">
-			<li class="breadscrumb-item">
-				Главная
-			</li>
-			<li class="breadscrumb-item">
-				Каталог
-			</li>
-			<li class="breadscrumb-item">
-				Спальня
-			</li>
-		</ul>
-		<section class="product-list">
-			<h1 class="product-list__title_h1">
-				Мебель для спальни
-			</h1>
-			<p class="product-list__article">
-				Интернет-магазин “Мебелик” предлагает приобрести недорогие мебель для спальни по ценам от производителя. Возможна покупка в кредит. Гарантия 1 год на всю продукцию. Осуществляем доставку по всей России.
-			</p>
-			<div class="product-list__sort-bar sort-bar">
-				<span class="sort-bar__count">
-					356 шт.
-				</span>
-				<label for="sortby" class="sort-bar__label">
-					<span class="sort-bar__select-text">
-						Сортировать по:
-					</span>
-					<select name="sortby" id="sortby" class="sort-bar__select">
-						<option value="1" selected class="sort-bar__option">
-							популярности
-						</option>
-						<option value="2" class="sort-bar__option">
-							возрастанию цены
-						</option>
-						<option value="3" class="sort-bar__option">
-							снижению цены
-						</option>
-					</select>
-				</label>
+	<div class="catalog-cont__fix-cont fix-cont">
+		<form class="filter">
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Мебель для спальни
+				</h3>
+
+				<ul class="filter__item-links-ul">
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Кровати для спальни
+						</a>
+					</li>
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Прикроватные тумбы
+						</a>
+					</li>
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Туалетные столики-консоли
+						</a>
+					</li>
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Зеркала для спальни
+						</a>
+					</li>
+					<li class="filter__item-links-li">
+						<a href="#" class="filter__item-links-link">
+							Вешалки для спальни
+						</a>
+					</li>
+				</ul>
+				
 			</div>
-			<div class="product-list__list">
-				@@include('html/catalog/product-list__items.html')
-			</div>
-			<div class="product-list__pagination-cont">
-				<a href="#" class="product-list__link-more">
-					Показать еще
-				</a>
-				<div class="product-list__pagination pagination">
-					<a href="#" class="pagination__link prev">
-						<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M6 11.5L0.999999 6.5L6 1.5" stroke="#838383" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</a>
-					<a href="#" class="pagination__link active">1</a>
-					<a href="#" class="pagination__link">2</a>
-					<a href="#" class="pagination__link">3</a>
-					<span class="pagination__elipsis">...</span>
-					<a href="#" class="pagination__link next active">
-						<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M1 1L6 6L1 11" stroke="#E1E1E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</a>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Цвет
+				</h3>
+				<div class="filter__item-colors">
+					<div class="filter__item-subtitle">
+						Все цвета:
+					</div>
+					<ul class="filter__item-colors-ul">
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #CCCCCC" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #D2B48C" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #663300" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #0000FF" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #000000" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #33CC00" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #FF99FF" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #6600CC" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #FF0000" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #FF9933" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #FFFF00" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="all-color">
+								<span style="background-color: #311F0E" class="filter__item-colors-color">
+								</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<div class="filter__item-colors">
+					<div class="filter__item-subtitle">
+						Дерево:
+					</div>
+					<ul class="filter__item-colors-ul wood">
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="wood-color">
+								<span style="background-color: #CCCCCC" class="filter__item-colors-color">
+								</span>
+								<span class="filter__item-colors-name">Светлое дерево</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="wood-color">
+								<span style="background-color: #FFFFFF" class="filter__item-colors-color border">
+								</span>
+								<span class="filter__item-colors-name">Белый</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="wood-color">
+								<span style="background-color: #8C5838" class="filter__item-colors-color">
+								</span>
+								<span class="filter__item-colors-name">Коричневое дерево</span>
+							</label>
+						</li>
+						<li class="filter__item-colors-li">
+							<label class="filter__item-colors-label">
+								<input type="checkbox" name="wood-color">
+								<span style="background-color: #503A2C" class="filter__item-colors-color">
+								</span>
+								<span class="filter__item-colors-name">Венге</span>
+							</label>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<h2 class="product-list__title_h2 title_h2">
-				Мебель для спальни
-			</h2>
-			<p class="product-list__article">
-				Интернет-магазин «Мебелик» предлагает купить в Москве недорогие, но удобные мебель для спальни. В каталоге представлены модели от российских производителей. Мебель для спальни представлены в широком ассортименте 840 моделей в интернет-магазине «ЛегкоМаркет»;
-			</p>
-			<p class="product-list__article">
-				Цены варьируются от 1550 до 227590 рублей; У нас можно сравнить цены на мебель для спальни, прочитать характеристики и отзывы покупателей; Купить мебель для спальни с гарантией по выгодным условиям покупки (в том числе в кредит или рассрочку);
-			</p>
-		</section>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Цена
+				</h3>
+				<div class="filter__item-price" data-max="72536" id="price-cont">
+					<div class="filter__item-price-from">от
+						<input class="filter__item-price-input" type="number" value="11485" id="price-from">
+					</div>
+					<div class="filter__item-price-to">до
+						<input class="filter__item-price-input" type="number" value="56550" id="price-to">
+					</div>
+				</div>
+				<div class="filter__item-price-slider" id="price-slider"></div>
+				
+			</div>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Стиль
+				</h3>
+
+				<ul class="filter__item-check-ul">
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Кантри
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Хай-тек
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Эко
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Скандинавский
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="style" class="filter__item-check-input">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Классический
+							</span>
+						</label>
+					</li>
+				</ul>
+
+				<button type="button" class="filter__item-more-link">
+					Показать еще
+				</button>
+			</div>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Материал
+				</h3>
+
+				<ul class="filter__item-check-ul">
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Искусственный мех">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Искусственный мех
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Сатин">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Сатин
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Спанбонд">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Спанбонд
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Рогожка">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Рогожка
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="material" class="filter__item-check-input" value="Микрофибра">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								Микрофибра
+							</span>
+						</label>
+					</li>
+				</ul>
+
+				<button type="button" class="filter__item-more-link">
+					Показать еще
+				</button>
+			</div>
+			<div class="filter__item">
+				<h3 class="filter__item-title">
+					Размер спального места
+				</h3>
+
+				<ul class="filter__item-check-ul">
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="70х160 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								70х160 см
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="80х190 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								80х190 см
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="70х190 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								70х190 см
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="80х200 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								80х200 см
+							</span>
+						</label>
+					</li>
+					<li class="filter__item-check-li">
+						<label class="filter__item-check-label">
+							<input type="checkbox" name="size" class="filter__item-check-input" value="140х190 см">
+							<span class="filter__item-check-fake"></span>
+							<span class="filter__item-check-name">
+								140х190 см
+							</span>
+						</label>
+					</li>
+				</ul>
+
+				<button type="button" class="filter__item-more-link">
+					Показать еще
+				</button>
+			</div>
+			<button type="reset" class="filter__submit">
+				Сбросить фильтр
+			</button>
+		</form>
+		<div class="col-right">
+			<ul class="breadscrumb">
+				<li class="breadscrumb-item">
+					Главная
+				</li>
+				<li class="breadscrumb-item">
+					Каталог
+				</li>
+				<li class="breadscrumb-item">
+					Спальня
+				</li>
+			</ul>
+			<section class="product-list">
+				<h1 class="product-list__title_h1">
+					Мебель для спальни
+				</h1>
+				<p class="product-list__article">
+					Интернет-магазин “Мебелик” предлагает приобрести недорогие мебель для спальни по ценам от производителя. Возможна покупка в кредит. Гарантия 1 год на всю продукцию. Осуществляем доставку по всей России.
+				</p>
+				<div class="product-list__sort-bar sort-bar">
+					<span class="sort-bar__count">
+						356 шт.
+					</span>
+					<label for="sortby" class="sort-bar__label">
+						<span class="sort-bar__select-text">
+							Сортировать по:
+						</span>
+						<select name="sortby" id="sortby" class="sort-bar__select">
+							<option value="1" selected class="sort-bar__option">
+								популярности
+							</option>
+							<option value="2" class="sort-bar__option">
+								возрастанию цены
+							</option>
+							<option value="3" class="sort-bar__option">
+								снижению цены
+							</option>
+						</select>
+					</label>
+				</div>
+				<div class="product-list__list">
+					@@include('html/catalog/product-list__items.html')
+				</div>
+				<div class="product-list__pagination-cont">
+					<a href="#" class="product-list__link-more">
+						Показать еще
+					</a>
+					<div class="product-list__pagination pagination">
+						<a href="#" class="pagination__link prev">
+							<svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="arrow" d="M6 11.5L0.999999 6.5L6 1.5" stroke="#838383" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+						<a href="#" class="pagination__link active">1</a>
+						<a href="#" class="pagination__link">2</a>
+						<a href="#" class="pagination__link">3</a>
+						<span class="pagination__elipsis">...</span>
+						<a href="#" class="pagination__link next active">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="arrow" d="M1 1L6 6L1 11" stroke="#E1E1E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<h2 class="product-list__title_h2 title_h2">
+					Мебель для спальни
+				</h2>
+				<p class="product-list__article article2">
+					Интернет-магазин «Мебелик» предлагает купить в Москве недорогие, но удобные мебель для спальни. В каталоге представлены модели от российских производителей. Мебель для спальни представлены в широком ассортименте 840 моделей в интернет-магазине «ЛегкоМаркет»;
+				</p>
+				<p class="product-list__article article2">
+					Цены варьируются от 1550 до 227590 рублей; У нас можно сравнить цены на мебель для спальни, прочитать характеристики и отзывы покупателей; Купить мебель для спальни с гарантией по выгодным условиям покупки (в том числе в кредит или рассрочку);
+				</p>
+			</section>
+		</div>
 	</div>
 </div>
+
+@@include('html/catalog/product-line1.html')
+@@include('html/catalog/product-line2.html')
 
 </main>
 
