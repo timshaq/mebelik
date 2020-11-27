@@ -197,10 +197,4 @@ const salesSlider = new Swiper('.sales .sales__col.slider .swiper-container', {
 
 
 
-
-
-
-
-
-
 }

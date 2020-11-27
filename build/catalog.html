@@ -2123,7 +2123,13 @@
 
 <div class="catalog-cont">
 	<div class="catalog-cont__fix-cont fix-cont">
-		<form class="filter">
+		<form class="filter" id="filter">
+			<button type="button" id="filter-close" class="filter__close">
+				<img src="img/btn__close.svg" alt="">
+			</button>
+			<h2 class="filter__title_h2 title_h2">
+				Фильтр
+			</h2>
 			<div class="filter__item">
 				<h3 class="filter__item-title">
 					Мебель для спальни
@@ -2297,12 +2303,14 @@
 				<h3 class="filter__item-title">
 					Цена
 				</h3>
-				<div class="filter__item-price" data-max="72536" id="price-cont">
-					<div class="filter__item-price-from">от
-						<input class="filter__item-price-input" type="number" value="11485" id="price-from">
-					</div>
+				<div class="filter__item-price" data-min="112" data-max="72536" id="price-cont">
+					<label class="filter__item-price-from">
+						<span>от</span>
+						<input autocomplete="off" class="filter__item-price-input" type="number" value="11485" id="price-from">
+					</label>
+					
 					<div class="filter__item-price-to">до
-						<input class="filter__item-price-input" type="number" value="56550" id="price-to">
+						<input autocomplete="off" class="filter__item-price-input" type="number" value="56550" id="price-to">
 					</div>
 				</div>
 				<div class="filter__item-price-slider" id="price-slider"></div>
@@ -2506,22 +2514,30 @@
 					<span class="sort-bar__count">
 						356 шт.
 					</span>
-					<label for="sortby" class="sort-bar__label">
-						<span class="sort-bar__select-text">
-							Сортировать по:
-						</span>
-						<select name="sortby" id="sortby" class="sort-bar__select">
-							<option value="1" selected class="sort-bar__option">
-								популярности
-							</option>
-							<option value="2" class="sort-bar__option">
-								возрастанию цены
-							</option>
-							<option value="3" class="sort-bar__option">
-								снижению цены
-							</option>
-						</select>
-					</label>
+					<div class="sort-bar__controls">
+						<button type="button" id="filter-btn" class="sort-bar__filter-btn">
+							<img src="img/catalog__filter.svg" alt="">
+						</button>
+						<button type="button" id="sort-btn" class="sort-bar__sort-btn">
+							<img src="img/catalog__sort.svg" alt="">
+						</button>
+						<label for="sortby" class="sort-bar__label">
+							<span class="sort-bar__select-text">
+								Сортировать по:
+							</span>
+							<select name="sortby" id="sortby" class="sort-bar__select">
+								<option value="1" selected class="sort-bar__option">
+									популярности
+								</option>
+								<option value="2" class="sort-bar__option">
+									возрастанию цены
+								</option>
+								<option value="3" class="sort-bar__option">
+									снижению цены
+								</option>
+							</select>
+						</label>
+					</div>
 				</div>
 				<div class="product-list__list">
 					

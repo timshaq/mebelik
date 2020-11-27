@@ -24,6 +24,8 @@
 		width: 100%
 		& .product-line__slide
 			width: 216px
+			@media(max-width:$mob)
+				width: calc(50% - 5px)
 	&__title_h1
 		font-family: Oswald
 		font-style: normal
@@ -101,6 +103,25 @@
 					stroke: var(--act-arrow-pag)
 
 .sort-bar
+	&__controls
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__sort-btn,
+	&__filter-btn
+		width: 24px
+		height: 24px
+	&__filter-btn
+		display: none
+		@media(max-width:$tab)
+			display: block
+	&__sort-btn
+		display: none
+		margin-left: 15px
+		@media(max-width:$mob)
+			display: block
+			&.active
+				transform: rotate(180deg)
 	&__count
 		font-family: Open Sans
 		font-style: normal
@@ -109,7 +130,10 @@
 		line-height: 140%
 		color: var(--black60)
 	&__label
-
+		@media(max-width:$tab)
+			margin-left: 15px
+		@media(max-width:$mob)
+			display: none
 	&__select-text
 		font-family: Open Sans
 		font-style: normal
@@ -135,9 +159,46 @@
 .filter
 	width: 270px
 	@media(max-width:$tab)
+		position: fixed
+		top: 0
+		left: 0
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		width: 100%
+		height: 100vh
+		background-color: var(--white)
+		padding: 0 15px
+		transform: translateX(-150%)
+		transition: all linear .1s
+		overflow-y: auto
+		&.open
+			z-index: 30
+			opacity: 1
+			visibility: visible
+			transform: translateX(0)
+			transition: all linear .2s
+	&__item-price-slider
+		margin-top: 20px
+		margin-bottom: 30px
+		width: calc(100% - 15px)
+	&__title_h2
 		display: none
+		@media(max-width:$tab)
+			display: block
+			margin: 15px 0
 	&__item
-
+		&.hide
+			& *
+				&:not(.filter__item-title)
+					display: none
+			& .filter__item-title
+				&:before
+					transform: translateY(-50%) rotate(180deg)
+	&__close
+		position: absolute
+		top: 27px
+		right: 15px
 	&__item-title
 		font-family: Open Sans
 		font-style: normal
@@ -156,10 +217,7 @@
 			position: absolute
 			right: 20px
 			top: 50%
-			transform: translateY(-50%) rotate(180deg)
-		&.open
-			&:before
-				transform: translateY(-50%) rotate(0deg)
+			transform: translateY(-50%) rotate(0deg)
 	&__item-links-ul
 
 	&__item-links-li
@@ -193,6 +251,7 @@
 				display: flex
 				align-items: center
 				margin: 10px 0
+
 				& .filter__item-colors-color
 					background-image: url('../img/filter__pattern.svg')
 					background-size: 15px 20px
@@ -269,6 +328,8 @@
 		font-size: 14px
 		line-height: 19px
 		color: var(--black60)
+		max-width: 86px
+		margin-left: 5px
 	&__item-check-ul
 
 	&__item-check-li
@@ -322,5 +383,19 @@
 		background-color: var(--blue)
 		padding: 10px 28px
 		margin-top: 30px
-.wood
-
+.noUi-target
+	height: 7px
+	background-color: var(--black10)
+	background-position: center
+	background-size: 100% 5px
+	background-repeat: no-repeat
+.noUi-connect
+	background-color: #C6C6C6
+.noUi-horizontal .noUi-handle
+	border: 2px solid #C6C6C6
+	background: #FFFFFF
+	border-radius: 100%
+	width: 19px
+	height: 19px
+	&:before, &:after
+		display: none

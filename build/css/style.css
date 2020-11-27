@@ -332,6 +332,11 @@ main {
           align-items: center;
 }
 
+.product-line__slider .swiper-container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /*    </GLOBAL>    */
 .header {
   position: fixed;
@@ -3885,6 +3890,12 @@ main {
   }
 }
 
+@media (max-width: 1199px) and (max-width: 699px) {
+  .product-list .product-line__slide {
+    width: calc(50% - 5px);
+  }
+}
+
 .product-list__title_h1 {
   font-family: Oswald;
   font-style: normal;
@@ -4029,6 +4040,52 @@ main {
   stroke: var(--act-arrow-pag);
 }
 
+.sort-bar__controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sort-bar__sort-btn, .sort-bar__filter-btn {
+  width: 24px;
+  height: 24px;
+}
+
+.sort-bar__filter-btn {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .sort-bar__filter-btn {
+    display: block;
+  }
+}
+
+.sort-bar__sort-btn {
+  display: none;
+  margin-left: 15px;
+}
+
+@media (max-width: 699px) {
+  .sort-bar__sort-btn {
+    display: block;
+  }
+  .sort-bar__sort-btn.active {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
 .sort-bar__count {
   font-family: Open Sans;
   font-style: normal;
@@ -4036,6 +4093,18 @@ main {
   font-size: 14px;
   line-height: 140%;
   color: var(--black60);
+}
+
+@media (max-width: 1199px) {
+  .sort-bar__label {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 699px) {
+  .sort-bar__label {
+    display: none;
+  }
 }
 
 .sort-bar__select-text {
@@ -4072,8 +4141,66 @@ main {
 
 @media (max-width: 1199px) {
   .filter {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    padding: 0 15px;
+    -webkit-transform: translateX(-150%);
+        -ms-transform: translateX(-150%);
+            transform: translateX(-150%);
+    -webkit-transition: all linear .1s;
+    transition: all linear .1s;
+    overflow-y: auto;
   }
+  .filter.open {
+    z-index: 30;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all linear .2s;
+    transition: all linear .2s;
+  }
+}
+
+.filter__item-price-slider {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: calc(100% - 15px);
+}
+
+.filter__title_h2 {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .filter__title_h2 {
+    display: block;
+    margin: 15px 0;
+  }
+}
+
+.filter__item.hide *:not(.filter__item-title) {
+  display: none;
+}
+
+.filter__item.hide .filter__item-title:before {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.filter__close {
+  position: absolute;
+  top: 27px;
+  right: 15px;
 }
 
 .filter__item-title {
@@ -4096,12 +4223,6 @@ main {
   position: absolute;
   right: 20px;
   top: 50%;
-  -webkit-transform: translateY(-50%) rotate(180deg);
-      -ms-transform: translateY(-50%) rotate(180deg);
-          transform: translateY(-50%) rotate(180deg);
-}
-
-.filter__item-title.open:before {
   -webkit-transform: translateY(-50%) rotate(0deg);
       -ms-transform: translateY(-50%) rotate(0deg);
           transform: translateY(-50%) rotate(0deg);
@@ -4279,6 +4400,8 @@ main {
   font-size: 14px;
   line-height: 19px;
   color: var(--black60);
+  max-width: 86px;
+  margin-left: 5px;
 }
 
 .filter__item-check-li {
@@ -4354,6 +4477,30 @@ main {
   background-color: var(--blue);
   padding: 10px 28px;
   margin-top: 30px;
+}
+
+.noUi-target {
+  height: 7px;
+  background-color: var(--black10);
+  background-position: center;
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+}
+
+.noUi-connect {
+  background-color: #C6C6C6;
+}
+
+.noUi-horizontal .noUi-handle {
+  border: 2px solid #C6C6C6;
+  background: #FFFFFF;
+  border-radius: 100%;
+  width: 19px;
+  height: 19px;
+}
+
+.noUi-horizontal .noUi-handle:before, .noUi-horizontal .noUi-handle:after {
+  display: none;
 }
 
 .footer {
