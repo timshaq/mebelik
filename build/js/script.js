@@ -173,7 +173,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       watchOverflow: !0,
       slidesPerView: 4,
       spaceBetween: 30,
-      lazy: !0,
       on: {
         imagesReady: function imagesReady() {
           var e = this.height;
@@ -392,8 +391,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         g = document.getElementById("btn-auth"),
         h = document.getElementById("auth-cont"),
         L = document.getElementById("auth-close"),
-        y = document.getElementById("registr-cont"),
-        E = document.getElementById("regist-close");
+        E = document.getElementById("registr-cont"),
+        y = document.getElementById("regist-close");
 
     function b(e) {
       e.classList.remove("open"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
@@ -406,13 +405,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     f.addEventListener("click", function () {
       return _(h);
     }), w.addEventListener("click", function () {
-      b(h), _(y);
+      b(h), _(E);
     }), g.addEventListener("click", function () {
-      b(y), _(h);
+      b(E), _(h);
     }), L.addEventListener("click", function () {
       return b(h);
-    }), E.addEventListener("click", function () {
-      return b(y);
+    }), y.addEventListener("click", function () {
+      return b(E);
     }), Object(o["default"])();
   });
 }]);

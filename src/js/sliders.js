@@ -35,7 +35,6 @@ const newsSlider = new Swiper('.news .news__row.swiper-container', {
 	watchOverflow: true,
 	slidesPerView: 4,
 	spaceBetween: 30,
-	lazy: true,
 	on: {
 		imagesReady: function() {
 			var height = this.height
