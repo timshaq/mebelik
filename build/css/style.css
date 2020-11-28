@@ -47,6 +47,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Open Sans Condensed';
+  src: url("../fonts/RobotoCondensed/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/RobotoCondensed/RobotoCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
 /*    <NULL>    */
 * {
   padding: 0;
