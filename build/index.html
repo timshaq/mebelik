@@ -80,7 +80,7 @@
 					</a>
 				</div>
 				<div class="header__control profile">
-					<div title="Профиль" class="header__control-btn">
+					<div title="Профиль" class="header__control-btn" id="btn-login">
 						<img src="img/icon__profile.svg" alt="Профиль">
 					</div>
 				</div>
@@ -4619,6 +4619,81 @@
 <div class="arrow-up" id="arrow-up">
 	<div class="arrow-up__circle">
 		<img src="img/arrow-up.svg" alt="" class="arrow-up__arrow">
+	</div>
+</div>
+<div class="popup-cont" id="auth-cont">
+	<div class="popup">
+		<button type="button" class="popup__close" id="auth-close">
+			<img src="img/btn__close.svg" alt="">
+		</button>
+		<form class="popup__form">
+			<h3 class="popup__title">
+				Войдите в личный кабинет
+			</h3>
+			<label class="popup__label">
+				<input type="text" class="popup__input" placeholder="Email">
+			</label>
+			<label class="popup__label">
+				<input type="password" class="popup__input" placeholder="Пароль">
+			</label>
+			<div class="popup__row between">
+				<label class="popup__label-check">
+					<input type="checkbox" name="mind" class="popup__checkbox">
+					<span class="popup__text">
+						Запомнить меня
+					</span>
+				</label>
+				<a href="#" class="popup__link">
+					Забыли пароль?
+				</a>
+			</div>
+			<button class="popup__submit">
+				Войти
+			</button>
+			<div class="popup__row">
+				<span class="popup__text">
+					Еще нет аккаунта?
+				</span>
+				<button type="button" id="btn-registr" class="popup__link">
+					Зарегистрируйтесь!
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="popup-cont" id="registr-cont">
+	<div class="popup">
+		<button type="button" class="popup__close" id="regist-close">
+			<img src="img/btn__close.svg" alt="">
+		</button>
+		<form class="popup__form">
+			<h3 class="popup__title">
+				Создайте аккаунт
+			</h3>
+			<label class="popup__label">
+				<input type="text" class="popup__input" placeholder="Укажите Ваш email">
+			</label>
+			<label class="popup__label">
+				<input type="text" class="popup__input" placeholder="Укажите Ваше имя и фамилию">
+			</label>
+			<label class="popup__label">
+				<input type="password" class="popup__input" placeholder="Придумайте надежный пароль">
+			</label>
+			<label class="popup__label">
+				<input type="password" class="popup__input" placeholder="Повторите пароль">
+			</label>
+			<button class="popup__submit">
+				Зарегистрироваться
+			</button>
+			<div class="popup__row">
+				<span class="popup__text">
+					Уже есть аккаунт?
+				</span>
+				<button type="button" id="btn-auth" class="popup__link">
+					Войдите!
+				</button>
+			</div>
+		</form>
 	</div>
 </div>
 

@@ -90,8 +90,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }), n.addEventListener("keydown", function (t) {
       e.noUiSlider.set([null, n.value]);
     });
-    var r = document.getElementById("filter-btn"),
-        l = document.getElementById("sort-btn"),
+    var l = document.getElementById("filter-btn"),
+        r = document.getElementById("sort-btn"),
         o = document.getElementById("filter-close"),
         a = document.getElementById("filter"),
         c = document.getElementById("html");
@@ -104,19 +104,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       e.classList.add("open"), c.style.overflowX = "hidden", c.style.overflowY = "hidden";
     }
 
-    r.addEventListener("click", function () {
+    l.addEventListener("click", function () {
       return u(a);
     }), o.addEventListener("click", function () {
       return d(a);
-    }), l.addEventListener("click", function () {
-      l.classList.contains("active") ? l.classList.remove("active") : l.classList.add("active");
+    }), r.addEventListener("click", function () {
+      r.classList.contains("active") ? r.classList.remove("active") : r.classList.add("active");
     });
     var p = document.querySelectorAll(".filter__item"),
-        w = Array.prototype.slice.call(p),
-        f = document.querySelectorAll(".filter__item-title");
-    Array.prototype.slice.call(f).forEach(function (e, t) {
+        m = Array.prototype.slice.call(p),
+        w = document.querySelectorAll(".filter__item-title");
+    Array.prototype.slice.call(w).forEach(function (e, t) {
       e.addEventListener("click", function () {
-        w[t].classList.contains("hide") ? w[t].classList.remove("hide") : w[t].classList.add("hide");
+        m[t].classList.contains("hide") ? m[t].classList.remove("hide") : m[t].classList.add("hide");
       });
     });
   };
@@ -328,18 +328,18 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   n.r(t);
   var s = n(3),
       i = n(0),
-      r = n(4),
-      l = n(2),
+      l = n(4),
+      r = n(2),
       o = n(1);
   document.addEventListener("DOMContentLoaded", function () {
     var e,
         t = document.getElementById("header");
     e = window.innerWidth > 0 ? window.innerWidth : screen.width, window.addEventListener("resize", function (t) {
       e = window.innerWidth > 0 ? window.innerWidth : screen.width, console.log("resize");
-    }), Object(s["default"])(), Object(l["default"])(e), window.addEventListener("scroll", function (e) {
+    }), Object(s["default"])(), Object(r["default"])(e), window.addEventListener("scroll", function (e) {
       var t = window.scrollY;
       console.log(t), Object(i["default"])();
-    }), Object(i["default"])(), Object(r["default"])();
+    }), Object(i["default"])(), Object(l["default"])();
     document.querySelectorAll(".header__nav-item").forEach(function (t) {
       t.addEventListener("click", function (n) {
         if (n.preventDefault(), console.log("ev"), console.log(n.target), e <= 768) if (n.preventDefault(), n.target === this || n.target === this.children[0]) console.log("this"), console.log(this), t.classList.contains("open") ? t.classList.remove("open") : t.classList.add("open");else if (n.target.classList.contains("header__more-title-link") || n.target.classList.contains("header__more-title")) {
@@ -360,16 +360,43 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         d = document.getElementById("catalog-tab-list"),
         u = document.getElementById("help-tab-list"),
         p = document.getElementById("login-tab-cont"),
-        w = [n, a, c],
-        f = [d, u, p];
-    w.forEach(function (e, t) {
+        m = [n, a, c],
+        w = [d, u, p];
+    m.forEach(function (e, t) {
       e.addEventListener("click", function () {
-        w.forEach(function (e) {
+        m.forEach(function (e) {
           return e.classList.remove("active");
-        }), w[t].classList.add("active"), f.forEach(function (e) {
+        }), m[t].classList.add("active"), w.forEach(function (e) {
           return e.classList.remove("open");
-        }), f[t].classList.add("open");
+        }), w[t].classList.add("open");
       });
+    });
+    var f = document.getElementById("btn-login"),
+        v = document.getElementById("btn-registr"),
+        g = document.getElementById("btn-auth"),
+        h = document.getElementById("auth-cont"),
+        y = document.getElementById("auth-close"),
+        E = document.getElementById("registr-cont"),
+        L = document.getElementById("regist-close");
+
+    function b(e) {
+      e.classList.remove("open"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
+    }
+
+    function _(e) {
+      e.classList.add("open"), html.style.overflowX = "hidden", html.style.overflowY = "hidden";
+    }
+
+    f.addEventListener("click", function () {
+      return _(h);
+    }), v.addEventListener("click", function () {
+      b(h), _(E);
+    }), g.addEventListener("click", function () {
+      b(E), _(h);
+    }), y.addEventListener("click", function () {
+      return b(h);
+    }), L.addEventListener("click", function () {
+      return b(E);
     }), Object(o["default"])();
   });
 }]);

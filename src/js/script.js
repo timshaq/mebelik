@@ -123,6 +123,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		})
 
+		const btnLogIn = document.getElementById('btn-login')
+		const btnReg = document.getElementById('btn-registr')
+		const btnAuth = document.getElementById('btn-auth')
+
+		const contAuth = document.getElementById('auth-cont')
+		const closeAuth = document.getElementById('auth-close')
+
+		const contReg = document.getElementById('registr-cont')
+		const closeReg = document.getElementById('regist-close')
+
+
+		function disableScroll() {
+			html.style.overflowX = 'hidden';
+			html.style.overflowY = 'hidden';
+		};
+
+		function enableScroll() {
+			html.style.overflowX = 'hidden';
+			html.style.overflowY = 'scroll';
+		};
+
+		function closeEl(el) {
+			el.classList.remove('open');
+			enableScroll();
+		}
+
+		function openEl(el) {
+			el.classList.add('open');
+			disableScroll();
+		}
+
+
+		btnLogIn.addEventListener('click', () => openEl(contAuth))
+		btnReg.addEventListener('click', () => {
+			closeEl(contAuth)
+			openEl(contReg)
+		})
+		btnAuth.addEventListener('click', () => {
+			closeEl(contReg)
+			openEl(contAuth)
+		})
+		closeAuth.addEventListener('click', () => closeEl(contAuth))
+		closeReg.addEventListener('click', () => closeEl(contReg))
+
 		catalog()
+
 
 });
