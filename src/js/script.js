@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	window.addEventListener('scroll', function(ev) {
 		var scrollTop = window.scrollY
-		console.log(scrollTop)
+		// console.log(scrollTop)
 		headerActiveClass()
 	});
 

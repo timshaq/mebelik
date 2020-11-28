@@ -1,20 +1,21 @@
 .news
 	margin: 60px 0
 	&__title_h3
-		font-family: Roboto
-		font-style: normal
-		font-weight: normal
-		font-size: 14px
-		line-height: 150%
-		color: var(--black)
-		@media(max-width:$tab)
-			overflow: hidden
-			text-overflow: ellipsis
-			display: -webkit-box
-			-webkit-box-orient: vertical
-			-webkit-line-clamp: 2
-			line-height: 21px
-			max-height: 42px
+		& a
+			font-family: Roboto
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 150%
+			color: var(--black)
+			@media(max-width:$tab)
+				overflow: hidden
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 2
+				line-height: 21px
+				max-height: 42px
 	&__row
 		display: flex
 		justify-content: space-between
@@ -56,12 +57,19 @@
 		border-right: 1px solid var(--black10)
 		border-bottom: 1px solid var(--black10)
 		padding: 20px 20px 17px
+		height: calc(100% - 200px)
+		display: flex
+		flex-direction: column
 		@media(max-width:$tab)
+			height: calc(100% - 170px)
 			padding: 15px
+		@media(max-width:$mob)
+			height: calc(100% - 180px)
 	&__props
 		display: flex
 		justify-content: space-between
 		margin-top: 13px
+		margin-top: auto
 	&__date
 		font-family: Roboto
 		font-style: normal

@@ -113,11 +113,19 @@
 			top: 50%
 			right: -30px
 			transform: translate(100%,-50%)
+			@media(max-width:1350px)
+				top: 25%
+				right: -30px
+
 		&.prev
 			top: 50%
 			left: -120px
 			transform: translate(100%,-50%)
 			z-index: 2
+			@media(max-width:1350px)
+				top: 75%
+				right: -30px
+				left: auto
 		& .arrow
 			stroke: var(--blue)
 		&.swiper-button-disabled

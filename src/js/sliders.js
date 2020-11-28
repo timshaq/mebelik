@@ -31,11 +31,22 @@ const previewSlider = new Swiper('.preview.swiper-container', {
 	},
 
 })
-
 const newsSlider = new Swiper('.news .news__row.swiper-container', {
 	watchOverflow: true,
 	slidesPerView: 4,
 	spaceBetween: 30,
+	lazy: true,
+	on: {
+		imagesReady: function() {
+			var height = this.height
+			console.log('height')
+			console.log(height)
+			this.slides.forEach(slide => {
+				console.log(slide)
+				slide.style.height = `${height}px`
+			})
+		},
+	},
 	breakpoints: {
 		320: {
 			slidesPerView: 1.2,
@@ -55,6 +66,7 @@ const newsSlider = new Swiper('.news .news__row.swiper-container', {
 	},
 
 })
+
 
 var productLinelist = document.querySelectorAll('.product-line');
 productLinelist = Array.prototype.slice.call(productLinelist);
@@ -142,15 +154,15 @@ const brandsSlider = new Swiper('.brands__slider', {
 		0: {
 			allowTouchMove: true,
 			slidesPerView: 1.8,
-			spaceBetween: 10,
+			spaceBetween: 60,
 		},
 		768: {
 			slidesPerView: 4.35,
-			spaceBetween: 0,
+			spaceBetween: 60,
 		},
 		1200: {
 			slidesPerView: 6,
-			spaceBetween: 0,
+			spaceBetween: 80,
 		},
 	},
 

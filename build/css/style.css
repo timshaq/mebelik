@@ -3175,7 +3175,7 @@ main {
   margin: 60px 0;
 }
 
-.news__title_h3 {
+.news__title_h3 a {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -3185,7 +3185,7 @@ main {
 }
 
 @media (max-width: 1199px) {
-  .news__title_h3 {
+  .news__title_h3 a {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -3285,11 +3285,28 @@ main {
   border-right: 1px solid var(--black10);
   border-bottom: 1px solid var(--black10);
   padding: 20px 20px 17px;
+  height: calc(100% - 200px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (max-width: 1199px) {
   .news__text {
+    height: calc(100% - 170px);
     padding: 15px;
+  }
+}
+
+@media (max-width: 699px) {
+  .news__text {
+    height: calc(100% - 180px);
   }
 }
 
@@ -3303,6 +3320,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 13px;
+  margin-top: auto;
 }
 
 .news__date {
@@ -3574,6 +3592,13 @@ main {
           transform: translate(100%, -50%);
 }
 
+@media (max-width: 1350px) {
+  .sales__slider-arrow.next {
+    top: 25%;
+    right: -30px;
+  }
+}
+
 .sales__slider-arrow.prev {
   top: 50%;
   left: -120px;
@@ -3581,6 +3606,14 @@ main {
       -ms-transform: translate(100%, -50%);
           transform: translate(100%, -50%);
   z-index: 2;
+}
+
+@media (max-width: 1350px) {
+  .sales__slider-arrow.prev {
+    top: 75%;
+    right: -30px;
+    left: auto;
+  }
 }
 
 .sales__slider-arrow .arrow {
@@ -3714,7 +3747,7 @@ main {
 .brands__slide {
   width: 170px;
   height: 80px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media (max-width: 1199px) {
@@ -4205,6 +4238,14 @@ main {
           transform: translateY(-50%) rotate(180deg);
 }
 
+.filter__item .filter__item-check-ul.hide {
+  display: none;
+}
+
+.filter__item.full .filter__item-check-ul.hide {
+  display: block;
+}
+
 .filter__close {
   position: absolute;
   top: 27px;
@@ -4224,6 +4265,7 @@ main {
   position: relative;
   margin-bottom: 20px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .filter__item-title:before {
@@ -4410,6 +4452,11 @@ main {
   color: var(--black60);
   max-width: 86px;
   margin-left: 5px;
+}
+
+.filter__item-price-input::-webkit-outer-spin-button, .filter__item-price-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .filter__item-check-li {

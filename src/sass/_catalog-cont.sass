@@ -195,6 +195,11 @@
 			& .filter__item-title
 				&:before
 					transform: translateY(-50%) rotate(180deg)
+		& .filter__item-check-ul.hide
+			display: none
+		&.full
+			& .filter__item-check-ul.hide
+				display: block
 	&__close
 		position: absolute
 		top: 27px
@@ -212,6 +217,7 @@
 		position: relative
 		margin-bottom: 20px
 		margin-top: 20px
+		cursor: pointer
 		&:before
 			content: url('../img/filter__arrow.svg')
 			position: absolute
@@ -330,6 +336,11 @@
 		color: var(--black60)
 		max-width: 86px
 		margin-left: 5px
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button
+			-webkit-appearance: none
+			-moz-appearance:textfield
+			margin: 0
 	&__item-check-ul
 
 	&__item-check-li
