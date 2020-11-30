@@ -6,6 +6,8 @@ import headerActiveClass from './headerActiveClass.js';
 import toggleSearchBlock from './toggleSearchBlock.js';
 import footerUlToggle from './footerUlToggle.js';
 import catalog from './catalog.js';
+import product from './product.js';
+
 document.addEventListener("DOMContentLoaded", function () {
 
 	var header = document.getElementById('header');
@@ -168,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		closeReg.addEventListener('click', () => closeEl(contReg))
 
 		catalog()
+		product()
 
 
 });

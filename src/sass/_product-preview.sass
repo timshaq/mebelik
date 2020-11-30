@@ -1,0 +1,212 @@
+.product-preview
+	margin-bottom: 50px
+	& .product-line__size-row
+		justify-content: flex-start
+		flex-wrap: wrap
+	& .product-line__size-text
+		width: 82px
+		padding: 13px
+		border: 1px solid var(--black20)
+		border-radius: 5px
+	& .product-line__size-label
+		&:not(:last-child)
+			margin-right: 30px
+	& .product-line__size-input:checked+span:after
+		top: 60%
+		transform: translate(0,0)
+		right: -10px
+	&__fix-cont
+
+	&__title_h1
+		font-family: Oswald
+		font-style: normal
+		font-weight: 500
+		font-size: 28px
+		line-height: 41px
+		color: var(--black)
+		margin: 10px 0
+	&__props
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__rating
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__rating-stars
+
+	&__rating-star
+
+	&__rating-reviews
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-left: 10px
+	&__articul
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-left: 40px
+	&__articul-name
+
+	&__articul-number
+
+	&__row
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		@media(max-width:$tab)
+			flex-direction: column
+	&__slider
+		width: 670px
+		@media(max-width:$tab)
+			width: 100%
+	&__inform
+		width: 470px
+		@media(max-width:$tab)
+			width: 100%
+.inform
+	&__card
+		border-radius: 10px
+		background-color: var(--gray)
+		display: flex
+		padding: 30px 15px 20px
+	&__col
+		&.left
+			margin-right: 20px
+	&__offer
+		border-right: 1px solid var(--black10)
+		padding-right: 28px
+	&__price
+		position: relative
+		margin-bottom: 28px
+	&__price-new
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 44px
+		line-height: 60px
+		color: var(--black)
+	&__price-old
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 150%
+		text-decoration-line: line-through
+		color: var(--black30)
+	&__sale
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 22px
+		color: var(--white)
+		border-radius: 5px
+		background-color: var(--red)
+		padding: 3px 8px
+		position: absolute
+		top: -10%
+		left: 65%
+		transform: translate(-50%,-50%)
+	&__controls
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__buy
+		border-radius: 7px
+		background-color: var(--blue)
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 21px
+		line-height: 155%
+		color: var(--white)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 7px 13px 7px 34px
+		width: 165px
+		margin-right: 15px
+	&__buy-ph
+		width: 22px
+		height: 22px
+	&__wish
+		width: 30px
+		height: 30px
+		& svg
+			width: 100%
+			height: 100%
+		@media(max-width:$mob)
+			width: 20px
+			height: 20px
+			top: 80px
+		& .heart_active
+			fill: transparent
+			@media(max-width:$mob)
+				fill: var(--white)
+		& .heart_disable
+		&.active
+			& .heart_active
+				fill: var(--red)
+			& .heart_disable
+				fill: transparent
+
+	&__order-info
+		margin-top: 30px
+	&__order-info-item
+		font-family: Open Sans
+		font-style: normal
+		font-weight: 600
+		font-size: 14px
+		line-height: 150%
+		color: var(--gray-dark)
+		position: relative
+		padding-right: 25px
+		&:not(:last-child)
+			margin-bottom: 15px
+	&__order-info-item-ph
+		width: 21px
+		height: 21px
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translateY(-50%)
+	&__delivery-title
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black)
+		margin-bottom: 10px
+	&__delivery-ul
+
+	&__delivery-li
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-bottom: 20px
+		display: flex
+		justify-content: space-between
+	&__delivery-nearest
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-bottom: 20px
+	& .tab-title
+		display: none
+		@media(max-width:$tab)
+			display: block
