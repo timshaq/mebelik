@@ -376,14 +376,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     var e,
         t = document.getElementById("header");
     e = window.innerWidth > 0 ? window.innerWidth : screen.width, window.addEventListener("resize", function (t) {
-      e = window.innerWidth > 0 ? window.innerWidth : screen.width, console.log("resize");
+      e = window.innerWidth > 0 ? window.innerWidth : screen.width, console.log("resize"), console.log(e);
     }), Object(s["default"])(), Object(o["default"])(e), window.addEventListener("scroll", function (e) {
       window.scrollY;
       Object(i["default"])();
     }), Object(i["default"])(), Object(l["default"])();
     document.querySelectorAll(".header__nav-item").forEach(function (t) {
       t.addEventListener("click", function (n) {
-        if (n.preventDefault(), console.log("ev"), console.log(n.target), e <= 768) if (n.preventDefault(), n.target === this || n.target === this.children[0]) console.log("this"), console.log(this), t.classList.contains("open") ? t.classList.remove("open") : t.classList.add("open");else if (n.target.classList.contains("header__more-title-link") || n.target.classList.contains("header__more-title")) {
+        if (e <= 1199 && (n.preventDefault(), console.log("ev"), console.log(n.target), e <= 768)) if (n.preventDefault(), n.target === this || n.target === this.children[0]) console.log("this"), console.log(this), t.classList.contains("open") ? t.classList.remove("open") : t.classList.add("open");else if (n.target.classList.contains("header__more-title-link") || n.target.classList.contains("header__more-title")) {
           var s;
           "A" === n.target.tagName && (s = n.target.getAttribute("href")), "H2" === n.target.tagName && (s = n.target.children[0].getAttribute("href")), s && (location.href = s);
         } else if (n.target.classList.contains("header__more-list") || n.target.classList.contains("header__more-list-title-link") || n.target.classList.contains("header__more-list-title")) {

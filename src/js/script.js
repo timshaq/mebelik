@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			 getVW = screen.width;
 		}
 	  console.log('resize')
+	  console.log(getVW)
 	});
 
 	sliders();
@@ -47,36 +48,40 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 		navLink.forEach(link => {
 			link.addEventListener('click', function(ev) {
-				ev.preventDefault()
-						console.log('ev')
-						console.log(ev.target)
-
-				if (getVW <= 768) {
+				if (getVW<=1199) {
 					ev.preventDefault()
-					if (ev.target === this || ev.target === this.children[0]) {
-						console.log('this')
-						console.log(this)
-						link.classList.contains('open')
-						? link.classList.remove('open')
-						: link.classList.add('open');
-					} else if (ev.target.classList.contains('header__more-title-link') || ev.target.classList.contains('header__more-title')) {
-						var testLink;
-						if (ev.target.tagName === 'A')  testLink = ev.target.getAttribute('href');
-						if (ev.target.tagName === 'H2')  testLink = ev.target.children[0].getAttribute('href');
-						if (testLink) location.href = testLink;
+							console.log('ev')
+							console.log(ev.target)
 
-					} else if (ev.target.classList.contains('header__more-list') || ev.target.classList.contains('header__more-list-title-link') || ev.target.classList.contains('header__more-list-title')) {
-						var target = ev.target;
-						if (target.tagName === 'A') target = target.parentElement.parentElement.parentElement;
-						if (target.tagName === 'H2') target = target.parentElement.parentElement;
-						target.classList.contains('open')
-						? target.classList.remove('open')
-						: target.classList.add('open');
-					} else if (ev.target.classList.contains('header__more-link') || ev.target.classList.contains('header__more-subtitle')) {
-						if (ev.target.tagName === 'H3') location.href = ev.target.children[0].getAttribute('href')
-						if (ev.target.tagName === 'A') location.href = ev.target.getAttribute('href')
+					if (getVW <= 768) {
+						ev.preventDefault()
+						if (ev.target === this || ev.target === this.children[0]) {
+							console.log('this')
+							console.log(this)
+							link.classList.contains('open')
+							? link.classList.remove('open')
+							: link.classList.add('open');
+						} else if (ev.target.classList.contains('header__more-title-link') || ev.target.classList.contains('header__more-title')) {
+							var testLink;
+							if (ev.target.tagName === 'A')  testLink = ev.target.getAttribute('href');
+							if (ev.target.tagName === 'H2')  testLink = ev.target.children[0].getAttribute('href');
+							if (testLink) location.href = testLink;
+
+						} else if (ev.target.classList.contains('header__more-list') || ev.target.classList.contains('header__more-list-title-link') || ev.target.classList.contains('header__more-list-title')) {
+							var target = ev.target;
+							if (target.tagName === 'A') target = target.parentElement.parentElement.parentElement;
+							if (target.tagName === 'H2') target = target.parentElement.parentElement;
+							target.classList.contains('open')
+							? target.classList.remove('open')
+							: target.classList.add('open');
+						} else if (ev.target.classList.contains('header__more-link') || ev.target.classList.contains('header__more-subtitle')) {
+							if (ev.target.tagName === 'H3') location.href = ev.target.children[0].getAttribute('href')
+							if (ev.target.tagName === 'A') location.href = ev.target.getAttribute('href')
+						}
 					}
+
 				}
+
 			})
 		})
 
