@@ -60,6 +60,9 @@ export default function() {
 	var galleryTop = new Swiper(galleryTopEl, {
 		spaceBetween: 0,
 		slidesPerView: 1,
+		thumbs: {
+			swiper: galleryThumbs
+		},
 		breakpoints: {
 			320: {
 				pagination: {
@@ -68,9 +71,6 @@ export default function() {
 				},
 			},
 			699: {
-				thumbs: {
-					swiper: galleryThumbs
-				},
 				navigation: {
 					nextEl: btnNextEl,
 					prevEl: btnPrevEl,

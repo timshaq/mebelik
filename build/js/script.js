@@ -187,6 +187,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     new Swiper(o, {
       spaceBetween: 0,
       slidesPerView: 1,
+      thumbs: {
+        swiper: d
+      },
       breakpoints: {
         320: {
           pagination: {
@@ -195,9 +198,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           }
         },
         699: {
-          thumbs: {
-            swiper: d
-          },
           navigation: {
             nextEl: a,
             prevEl: c

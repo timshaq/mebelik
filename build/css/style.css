@@ -4814,6 +4814,7 @@ main {
 .product-preview__slider .gallery-thumbs {
   height: 90px;
   width: 100%;
+  cursor: pointer;
 }
 
 .product-preview__slider .gallery-thumbs .swiper-slide {
