@@ -11,10 +11,46 @@
 	& .product-line__size-label
 		&:not(:last-child)
 			margin-right: 30px
+			@media(max-width:$mob)
+				margin-right: 15px
+	& .product-line__colors-label
+		@media(max-width:$mob)
+			margin-right: 20px
+			margin-top: 20px
+			margin-bottom: 0
+	& .inputs
+		& .product-line__colors-status
+			width: 46px
+			height: 46px
+		@media(max-width:$tab)
+			display: flex
+			justify-content: space-between
+			margin-top: 30px
+			&__colors
+				width: 275px
+				@media(max-width:$mob)
+					margin-bottom: 15px
+			&__sizes
+				width: 310px
+			& .product-line__size-row
+				display: flex
+		@media(max-width:$mob)
+			flex-direction: column
+	& .tab-title
+		font-family: Oswald
+		font-style: normal
+		font-weight: 500
+		font-size: 20px
+		line-height: 30px
+		color: var(--gray2)
 	& .product-line__size-input:checked+span:after
 		top: 60%
 		transform: translate(0,0)
 		right: -10px
+	& .product-line__colors-input:checked+span:after
+		top: 60%
+		@media(max-width:$mob)
+			top: -1px
 	&__fix-cont
 
 	&__title_h1
@@ -77,15 +113,35 @@
 		background-color: var(--gray)
 		display: flex
 		padding: 30px 15px 20px
+		@media(max-width:$mob)
+			flex-direction: column
+			padding: 15px
 	&__col
 		&.left
 			margin-right: 20px
+			@media(max-width:$mob)
+				margin-right: 0
 	&__offer
 		border-right: 1px solid var(--black10)
 		padding-right: 28px
+		@media(max-width:$mob)
+			padding-right: 0
+			display: flex
+			justify-content: space-between
+			align-items: center
+			border-right: none
+			border-bottom: 1px solid var(--black10)
+			padding-bottom: 17px
 	&__price
 		position: relative
 		margin-bottom: 28px
+		@media(max-width:$mob)
+			position: static
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			margin-bottom: 0
 	&__price-new
 		font-family: Open Sans Condensed
 		font-style: normal
@@ -93,6 +149,9 @@
 		font-size: 44px
 		line-height: 60px
 		color: var(--black)
+		@media(max-width:$mob)
+			font-size: 24px
+			line-height: 33px
 	&__price-old
 		font-family: Open Sans
 		font-style: normal
@@ -101,6 +160,8 @@
 		line-height: 150%
 		text-decoration-line: line-through
 		color: var(--black30)
+		@media(max-width:$mob)
+			font-size: 14px
 	&__sale
 		font-family: Open Sans Condensed
 		font-style: normal
@@ -134,9 +195,19 @@
 		padding: 7px 13px 7px 34px
 		width: 165px
 		margin-right: 15px
+		@media(max-width:$mob)
+			font-size: 16px
+			text-transform: uppercase
+			padding: 11px 23px
+			width: 125px
+			height: 48px
+			margin-right: 0
 	&__buy-ph
 		width: 22px
 		height: 22px
+		@media(max-width:$mob)
+			width: 19px
+			height: 19px
 	&__wish
 		width: 30px
 		height: 30px
@@ -147,6 +218,7 @@
 			width: 20px
 			height: 20px
 			top: 80px
+			position: absolute
 		& .heart_active
 			fill: transparent
 			@media(max-width:$mob)
@@ -160,6 +232,9 @@
 
 	&__order-info
 		margin-top: 30px
+		@media(max-width:$mob)
+			margin-top: 15px
+			margin-bottom: 15px
 	&__order-info-item
 		font-family: Open Sans
 		font-style: normal
@@ -195,9 +270,10 @@
 		font-size: 14px
 		line-height: 150%
 		color: var(--black60)
-		margin-bottom: 20px
 		display: flex
 		justify-content: space-between
+		&:not(:last-child)
+			margin-bottom: 20px
 	&__delivery-nearest
 		font-family: Open Sans
 		font-style: normal
@@ -206,7 +282,3 @@
 		line-height: 150%
 		color: var(--black60)
 		margin-bottom: 20px
-	& .tab-title
-		display: none
-		@media(max-width:$tab)
-			display: block

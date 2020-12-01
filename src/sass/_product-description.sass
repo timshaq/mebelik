@@ -17,6 +17,8 @@
 			left: 0
 		@media(max-width:$tab)
 			justify-content: space-between
+		@media(max-width:$mob)
+			display: none
 	&__tabs-title
 		font-family: Oswald
 		font-style: normal
@@ -51,21 +53,42 @@
 			@media(max-width:$tab)
 				margin-right: 0
 	&__item
+		display: none
+		&.active
+			display: block
+			@media(max-width:$mob)
+				& .product-description__item-clone
+					display: none
+		&.active-mob
+			@media(max-width:$mob)
+				& .product-description__item-clone
+					display: flex
+				& .product-description__item-title
+					&:before
+						top: 50%
+						right: 15px
+						transform: rotate(0deg) translateY(-50%)
+		@media(max-width:$mob)
+			display: block
+			& .product-description__item-clone
+				display: none
+
+	&__item-clone
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
-		display: none
-		&.active
-			@media(min-width:$mob+1)
-				display: flex
 		&.reviews
 			flex-direction: column
 			justify-content: flex-start
 			width: 870px
+			@media(max-width:$tab)
+				width: 100%
 		@media(max-width:$tab)
 			flex-direction: column
 			justify-content: flex-start
 			align-items: flex-start
+		@media(max-width:$mob)
+			display: flex
 	&__item-col
 		width: 570px
 		display: flex
@@ -75,8 +98,8 @@
 		@media(max-width:$tab)
 			width: 100%
 		&.mg-tab
-		@media(max-width:$tab)
-			margin-top: 40px
+			@media(max-width:$tab)
+				margin-top: 40px
 	&__item-title
 		font-family: Oswald
 		font-style: normal
@@ -86,9 +109,18 @@
 		width: 100%
 		background-color: var(--gray)
 		border-radius: 10px
+		padding: 13px
 		display: none
 		@media(max-width:$mob)
 			display: block
+			position: relative
+			margin: 15px 0
+			&:before
+				content: url('../img/product__arrow.svg')
+				position: absolute
+				top: 50%
+				right: 15px
+				transform: rotate(180deg) translateY(50%)
 	&__item-subtitle
 		font-family: Oswald
 		font-style: normal
@@ -135,6 +167,13 @@
 		color: var(--black60)
 		display: flex
 		justify-content: space-between
+		@media(max-width:$mob)
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			background-color: var(--gray)
+			padding: 7px 15px
+			margin: 5px 0
 		& .dotes
 			width: inherit
 			position: relative
@@ -145,12 +184,20 @@
 				position: absolute
 				bottom: 0
 				left: 0
+			@media(max-width:$mob)
+				display: none
 		& .nospace
 			white-space: nowrap
 			&:first-child
 				margin-right: 3px
+				@media(max-width:$mob)
+					margin-right: 0
 			&:last-child
 				margin-left: 3px
+				@media(max-width:$mob)
+					margin-left: 0
+			@media(max-width:$mob)
+				white-space: normal
 	&__item-rating-card
 		width: 100%
 		display: flex
@@ -159,10 +206,15 @@
 		border-radius: 10px
 		background-color: var(--gray)
 		padding: 18px
+		@media(max-width:$mob)
+			padding: 0
+			background-color: transparent
 	&__item-rating-cont
 		display: flex
 		justify-content: flex-start
 		align-items: center
+		@media(max-width:$mob)
+			display: none
 	&__item-rating-title
 		font-family: Oswald
 		font-style: normal
@@ -185,10 +237,14 @@
 		background-color: var(--blue)
 		padding: 9px 33px
 		border-radius: 5px
+		@media(max-width:$mob)
+			width: 100%
 	&__comment
 		margin-top: 30px
 	&__reply
 		padding-left: 30px
+		@media(max-width:$mob)
+			padding-left: 0
 	&__comment-row
 		display: flex
 		margin-bottom: 20px
@@ -215,6 +271,8 @@
 				top: -10px
 				left: 0
 				transform: translateY(-50%)
+			@media(max-width:$mob)
+				flex-direction: column
 		&.hr-bottom
 			position: relative
 			margin-bottom: 20px
@@ -229,6 +287,8 @@
 				transform: translateY(-50%)
 		&.consultant
 			align-items: center
+			@media(max-width:$mob)
+				flex-direction: column
 	&__comment-person
 		display: flex
 		justify-content: flex-start
@@ -241,9 +301,13 @@
 		width: 70px
 		height: 70px
 		margin-right: 15px
+		@media(max-width:$mob)
+			width: 60px
+			height: 60px
 	&__comment-person-ph
-		width: 70px
-		height: 70px
+		width: 100%
+		height: 100%
+		object-fit: cover
 	&__comment-person-info
 
 	&__comment-person-name
@@ -253,6 +317,9 @@
 		font-size: 22px
 		line-height: 33px
 		color: var(--black)
+		@media(max-width:$mob)
+			font-size: 16px
+			line-height: 23px
 	&__comment-person-date
 		font-family: Open Sans
 		font-style: normal
@@ -260,11 +327,16 @@
 		font-size: 14px
 		line-height: 150%
 		color: var(--black60)
+		@media(max-width:$mob)
+			font-size: 12px
 	&__comment-rating
 
 	&__comment-rating-star
 		width: 20px
 		height: 20px
+		@media(max-width:$mob)
+			width: 16px
+			height: 16px
 	&__comment-article
 		font-family: Open Sans
 		font-style: normal
@@ -278,12 +350,17 @@
 		-webkit-line-clamp: 6
 		line-height: 21px
 		max-height: 126px
+		@media(max-width:$mob)
+			font-size: 14px
 	&__comment-ph
 		width: 90px
 		height: 90px
 		border-radius: 10px
 		margin-right: 15px
 		margin-bottom: 20px
+		@media(max-width:$mob)
+			width: 60px
+			height: 60px
 	&__comment-more
 		font-family: Open Sans
 		font-style: normal
@@ -300,6 +377,8 @@
 		color: var(--black60)
 		margin-right: 20px
 	&__comment-controls
+		@media(max-width:$mob)
+			margin-top: 15px
 	&__comment-karma-btn
 		border-radius: 10px
 		background-color: var(--gray)
@@ -354,9 +433,14 @@
 				position: absolute
 				bottom: -10px
 				left: 0
+			@media(max-width:$mob)
+				flex-wrap: wrap
 		&__ph-cont
 			width: 170px
 			height: 140px
+			@media(max-width:$mob)
+				width: 140px
+				height: 140px
 		&__ph
 
 		&__props
@@ -364,11 +448,21 @@
 			justify-content: space-between
 			align-items: center
 			width: 460px
+			@media(max-width:$tab)
+				flex-direction: column
+				align-items: flex-start
+				width: 230px
+			@media(max-width:$mob)
+				flex-direction: column
+				align-items: flex-start
+				width: 50%
 		&__params
 
 		&__params-item
 			&:not(:last-child)
 				margin-bottom: 20px
+				@media(max-width:$tab)
+					margin-bottom: 10px
 		&__params-text
 			font-family: Open Sans
 			font-style: normal
@@ -385,6 +479,9 @@
 			color: var(--gray-dark)
 		&__presence
 			width: 160px
+			@media(max-width:$tab)
+				width: auto
+				margin-top: 20px
 		&__presence-text
 			font-family: Roboto
 			font-style: normal
@@ -414,6 +511,12 @@
 			display: flex
 			justify-content: space-between
 			align-items: center
+			@media(max-width:$tab)
+				flex-direction: column
+				width: 172px
+			@media(max-width:$mob)
+				flex-direction: row
+				width: 100%
 		&__buy
 			font-family: Open Sans Condensed
 			font-style: normal
@@ -424,10 +527,20 @@
 			background-color: var(--blue)
 			border-radius: 5px
 			padding: 9px 60px
+			@media(max-width:$tab)
+				margin-top: 20px
 	&__item-overview-list
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
 		width: 100%
+		@media(max-width:605px)
+			justify-content: center
 		& .news__title_h3
 			margin-bottom: 36px
+		& .news__item
+			@media(max-width:$tab)
+				margin-bottom: 20px
+				width: 216px
+			@media(max-width:$mob)
+				width: 290px
