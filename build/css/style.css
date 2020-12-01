@@ -4764,11 +4764,91 @@ main {
 
 .product-preview__slider {
   width: 670px;
+  height: 662px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 699px) {
+  .product-preview__slider .swiper-button-next.swiper-button-white, .product-preview__slider .swiper-button-prev.swiper-button-white {
+    display: none;
+  }
+}
+
+.product-preview__slider .swiper-pagination-bullet {
+  background-color: var(--black10);
+  opacity: 1;
+}
+
+.product-preview__slider .swiper-pagination-bullet-active {
+  background-color: var(--blue);
+}
+
+.product-preview__slider .gallery-top {
+  height: 552px;
+  width: 100%;
+}
+
+@media (max-width: 699px) {
+  .product-preview__slider .gallery-top {
+    height: 100%;
+    width: 290px;
+  }
+}
+
+.product-preview__slider .gallery-thumbs {
+  height: 90px;
+  width: 100%;
+}
+
+.product-preview__slider .gallery-thumbs .swiper-slide {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 699px) {
+  .product-preview__slider .gallery-thumbs {
+    display: none;
+  }
 }
 
 @media (max-width: 1199px) {
   .product-preview__slider {
     width: 100%;
+  }
+}
+
+@media (max-width: 699px) {
+  .product-preview__slider {
+    height: 239px;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
