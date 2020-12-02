@@ -181,6 +181,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		btnCall.addEventListener('click', () => openEl(contCall))
 		closeCall.addEventListener('click', () => closeEl(contCall))
 
+		const btnReview = document.getElementById('review-btn')
+		if (btnReview) {
+			const contReview = document.getElementById('review-cont')
+			const closeReview = document.getElementById('review-close')
+
+			btnReview.addEventListener('click', () => openEl(contReview))
+			closeReview.addEventListener('click', () => closeEl(contReview))
+		}
+
 		catalog()
 		product()
 

@@ -54,17 +54,22 @@
 				& .product-line__price-old,
 				& .product-line__ph
 					display: none
-				& .product-line__btn,
 				& .product-line__options,
 				& .product-line__phcont-slider,
 				& .product-line__slide-presence
 					display: block
+				& .product-line__btn
+					display: flex
+					justify-content: center
+					align-items: center
 				& .product-line__phcont-slider
 					opacity: 1
 					visibility: visible
 					z-index: 1
 				& .product-line__price
 					justify-content: space-between
+					& div
+						width: 45%
 		@media(max-width:$tab)
 			padding: 10px
 		@media(max-width:$mob)

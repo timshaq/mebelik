@@ -92,8 +92,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }), n.addEventListener("input", function (t) {
       n.value.length > s && (n.value = +n.value.substring(0, n.value.length - (n.value.length - s))), n.value > l && (n.value = l), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
     });
-    var r = document.getElementById("filter-btn"),
-        o = document.getElementById("sort-btn"),
+    var o = document.getElementById("filter-btn"),
+        r = document.getElementById("sort-btn"),
         c = document.getElementById("filter-close"),
         a = document.getElementById("filter"),
         d = document.getElementById("html");
@@ -106,12 +106,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       d.style.overflowX = "hidden", d.style.overflowY = "scroll";
     }
 
-    r.addEventListener("click", function () {
+    o.addEventListener("click", function () {
       return a.classList.add("open"), void u();
     }), c.addEventListener("click", function () {
       return a.classList.remove("open"), void p();
-    }), o.addEventListener("click", function () {
-      o.classList.contains("active") ? (o.classList.remove("active"), p()) : (u(), o.classList.add("active"));
+    }), r.addEventListener("click", function () {
+      r.classList.contains("active") ? (r.classList.remove("active"), p()) : (u(), r.classList.add("active"));
     });
     var v = document.querySelectorAll(".filter__item"),
         m = Array.prototype.slice.call(v),
@@ -165,11 +165,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         t[n].classList.contains("active-mob") ? t[n].classList.remove("active-mob") : t[n].classList.add("active-mob");
       });
     });
-    var r = document.querySelector(".product-preview .gallery-thumbs"),
-        o = document.querySelector(".product-preview .gallery-top"),
+    var o = document.querySelector(".product-preview .gallery-thumbs"),
+        r = document.querySelector(".product-preview .gallery-top"),
         c = document.querySelector(".product-preview .gallery-top .swiper-button-next"),
         a = document.querySelector(".product-preview .gallery-top .swiper-button-prev");
-    var d = new Swiper(r, {
+    var d = new Swiper(o, {
       breakpoints: {
         320: {
           init: !1
@@ -184,7 +184,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     });
-    new Swiper(o, {
+    new Swiper(r, {
       spaceBetween: 0,
       slidesPerView: 1,
       thumbs: {
@@ -410,15 +410,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   var i = n(4),
       l = n(0),
       s = n(5),
-      r = n(2),
-      o = n(1),
+      o = n(2),
+      r = n(1),
       c = n(3);
   document.addEventListener("DOMContentLoaded", function () {
     var e,
         t = document.getElementById("header");
     e = window.innerWidth > 0 ? window.innerWidth : screen.width, window.addEventListener("resize", function (t) {
       e = window.innerWidth > 0 ? window.innerWidth : screen.width, console.log("resize"), console.log(e);
-    }), Object(i["default"])(), Object(r["default"])(e), window.addEventListener("scroll", function (e) {
+    }), Object(i["default"])(), Object(o["default"])(e), window.addEventListener("scroll", function (e) {
       window.scrollY;
       Object(l["default"])();
     }), Object(l["default"])(), Object(s["default"])();
@@ -487,6 +487,20 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       return B(S);
     }), P.addEventListener("click", function () {
       return _(S);
-    }), Object(o["default"])(), Object(c["default"])();
+    });
+    var I = document.getElementById("review-btn");
+
+    if (I) {
+      var _e = document.getElementById("review-cont"),
+          _t = document.getElementById("review-close");
+
+      I.addEventListener("click", function () {
+        return B(_e);
+      }), _t.addEventListener("click", function () {
+        return _(_e);
+      });
+    }
+
+    Object(r["default"])(), Object(c["default"])();
   });
 }]);
