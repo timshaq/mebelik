@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+
+	<title>Cart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- <link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css">
+	<script src="lib/swiper/swiper-bundle.min.js"></script> -->
+
+
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+
+	<script src="js/script.min.js"></script>
+
+</head>
+
+<body id="body">
+
+<!-- @@include('html/header.html') -->
+
+<main>
+
+<section class="cart">
+	<div class="cart__fix-cont fix-cont">
+<ul class="breadscrumb">
+	<li class="breadscrumb-item">
+		Главная
+	</li>
+	<li class="breadscrumb-item">
+		Каталог
+	</li>
+	<li class="breadscrumb-item">
+		Спальня
+	</li>
+</ul>
+
+		<div class="cart__header">
+			<div class="cart__coupon-cont">
+				<form class="header__search-form">
+					<label for="coupon-input" class="header__search-label">
+						<input id="coupon-input" type="text" class="header__search-input" placeholder="Введите код купона для скидки...">
+					</label>
+					<button type="submit" class="header__search-submit">
+						<img class="search-icon" src="img/coupon-arrow.svg" alt="">
+					</button>
+				</form>
+				<div class="cart__detail">
+					<span class="cart__detail-count">
+						2 товара
+					</span>
+					<span class="cart__detail-price">
+						22 989 руб.
+					</span>
+					<div>
+						<button type="button" class="cart__detail-buy">
+							Оформить заказ
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+@@include('html/cart/cards.html')
+
+
+	</div>
+</section>
+
+</main>
+
+<!-- @@include('html/footer.html')
+@@include('html/arrow-up.html')
+@@include('html/autoriz.html')
+@@include('html/registr.html')
+@@include('html/call.html') -->
+
+</body>
+
+
+
+</html>

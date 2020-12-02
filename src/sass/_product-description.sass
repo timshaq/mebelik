@@ -500,12 +500,24 @@
 			transform: translate(100%,-50%)
 			border-radius: 100%
 		&__price
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+		&__price-new
 			font-family: Oswald
 			font-style: normal
 			font-weight: 600
 			font-size: 20px
 			line-height: 30px
-			color: var(--black)
+		&__price-old
+			font-family: Open Sans
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 150%
+			color: var(--black30)
+			text-decoration-line: line-through
 		&__adapt-cont
 			width: 470px
 			display: flex
