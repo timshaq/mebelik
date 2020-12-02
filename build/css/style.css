@@ -2705,7 +2705,7 @@ main {
   color: var(--white);
   background-color: var(--blue);
   padding: 7px 0;
-  width: 45%;
+  width: 100%;
   border-radius: 5px;
 }
 
