@@ -6449,6 +6449,10 @@ main {
   color: var(--black60);
 }
 
+.popup-cont .popup__input.textarea {
+  resize: none;
+}
+
 .popup-cont .popup__row {
   display: -webkit-box;
   display: -webkit-flex;

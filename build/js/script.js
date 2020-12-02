@@ -7,12 +7,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   function n(i) {
     if (t[i]) return t[i].exports;
-    var s = t[i] = {
+    var l = t[i] = {
       i: i,
       l: !1,
       exports: {}
     };
-    return e[i].call(s.exports, s, s.exports, n), s.l = !0, s.exports;
+    return e[i].call(l.exports, l, l.exports, n), l.l = !0, l.exports;
   }
 
   n.m = e, n.c = t, n.d = function (e, t, i) {
@@ -33,10 +33,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     if (n.r(i), Object.defineProperty(i, "default", {
       enumerable: !0,
       value: e
-    }), 2 & t && "string" != typeof e) for (var s in e) {
-      n.d(i, s, function (t) {
+    }), 2 & t && "string" != typeof e) for (var l in e) {
+      n.d(i, l, function (t) {
         return e[t];
-      }.bind(null, s));
+      }.bind(null, l));
     }
     return i;
   }, n.n = function (e) {
@@ -67,15 +67,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     var t = document.getElementById("price-from"),
         n = document.getElementById("price-to"),
         i = +document.getElementById("price-cont").getAttribute("data-min"),
-        s = +document.getElementById("price-cont").getAttribute("data-max"),
-        l = ("" + s).split("").length;
+        l = +document.getElementById("price-cont").getAttribute("data-max"),
+        s = ("" + l).split("").length;
     noUiSlider.create(e, {
-      start: [i + 2e3, s - 5e3],
+      start: [i + 2e3, l - 5e3],
       connect: [!0, !1, !0],
       padding: [0, 17],
       range: {
         min: [0],
-        max: [s]
+        max: [l]
       },
       format: {
         to: function to(e) {
@@ -88,14 +88,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }), e.noUiSlider.on("update", function (e) {
       t.value = e[0], n.value = e[1];
     }), t.addEventListener("input", function (n) {
-      t.value.length > l && (t.value = +t.value.substring(0, t.value.length - (t.value.length - l))), t.value > s && (t.value = s), t.value < 1 && (t.value = i), e.noUiSlider.set([t.value, null]);
+      t.value.length > s && (t.value = +t.value.substring(0, t.value.length - (t.value.length - s))), t.value > l && (t.value = l), t.value < 1 && (t.value = i), e.noUiSlider.set([t.value, null]);
     }), n.addEventListener("input", function (t) {
-      n.value.length > l && (n.value = +n.value.substring(0, n.value.length - (n.value.length - l))), n.value > s && (n.value = s), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
+      n.value.length > s && (n.value = +n.value.substring(0, n.value.length - (n.value.length - s))), n.value > l && (n.value = l), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
     });
     var r = document.getElementById("filter-btn"),
         o = document.getElementById("sort-btn"),
-        a = document.getElementById("filter-close"),
-        c = document.getElementById("filter"),
+        c = document.getElementById("filter-close"),
+        a = document.getElementById("filter"),
         d = document.getElementById("html");
 
     function u() {
@@ -107,9 +107,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }
 
     r.addEventListener("click", function () {
-      return c.classList.add("open"), void u();
-    }), a.addEventListener("click", function () {
-      return c.classList.remove("open"), void p();
+      return a.classList.add("open"), void u();
+    }), c.addEventListener("click", function () {
+      return a.classList.remove("open"), void p();
     }), o.addEventListener("click", function () {
       o.classList.contains("active") ? (o.classList.remove("active"), p()) : (u(), o.classList.add("active"));
     });
@@ -149,26 +149,26 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         t = Array.prototype.slice.call(e),
         n = document.querySelectorAll(".product-description__tabs-title"),
         i = Array.prototype.slice.call(n),
-        s = document.querySelectorAll(".product-description__item-title"),
-        l = Array.prototype.slice.call(s);
+        l = document.querySelectorAll(".product-description__item-title"),
+        s = Array.prototype.slice.call(l);
     i.forEach(function (e, n) {
-      var s = i;
+      var l = i;
       e.addEventListener("click", function () {
-        s.forEach(function (e) {
+        l.forEach(function (e) {
           e.classList.remove("active");
-        }), s[n].classList.add("active"), t.forEach(function (e) {
+        }), l[n].classList.add("active"), t.forEach(function (e) {
           e.classList.remove("active");
         }), t[n].classList.add("active");
       });
-    }), l.forEach(function (e, n) {
+    }), s.forEach(function (e, n) {
       e.addEventListener("click", function () {
         t[n].classList.contains("active-mob") ? t[n].classList.remove("active-mob") : t[n].classList.add("active-mob");
       });
     });
     var r = document.querySelector(".product-preview .gallery-thumbs"),
         o = document.querySelector(".product-preview .gallery-top"),
-        a = document.querySelector(".product-preview .gallery-top .swiper-button-next"),
-        c = document.querySelector(".product-preview .gallery-top .swiper-button-prev");
+        c = document.querySelector(".product-preview .gallery-top .swiper-button-next"),
+        a = document.querySelector(".product-preview .gallery-top .swiper-button-prev");
     var d = new Swiper(r, {
       breakpoints: {
         320: {
@@ -199,8 +199,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         },
         699: {
           navigation: {
-            nextEl: a,
-            prevEl: c
+            nextEl: c,
+            prevEl: a
           }
         }
       }
@@ -408,11 +408,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   n.r(t);
   var i = n(4),
-      s = n(0),
-      l = n(5),
+      l = n(0),
+      s = n(5),
       r = n(2),
       o = n(1),
-      a = n(3);
+      c = n(3);
   document.addEventListener("DOMContentLoaded", function () {
     var e,
         t = document.getElementById("header");
@@ -420,16 +420,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       e = window.innerWidth > 0 ? window.innerWidth : screen.width, console.log("resize"), console.log(e);
     }), Object(i["default"])(), Object(r["default"])(e), window.addEventListener("scroll", function (e) {
       window.scrollY;
-      Object(s["default"])();
-    }), Object(s["default"])(), Object(l["default"])();
+      Object(l["default"])();
+    }), Object(l["default"])(), Object(s["default"])();
     document.querySelectorAll(".header__nav-item").forEach(function (t) {
       t.addEventListener("click", function (n) {
         if (e <= 1199 && (n.preventDefault(), console.log("ev"), console.log(n.target), e <= 768)) if (n.preventDefault(), n.target === this || n.target === this.children[0]) console.log("this"), console.log(this), t.classList.contains("open") ? t.classList.remove("open") : t.classList.add("open");else if (n.target.classList.contains("header__more-title-link") || n.target.classList.contains("header__more-title")) {
           var i;
           "A" === n.target.tagName && (i = n.target.getAttribute("href")), "H2" === n.target.tagName && (i = n.target.children[0].getAttribute("href")), i && (location.href = i);
         } else if (n.target.classList.contains("header__more-list") || n.target.classList.contains("header__more-list-title-link") || n.target.classList.contains("header__more-list-title")) {
-          var s = n.target;
-          "A" === s.tagName && (s = s.parentElement.parentElement.parentElement), "H2" === s.tagName && (s = s.parentElement.parentElement), s.classList.contains("open") ? s.classList.remove("open") : s.classList.add("open");
+          var l = n.target;
+          "A" === l.tagName && (l = l.parentElement.parentElement.parentElement), "H2" === l.tagName && (l = l.parentElement.parentElement), l.classList.contains("open") ? l.classList.remove("open") : l.classList.add("open");
         } else (n.target.classList.contains("header__more-link") || n.target.classList.contains("header__more-subtitle")) && ("H3" === n.target.tagName && (location.href = n.target.children[0].getAttribute("href")), "A" === n.target.tagName && (location.href = n.target.getAttribute("href")));
       });
     });
@@ -437,12 +437,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       t.classList.contains("menu-open") ? (t.classList.remove("menu-open"), t.classList.remove("active"), t.classList.remove("not-search")) : (t.classList.add("menu-open"), t.classList.add("active"), t.classList.add("not-search"));
     });
     var n = document.getElementById("catalog-tab"),
-        c = document.getElementById("help-tab"),
+        a = document.getElementById("help-tab"),
         d = document.getElementById("login-tab"),
         u = document.getElementById("catalog-tab-list"),
         p = document.getElementById("help-tab-list"),
         v = document.getElementById("login-tab-cont"),
-        m = [n, c, d],
+        m = [n, a, d],
         w = [u, p, v];
     m.forEach(function (e, t) {
       e.addEventListener("click", function () {
@@ -457,8 +457,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         g = document.getElementById("btn-registr"),
         h = document.getElementById("btn-auth"),
         y = document.getElementById("auth-cont"),
-        L = document.getElementById("auth-close"),
-        E = document.getElementById("registr-cont"),
+        E = document.getElementById("auth-close"),
+        L = document.getElementById("registr-cont"),
         b = document.getElementById("regist-close");
 
     function _(e) {
@@ -472,13 +472,21 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     f.addEventListener("click", function () {
       return B(y);
     }), g.addEventListener("click", function () {
-      _(y), B(E);
+      _(y), B(L);
     }), h.addEventListener("click", function () {
-      _(E), B(y);
-    }), L.addEventListener("click", function () {
+      _(L), B(y);
+    }), E.addEventListener("click", function () {
       return _(y);
     }), b.addEventListener("click", function () {
-      return _(E);
-    }), Object(o["default"])(), Object(a["default"])();
+      return _(L);
+    });
+    var k = document.querySelector(".footer .navigation .navigation__tel-callback"),
+        S = document.getElementById("call-cont"),
+        P = document.getElementById("call-close");
+    k.addEventListener("click", function () {
+      return B(S);
+    }), P.addEventListener("click", function () {
+      return _(S);
+    }), Object(o["default"])(), Object(c["default"])();
   });
 }]);

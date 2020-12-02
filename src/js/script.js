@@ -174,6 +174,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		closeAuth.addEventListener('click', () => closeEl(contAuth))
 		closeReg.addEventListener('click', () => closeEl(contReg))
 
+		const btnCall = document.querySelector('.footer .navigation .navigation__tel-callback')
+		const contCall = document.getElementById('call-cont')
+		const closeCall = document.getElementById('call-close')
+
+		btnCall.addEventListener('click', () => openEl(contCall))
+		closeCall.addEventListener('click', () => closeEl(contCall))
+
 		catalog()
 		product()
 
