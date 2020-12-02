@@ -319,7 +319,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       pagination: {
         el: ".swiper-pagination",
         type: "bullets",
-        clickable: !0
+        clickable: !0,
+        dynamicBullets: !0
       },
       breakpoints: {
         0: {

@@ -130,6 +130,7 @@ const productLineInsideSliders = new Swiper('.product-line__phcont-slider .swipe
     el: '.swiper-pagination',
     type: 'bullets',
     clickable: true,
+    dynamicBullets: true,
   },
 	breakpoints: {
 		0: {

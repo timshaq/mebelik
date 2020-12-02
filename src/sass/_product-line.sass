@@ -137,6 +137,8 @@
 		width: 24px
 		height: 24px
 		z-index: 2
+		@media(max-width:$tab)
+			top: 160px
 		@media(max-width:$mob)
 			width: 20px
 			height: 20px
@@ -198,29 +200,30 @@
 			align-items: flex-start
 			justify-content: flex-start
 	&__slide-title
-		font-family: Open Sans
-		font-style: normal
-		font-weight: normal
-		font-size: 14px
-		line-height: 150%
-		color: var(--black60)
-		margin-top: 20px
-		margin-bottom: 15px
-		@media(max-width:$tab)
-			overflow: hidden
-			text-overflow: ellipsis
-			display: -webkit-box
-			-webkit-box-orient: vertical
-			-webkit-line-clamp: 2
-			line-height: 21px
-			max-height: 42px
-			padding: 0 5px
-		@media(max-width:$mob)
-			padding: 0
-			order: -2
-			margin-top: 15px
-			margin-bottom: 7px
-			font-size: 12px
+		& a
+			font-family: Open Sans
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 150%
+			color: var(--black60)
+			margin-top: 20px
+			margin-bottom: 15px
+			@media(max-width:$tab)
+				overflow: hidden
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 2
+				line-height: 21px
+				max-height: 42px
+				padding: 0 5px
+			@media(max-width:$mob)
+				padding: 0
+				order: -2
+				margin-top: 15px
+				margin-bottom: 7px
+				font-size: 12px
 	&__slide-inform
 		display: flex
 		justify-content: space-between
@@ -291,7 +294,8 @@
 		line-height: 155%
 		color: var(--white)
 		background-color: var(--blue)
-		padding: 7px 36px
+		padding: 7px 0
+		width: 45%
 		border-radius: 5px
 		@media(max-width:$mob)
 			width: 100%
