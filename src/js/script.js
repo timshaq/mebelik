@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		closeAuth.addEventListener('click', () => closeEl(contAuth))
 		closeReg.addEventListener('click', () => closeEl(contReg))
 
+
 		const btnCall = document.querySelector('.footer .navigation .navigation__tel-callback')
 		const contCall = document.getElementById('call-cont')
 		const closeCall = document.getElementById('call-close')
@@ -188,6 +189,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			btnReview.addEventListener('click', () => openEl(contReview))
 			closeReview.addEventListener('click', () => closeEl(contReview))
+		}
+
+		const btnQuest = document.getElementById('quest-btn')
+		if (btnQuest) {
+			const contQuest = document.getElementById('quest-cont')
+			const closeQuest = document.getElementById('quest-close')
+
+			btnQuest.addEventListener('click', () => openEl(contQuest))
+			closeQuest.addEventListener('click', () => closeEl(contQuest))
 		}
 
 		catalog()

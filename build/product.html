@@ -2675,7 +2675,7 @@
 
 			<div class="product-description__item-clone  reviews">
 					<div class="product-description__item-rating-card">
-						<button type="button" class="product-description__item-set-review">
+						<button id="quest-btn" type="button" class="product-description__item-set-review">
 							Задать вопрос
 						</button>
 					</div>
@@ -5239,14 +5239,42 @@
 					Ваша оценка:
 				</span>
 			</div>
+			<div class="popup__row rating">
+				<a href="#" class="review-star"></a>
+				<a href="#" class="review-star"></a>
+				<a href="#" class="review-star"></a>
+				<a href="#" class="review-star hover"></a>
+				<a href="#" class="review-star selected"></a>
+			</div>
+			<label class="popup__label">
+				<textarea rows="6" cols="45" name="review" class="popup__input textarea" placeholder="Поделитесь своим мнением о товаре с другими пользователями..."></textarea>
+			</label>
+			<button type="submit" class="popup__submit">
+				Оставить отзыв
+			</button>
+		</form>
+	</div>
+</div>
+<div class="popup-cont review" id="quest-cont">
+	<div class="popup">
+		<button type="button" class="popup__close" id="quest-close">
+			<img src="img/btn__close.svg" alt="">
+		</button>
+		<form class="popup__form">
+			<h3 class="popup__title">
+				Оставьте отзыв
+			</h3>
 			<div class="popup__row">
 				<span class="popup__text">
-					<a href="#" class="review-star"></a>
-					<a href="#" class="review-star"></a>
-					<a href="#" class="review-star"></a>
-					<a href="#" class="review-star hover"></a>
-					<a href="#" class="review-star selected"></a>
+					Ваша оценка:
 				</span>
+			</div>
+			<div class="popup__row rating">
+				<a href="#" class="review-star"></a>
+				<a href="#" class="review-star"></a>
+				<a href="#" class="review-star"></a>
+				<a href="#" class="review-star hover"></a>
+				<a href="#" class="review-star selected"></a>
 			</div>
 			<label class="popup__label">
 				<textarea rows="6" cols="45" name="review" class="popup__input textarea" placeholder="Поделитесь своим мнением о товаре с другими пользователями..."></textarea>

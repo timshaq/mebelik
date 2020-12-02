@@ -113,14 +113,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }), r.addEventListener("click", function () {
       r.classList.contains("active") ? (r.classList.remove("active"), p()) : (u(), r.classList.add("active"));
     });
-    var v = document.querySelectorAll(".filter__item"),
-        m = Array.prototype.slice.call(v),
+    var m = document.querySelectorAll(".filter__item"),
+        v = Array.prototype.slice.call(m),
         w = document.querySelectorAll(".filter__item-title");
     Array.prototype.slice.call(w).forEach(function (e, t) {
       e.addEventListener("click", function () {
-        m[t].classList.contains("hide") ? m[t].classList.remove("hide") : m[t].classList.add("hide");
+        v[t].classList.contains("hide") ? v[t].classList.remove("hide") : v[t].classList.add("hide");
       });
-    }), m.forEach(function (e, t) {
+    }), v.forEach(function (e, t) {
       var n = e.querySelector(".filter__item-more-link");
       n && n.addEventListener("click", function () {
         e.classList.contains("full") ? (e.classList.remove("full"), n.innerText = "Показать еще") : (e.classList.add("full"), n.innerText = "Скрыть");
@@ -441,14 +441,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         d = document.getElementById("login-tab"),
         u = document.getElementById("catalog-tab-list"),
         p = document.getElementById("help-tab-list"),
-        v = document.getElementById("login-tab-cont"),
-        m = [n, a, d],
-        w = [u, p, v];
-    m.forEach(function (e, t) {
+        m = document.getElementById("login-tab-cont"),
+        v = [n, a, d],
+        w = [u, p, m];
+    v.forEach(function (e, t) {
       e.addEventListener("click", function () {
-        m.forEach(function (e) {
+        v.forEach(function (e) {
           return e.classList.remove("active");
-        }), m[t].classList.add("active"), w.forEach(function (e) {
+        }), v[t].classList.add("active"), w.forEach(function (e) {
           return e.classList.remove("open");
         }), w[t].classList.add("open");
       });
@@ -482,22 +482,35 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     });
     var k = document.querySelector(".footer .navigation .navigation__tel-callback"),
         S = document.getElementById("call-cont"),
-        P = document.getElementById("call-close");
+        I = document.getElementById("call-close");
     k.addEventListener("click", function () {
       return B(S);
-    }), P.addEventListener("click", function () {
+    }), I.addEventListener("click", function () {
       return _(S);
     });
-    var I = document.getElementById("review-btn");
+    var P = document.getElementById("review-btn");
 
-    if (I) {
+    if (P) {
       var _e = document.getElementById("review-cont"),
           _t = document.getElementById("review-close");
 
-      I.addEventListener("click", function () {
+      P.addEventListener("click", function () {
         return B(_e);
       }), _t.addEventListener("click", function () {
         return _(_e);
+      });
+    }
+
+    var V = document.getElementById("quest-btn");
+
+    if (V) {
+      var _e2 = document.getElementById("quest-cont"),
+          _t2 = document.getElementById("quest-close");
+
+      V.addEventListener("click", function () {
+        return B(_e2);
+      }), _t2.addEventListener("click", function () {
+        return _(_e2);
       });
     }
 
