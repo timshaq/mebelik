@@ -2,12 +2,12 @@
 <html lang="ru" id="html">
 <head>
 
-	<title>Cart</title>
+	<title>Order</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<!-- <link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css">
-	<script src="lib/swiper/swiper-bundle.min.js"></script> -->
+	<link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css">
+	<script src="lib/swiper/swiper-bundle.min.js"></script>
 
 
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
@@ -19,7 +19,7 @@
 
 <body id="body">
 
-<!-- @@include('html/header.html') -->
+@@include('html/header.html')
 
 <main>
 
@@ -36,62 +36,203 @@
 		Спальня
 	</li>
 </ul>
-		<div class="order__col">
-			<div class="order__item">
-				<h2 class="order__title">
-					Контактные данные
-				</h2>
-				<div class="order__inputs">
-					<input type="text" class="order__input"placeholder="Имя">
-					<input type="text" class="order__input"placeholder="Фамилия">
-					<input type="text" class="order__input"placeholder="Email">
-					<input type="text" class="order__input"placeholder="Телефон">
-				</div>
-			</div>
-			<div class="order__item">
-				<h2 class="order__title">
-					Доставка
-				</h2>
-				<div class="order__radios">
-				</div>
-				<div class="order__inputs">
-					<input type="text" class="order__input"placeholder="Регион/Область">
-					<input type="text" class="order__input"placeholder="Город/Населенный пункт">
-					<input type="text" class="order__input"placeholder="Улица">
+
+		<div class="order__container">
+			<div class="order__col values">
+				<div class="order__item">
+					<h2 class="order__title">
+						Контактные данные
+					</h2>
 					<div class="order__inputs">
-						<input type="text" class="order__input"placeholder="Дом">
-						<input type="text" class="order__input"placeholder="Квартира">
+						<input type="text" class="order__input"placeholder="Имя">
+						<input type="text" class="order__input"placeholder="Фамилия">
+						<input type="text" class="order__input"placeholder="Email">
+						<input type="text" class="order__input"placeholder="Телефон">
+					</div>
+				</div>
+				<div class="order__item">
+					<h2 class="order__title">
+						Доставка
+					</h2>
+					<div class="order__radios">
+						<label class="order__radio-label"> 
+							<input type="radio" name="delivery" value="Курьерская доставка" class="order__radio">
+							<span class="order__radio-cont">
+								<span class="order__radio-text">
+									Курьерская доставка
+								</span>
+							</span>
+						</label>
+						<label class="order__radio-label"> 
+							<input type="radio" name="delivery" value="Почта России" class="order__radio">
+							<span class="order__radio-cont">
+								<img src="img/ruspost.svg" alt="" class="order__radio-ph">
+								<span class="order__radio-text">
+									Почта России
+								</span>
+							</span>
+						</label>
+						<label  class="order__radio-label"> 
+							<input type="radio" name="delivery" value="Сдэк" class="order__radio">
+							<span class="order__radio-cont">
+								<img src="img/cdek.svg" alt="" class="order__radio-ph">
+								<span class="order__radio-text">
+									СДЭК
+								</span>
+							</span>
+						</label>
+					</div>
+					<div class="order__inputs">
+						<input type="text" class="order__input" placeholder="Регион/Область">
+						<input type="text" class="order__input" placeholder="Город/Населенный пункт">
+						<input type="text" class="order__input" placeholder="Улица">
+						<div class="order__inputs">
+							<input type="text" class="order__input" placeholder="Дом">
+							<input type="text" class="order__input" placeholder="Квартира">
+						</div>
+					</div>
+				</div>
+				<div class="order__item">
+					<h2 class="order__title">
+						Оплата
+					</h2>
+					<div class="order__radios var2">
+						<label class="order__radio-label"> 
+							<input type="radio" name="payment" value="Наличными при получении" class="order__radio">
+							<span class="order__radio-cont">
+								<span class="order__radio-text">
+									Наличными при получении
+								</span>
+							</span>
+						</label>
+						<label class="order__radio-label"> 
+							<input type="radio" name="payment" value="Банковской картой онлайн" class="order__radio">
+							<span class="order__radio-cont">
+								<span class="order__radio-text">
+									Банковской картой онлайн
+								</span>
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="order__item">
+					<h2 class="order__title">
+						Товары
+					</h2>
+					<div class="order__products">
+					</div>
+				</div>
+				<div class="order__item">
+					<h2 class="order__title">
+						Занос в квартиру и сборка
+					</h2>
+					<div class="order__options">
+						<label class="order__options-label"> 
+							<input type="radio" name="gruz" value="Лифт или первый этаж" class="order__radio">
+							<span class="order__radio-cont">
+								<span class="order__option-text">
+									Лифт или первый этаж
+								</span>
+							</span>
+						</label>
+						<label class="order__options-label"> 
+							<input type="radio" name="gruz" value="Подъем по лестнице" class="order__radio">
+							<span class="order__radio-cont">
+								<span class="order__option-text">
+									Подъем по лестнице
+								</span>
+							</span>
+
+							<div class="order__num-cont">
+								<div class="cart-cont__input-num-cont">
+									<input type="number">
+								</div>
+								<span class="order__options-price">
+									2 000 руб.
+								</span>
+							</div>
+						</label>
+
+						<label class="order__options-label"> 
+							<input type="checkbox" name="craft" class="order__radio">
+							<span class="order__radio-cont">
+								<span class="order__option-text">
+									Сборка в день доставки <span class="order__options-price">2 000руб.</span>
+								</span>
+							</span>
+						</label>
 					</div>
 				</div>
 			</div>
-			<div class="order__item">
-				<h2 class="order__title">
-					Оплата
-				</h2>
-				<div class="order__radios">
+			<div class="order__col resume">
+				<div class="order__resume-header">
+					<span class="order__resume-title">
+						Ваша корзина
+					</span>
+					<span class="order__resume-count">
+						2 товара
+					</span>
+				</div>
+				<ul class="order__product-values">
+					<li class="order__product-values-item">
+						<span class="order__product-values-name">
+							Товары
+						</span>
+						<span class="order__product-values-value">
+							22 989.-
+						</span>
+					</li>
+					<li class="order__product-values-item">
+						<span class="order__product-values-name">
+							Скидка
+						</span>
+						<span class="order__product-values-value">
+							3 300.-
+						</span>
+					</li>
+				</ul>
+				<ul class="order__product-values">
+					<li class="order__product-values-item">
+						<span class="order__product-values-name">
+							Занос в квартиру
+						</span>
+						<span class="order__product-values-value">
+							889.-
+						</span>
+					</li>
+					<li class="order__product-values-item">
+						<span class="order__product-values-name">
+							Сборка мебели
+						</span>
+						<span class="order__product-values-value">
+							449.-
+						</span>
+					</li>
+				</ul>
+				<ul class="order__product-values">
+					<li class="order__product-values-item">
+						<span class="order__product-values-name">
+							Доставка
+						</span>
+						<span class="order__product-values-value">
+							0.-
+						</span>
+					</li>
+				</ul>
+				<div class="order__resume-total">
+					<span class="order__resume-total-title">
+						Итого
+					</span>
+					<span class="order__resume-total-price">
+						26 289.-
+					</span>
+				</div>
+				<div class="order__buy-cont">
+					<button class="order__buy">
+						Оформить заказ
+					</button>
 				</div>
 			</div>
-			<div class="order__item">
-				<h2 class="order__title">
-					Товары
-				</h2>
-				<div class="order__products">
-					
-				</div>
-			</div>
-			<div class="order__item">
-				<h2 class="order__title">
-					Занос в квартиру и сборка
-				</h2>
-				<div class="order__options">
-					<input type="radio" class="order__option" placeholder="Лифт или первый этаж">
-					<input type="radio" class="order__option" placeholder="Подъем по лестнице">
-					<div>количество</div>
-					<input type="radio" class="order__option" placeholder="Сборка в день доставки">
-				</div>
-			</div>
-		</div>
-		<div class="order__col">
 			
 		</div>
 	</div>
@@ -99,11 +240,11 @@
 
 </main>
 
-<!-- @@include('html/footer.html')
+@@include('html/footer.html')
 @@include('html/arrow-up.html')
 @@include('html/autoriz.html')
 @@include('html/registr.html')
-@@include('html/call.html') -->
+@@include('html/call.html')
 
 </body>
 

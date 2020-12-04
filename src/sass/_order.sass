@@ -1,6 +1,24 @@
 .order
+	margin-bottom: 100px
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
 	&__col
-
+		&.values
+			width: 870px
+			@media(max-width:$tab)
+				width: 462px
+		&.resume
+			width: 270px
+			background-color: var(--gray)
+			border-radius: 10px
+			padding: 15px
+			position: sticky
+			top: 20px
+			min-height: 200px
+			@media(max-width:$tab)
+				width: 216px
 	&__item
 
 	&__title
@@ -10,6 +28,7 @@
 		font-size: 28px
 		line-height: 41px
 		color: var(--black)
+		margin-bottom: 20px
 	&__inputs
 		display: flex
 		justify-content: space-between
@@ -17,6 +36,13 @@
 		flex-wrap: wrap
 		& .order__inputs
 			width: 45%
+			@media(max-width:$tab)
+				width: 100%
+				flex-direction: row
+				& .order__input
+					width: 48%
+		@media(max-width:$tab)
+			flex-direction: column
 	&__input
 		font-family: Open Sans
 		font-style: normal
@@ -36,11 +62,178 @@
 			font-size: 14px
 			line-height: 150%
 			color: var(--black60)
+		@media(max-width:$tab)
+			width: 100%
 	&__radios
-
+		display: flex
+		justify-content: flex-start
+		margin-bottom: 30px
+		flex-wrap: wrap
+	&__radio-label
+		width: 30%
+		background-color: var(--gray)
+		border-radius: 5px
+		border: 1px solid var(--black10)
+		padding: 12px 15px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		margin: 15px 20px 15px 0
+		@media(max-width:$tab)
+			width: 48%
+			margin: 15px 2% 15px 0
+	&__radio
+		width: 0
+		height: 0
+		visibility: hidden
+		opacity: 0
+		&:checked + .order__radio-cont
+			&:before
+				content: url('../img/order__input-check.svg')
+			& + .order__num-cont
+				display: flex
+	&__radio-cont
+		width: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		position: relative
+		padding-left: 32px
+		&:before
+			content: url('../img/order__input.svg')
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translate(0,-50%)
+	&__radio-text
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 21px
+		color: var(--black)
+	&__radio-ph
+		max-height: 23px
+		max-width: 50px
+		object-fit: contain
+		object-position: left
+		margin-right: 15px
 	&__products
 
 	&__options
-
+		display: flex
+		flex-direction: column
+	&__options-price
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black)
+		margin-left: 20px
 	&__option
-
+	&__option-text
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+	&__num-cont
+		display: none
+		margin-top: 15px
+		margin-bottom: 30px
+	&__resume-header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 25px
+		position: relative
+		&:before
+			content: ''
+			width: 100%
+			height: 1px
+			background-color: var(--black10)
+			position: absolute
+			bottom: 10px
+			left: 0
+	&__resume-title
+		font-family: Oswald
+		font-style: normal
+		font-weight: 600
+		font-size: 18px
+		line-height: 27px
+		color: var(--black)
+	&__resume-count
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+	&__product-values
+		margin-bottom: 20px
+	&__product-values-item
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__product-values-name
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+	&__product-values-value
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+	&__resume-total
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 25px
+		position: relative
+		&:before
+			content: ''
+			width: 100%
+			height: 1px
+			background-color: var(--black10)
+			position: absolute
+			top: 10px
+			left: 0
+	&__resume-total-title
+		font-family: Oswald
+		font-style: normal
+		font-weight: 600
+		font-size: 16px
+		line-height: 24px
+		color: var(--black)
+	&__resume-total-price
+		font-family: Oswald
+		font-style: normal
+		font-weight: 600
+		font-size: 16px
+		line-height: 24px
+		color: var(--black)
+	&__buy-cont
+		width: 100%
+		margin-top: 20px
+	&__buy
+		width: 100%
+		color: var(--white)
+		background-color: var(--blue)
+		text-transform: uppercase
+		font-family: Open Sans Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 155%
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 10px 0
+		border-radius: 7px
