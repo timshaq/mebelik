@@ -1,14 +1,76 @@
 .order
 	margin-bottom: 100px
+	& .product-description__item
+		display: flex
+		width: 100%
+	& .variants__item
+		@media(max-width:$tab)
+			flex-wrap: wrap
+			position: relative
+	& .variants__props
+		width: 270px
+		@media(max-width:$tab)
+			width: 60%
+		@media(max-width:$mob)
+			width: 50%
+	& .variants__adapt-cont
+		width: auto
+		margin-left: auto
+		@media(max-width:$tab)
+			margin-left: 40%
+			width: 35%
+			order: 2
+		@media(max-width:$mob)
+			margin: 0
+			width: 50%
+	& .variants,
+	.order__products,
+		width: 100%
+	& .variants
+		@media(max-width:$mob)
+			display: flex
+	& .variants__price
+		position: relative
+		flex-direction: row
+		@media(max-width:$tab)
+			position: static
+	& .inform__sale
+		top: -15px
+		left: 50%
+		@media(max-width:$tab)
+			top: 30px
+			left: 5.7%
+	& .variants__price-old
+		margin-left: 15px
+	& .variants__presence
+		margin: 0 auto
+		width: auto
+		@media(max-width:$tab)
+			width: auto
+			margin: 0 0 0 auto
+			order: 3 
+	&__value-text
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		@media(max-width:$mob)
+			margin: 5px 0
 	&__container
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
+		@media(max-width:$mob)
+			flex-direction: column
 	&__col
 		&.values
 			width: 870px
 			@media(max-width:$tab)
 				width: 462px
+			@media(max-width:$mob)
+				width: 100%
 		&.resume
 			width: 270px
 			background-color: var(--gray)
@@ -19,6 +81,9 @@
 			min-height: 200px
 			@media(max-width:$tab)
 				width: 216px
+			@media(max-width:$mob)
+				width: 100%
+				position: static
 	&__item
 
 	&__title
@@ -29,6 +94,11 @@
 		line-height: 41px
 		color: var(--black)
 		margin-bottom: 20px
+		@media(max-width:$mob)
+			font-size: 18px
+			line-height: 27px
+			margin-bottom: 15px
+			margin-top: 30px
 	&__inputs
 		display: flex
 		justify-content: space-between
@@ -82,6 +152,8 @@
 		@media(max-width:$tab)
 			width: 48%
 			margin: 15px 2% 15px 0
+		@media(max-width:$mob)
+			width: 100%
 	&__radio
 		width: 0
 		height: 0
@@ -123,6 +195,8 @@
 	&__options
 		display: flex
 		flex-direction: column
+		@media(max-width:$mob)
+			margin-bottom: 30px
 	&__options-price
 		font-family: Open Sans
 		font-style: normal
@@ -222,6 +296,14 @@
 	&__buy-cont
 		width: 100%
 		margin-top: 20px
+		@media(max-width:$mob)
+			position: fixed
+			width: 100%
+			bottom: 0
+			left: 0
+			z-index: 15
+			padding: 15px
+			background-color: var(--gray)
 	&__buy
 		width: 100%
 		color: var(--white)
