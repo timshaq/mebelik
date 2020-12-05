@@ -104,8 +104,14 @@
 		flex-wrap: wrap
 		margin-bottom: 30px
 		&.row50
+			width: 45%
+			@media(max-width:$tab)
+				width: 48%
+			@media(max-width:$mob)
+				flex-direction: row
+				width: 100%
 			& .cabinet__input
-				width: 45%
+				width: 48%
 		@media(max-width:$mob)
 			flex-direction: column
 	&__input
@@ -136,6 +142,16 @@
 				top: 0
 				width: 19px
 				height: 19px
+		&.input45
+			width: 48%
+			@media(max-width:$mob)
+				width: 100%
+		&.input60
+			width: 51%
+			@media(max-width:$tab)
+				width: 48%
+			@media(max-width:$mob)
+				width: 100%
 		@media(max-width:$mob)
 			width: 100%
 	&__submit
