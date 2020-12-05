@@ -1,0 +1,16 @@
+.news-page
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: stretch
+		& .news__item
+			margin-bottom: 20px
+			@media(max-width:$tab)
+				width: 30%
+			@media(max-width:$mob)
+				width: 48%
+			@media(max-width:424px)
+				width: 100%
+		& .news__title_h3
+			margin-bottom: 15px
