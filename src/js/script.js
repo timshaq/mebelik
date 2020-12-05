@@ -7,6 +7,7 @@ import toggleSearchBlock from './toggleSearchBlock.js';
 import footerUlToggle from './footerUlToggle.js';
 import catalog from './catalog.js';
 import product from './product.js';
+import cabinet from './cab.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -202,6 +203,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		catalog()
 		product()
+		cabinet()
+
+
 
 
 });

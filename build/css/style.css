@@ -7526,9 +7526,23 @@ main {
   border-radius: 7px;
 }
 
+@media (max-width: 1199px) {
+  .cabinet__fix-cont {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .cabinet__fix-cont {
+    padding: 0;
+  }
+}
+
 .cabinet__wrapper {
   margin-top: 30px;
-  height: 787px;
+  min-height: 787px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7554,6 +7568,8 @@ main {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    min-height: auto;
+    margin-bottom: 60px;
   }
 }
 
@@ -7564,6 +7580,9 @@ main {
 @media (max-width: 1199px) {
   .cabinet__ways {
     width: 100%;
+    margin-bottom: 37px;
+    background-color: var(--gray);
+    padding: 7px 0;
   }
 }
 
@@ -7650,7 +7669,8 @@ main {
 @media (max-width: 1199px) {
   .cabinet__swiper-slide.exit {
     border: none;
-    padding: 12px 35px;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -7663,7 +7683,8 @@ main {
     line-height: 155%;
     color: var(--black);
     border: none;
-    padding: 0 35px;
+    padding: 0;
+    height: 36px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7681,6 +7702,155 @@ main {
 
 .cabinet__content {
   width: 870px;
+}
+
+@media (max-width: 1199px) {
+  .cabinet__content {
+    width: 100%;
+  }
+}
+
+.cabinet__title {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 41px;
+  color: var(--black);
+  margin-bottom: 30px;
+}
+
+.cabinet__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 699px) {
+  .cabinet__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.cabinet__input {
+  border-radius: 5px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
+  width: 30%;
+  background-color: var(--gray);
+  padding: 13px;
+  margin-bottom: 30px;
+}
+
+.cabinet__input::-webkit-input-placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
+}
+
+.cabinet__input::-moz-placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
+}
+
+.cabinet__input:-ms-input-placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
+}
+
+.cabinet__input::-ms-input-placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
+}
+
+.cabinet__input::placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
+}
+
+.cabinet__input.calendar {
+  position: relative;
+}
+
+.cabinet__input.calendar:before {
+  content: url("../img/calendar.svg");
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 19px;
+  height: 19px;
+}
+
+@media (max-width: 699px) {
+  .cabinet__input {
+    width: 100%;
+  }
+}
+
+.cabinet__submit {
+  border-radius: 5px;
+  width: 170px;
+  height: 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--blue);
+  font-family: Open Sans Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 155%;
+  color: var(--white);
 }
 
 .popup-cont {

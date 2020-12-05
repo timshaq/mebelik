@@ -7,12 +7,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   function n(i) {
     if (t[i]) return t[i].exports;
-    var l = t[i] = {
+    var s = t[i] = {
       i: i,
       l: !1,
       exports: {}
     };
-    return e[i].call(l.exports, l, l.exports, n), l.l = !0, l.exports;
+    return e[i].call(s.exports, s, s.exports, n), s.l = !0, s.exports;
   }
 
   n.m = e, n.c = t, n.d = function (e, t, i) {
@@ -33,10 +33,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     if (n.r(i), Object.defineProperty(i, "default", {
       enumerable: !0,
       value: e
-    }), 2 & t && "string" != typeof e) for (var l in e) {
-      n.d(i, l, function (t) {
+    }), 2 & t && "string" != typeof e) for (var s in e) {
+      n.d(i, s, function (t) {
         return e[t];
-      }.bind(null, l));
+      }.bind(null, s));
     }
     return i;
   }, n.n = function (e) {
@@ -48,7 +48,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return n.d(t, "a", t), t;
   }, n.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
-  }, n.p = "", n(n.s = 6);
+  }, n.p = "", n(n.s = 7);
 }([function (e, t, n) {
   "use strict";
 
@@ -62,20 +62,46 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   "use strict";
 
   n.r(t), t["default"] = function () {
+    var e = document.querySelector("#cab-slider .swiper-container");
+    new Swiper(e, {
+      spaceBetween: 0,
+      simulateTouch: !1,
+      breakpoints: {
+        320: {
+          width: null,
+          slidesPerView: 2.5,
+          simulateTouch: !0
+        },
+        650: {
+          width: null,
+          slidesPerView: 5.5,
+          simulateTouch: !0
+        },
+        1200: {
+          width: 270,
+          simulateTouch: !1
+        }
+      }
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
     var e = document.getElementById("price-slider");
     if (!e) return;
     var t = document.getElementById("price-from"),
         n = document.getElementById("price-to"),
         i = +document.getElementById("price-cont").getAttribute("data-min"),
-        l = +document.getElementById("price-cont").getAttribute("data-max"),
-        s = ("" + l).split("").length;
+        s = +document.getElementById("price-cont").getAttribute("data-max"),
+        l = ("" + s).split("").length;
     noUiSlider.create(e, {
-      start: [i + 2e3, l - 5e3],
+      start: [i + 2e3, s - 5e3],
       connect: [!0, !1, !0],
       padding: [0, 17],
       range: {
         min: [0],
-        max: [l]
+        max: [s]
       },
       format: {
         to: function to(e) {
@@ -88,9 +114,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }), e.noUiSlider.on("update", function (e) {
       t.value = e[0], n.value = e[1];
     }), t.addEventListener("input", function (n) {
-      t.value.length > s && (t.value = +t.value.substring(0, t.value.length - (t.value.length - s))), t.value > l && (t.value = l), t.value < 1 && (t.value = i), e.noUiSlider.set([t.value, null]);
+      t.value.length > l && (t.value = +t.value.substring(0, t.value.length - (t.value.length - l))), t.value > s && (t.value = s), t.value < 1 && (t.value = i), e.noUiSlider.set([t.value, null]);
     }), n.addEventListener("input", function (t) {
-      n.value.length > s && (n.value = +n.value.substring(0, n.value.length - (n.value.length - s))), n.value > l && (n.value = l), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
+      n.value.length > l && (n.value = +n.value.substring(0, n.value.length - (n.value.length - l))), n.value > s && (n.value = s), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
     });
     var o = document.getElementById("filter-btn"),
         r = document.getElementById("sort-btn"),
@@ -149,18 +175,18 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         t = Array.prototype.slice.call(e),
         n = document.querySelectorAll(".product-description__tabs-title"),
         i = Array.prototype.slice.call(n),
-        l = document.querySelectorAll(".product-description__item-title"),
-        s = Array.prototype.slice.call(l);
+        s = document.querySelectorAll(".product-description__item-title"),
+        l = Array.prototype.slice.call(s);
     i.forEach(function (e, n) {
-      var l = i;
+      var s = i;
       e.addEventListener("click", function () {
-        l.forEach(function (e) {
+        s.forEach(function (e) {
           e.classList.remove("active");
-        }), l[n].classList.add("active"), t.forEach(function (e) {
+        }), s[n].classList.add("active"), t.forEach(function (e) {
           e.classList.remove("active");
         }), t[n].classList.add("active");
       });
-    }), s.forEach(function (e, n) {
+    }), l.forEach(function (e, n) {
       e.addEventListener("click", function () {
         t[n].classList.contains("active-mob") ? t[n].classList.remove("active-mob") : t[n].classList.add("active-mob");
       });
@@ -398,7 +424,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     });
   };
 }, function (e, t, n) {
-  n(1), n(2), n(7), n(0), n(8), n(3), n(9), n(4), e.exports = n(5);
+  n(1), n(2), n(3), n(8), n(0), n(9), n(4), n(10), n(5), e.exports = n(6);
 }, function (e, t) {}, function (e, t, n) {
   "use strict";
 
@@ -407,12 +433,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   "use strict";
 
   n.r(t);
-  var i = n(4),
-      l = n(0),
-      s = n(5),
-      o = n(2),
-      r = n(1),
-      c = n(3);
+  var i = n(5),
+      s = n(0),
+      l = n(6),
+      o = n(3),
+      r = n(2),
+      c = n(4),
+      a = n(1);
   document.addEventListener("DOMContentLoaded", function () {
     var e,
         t = document.getElementById("header");
@@ -420,16 +447,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       e = window.innerWidth > 0 ? window.innerWidth : screen.width, console.log("resize"), console.log(e);
     }), Object(i["default"])(), Object(o["default"])(e), window.addEventListener("scroll", function (e) {
       window.scrollY;
-      Object(l["default"])();
-    }), Object(l["default"])(), Object(s["default"])();
+      Object(s["default"])();
+    }), Object(s["default"])(), Object(l["default"])();
     document.querySelectorAll(".header__nav-item").forEach(function (t) {
       t.addEventListener("click", function (n) {
         if (e <= 1199 && (n.preventDefault(), console.log("ev"), console.log(n.target), e <= 768)) if (n.preventDefault(), n.target === this || n.target === this.children[0]) console.log("this"), console.log(this), t.classList.contains("open") ? t.classList.remove("open") : t.classList.add("open");else if (n.target.classList.contains("header__more-title-link") || n.target.classList.contains("header__more-title")) {
           var i;
           "A" === n.target.tagName && (i = n.target.getAttribute("href")), "H2" === n.target.tagName && (i = n.target.children[0].getAttribute("href")), i && (location.href = i);
         } else if (n.target.classList.contains("header__more-list") || n.target.classList.contains("header__more-list-title-link") || n.target.classList.contains("header__more-list-title")) {
-          var l = n.target;
-          "A" === l.tagName && (l = l.parentElement.parentElement.parentElement), "H2" === l.tagName && (l = l.parentElement.parentElement), l.classList.contains("open") ? l.classList.remove("open") : l.classList.add("open");
+          var s = n.target;
+          "A" === s.tagName && (s = s.parentElement.parentElement.parentElement), "H2" === s.tagName && (s = s.parentElement.parentElement), s.classList.contains("open") ? s.classList.remove("open") : s.classList.add("open");
         } else (n.target.classList.contains("header__more-link") || n.target.classList.contains("header__more-subtitle")) && ("H3" === n.target.tagName && (location.href = n.target.children[0].getAttribute("href")), "A" === n.target.tagName && (location.href = n.target.getAttribute("href")));
       });
     });
@@ -437,83 +464,84 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       t.classList.contains("menu-open") ? (t.classList.remove("menu-open"), t.classList.remove("active"), t.classList.remove("not-search")) : (t.classList.add("menu-open"), t.classList.add("active"), t.classList.add("not-search"));
     });
     var n = document.getElementById("catalog-tab"),
-        a = document.getElementById("help-tab"),
-        d = document.getElementById("login-tab"),
-        u = document.getElementById("catalog-tab-list"),
-        p = document.getElementById("help-tab-list"),
-        m = document.getElementById("login-tab-cont"),
-        v = [n, a, d],
-        w = [u, p, m];
-    v.forEach(function (e, t) {
+        d = document.getElementById("help-tab"),
+        u = document.getElementById("login-tab"),
+        p = document.getElementById("catalog-tab-list"),
+        m = document.getElementById("help-tab-list"),
+        v = document.getElementById("login-tab-cont"),
+        w = [n, d, u],
+        f = [p, m, v];
+    w.forEach(function (e, t) {
       e.addEventListener("click", function () {
-        v.forEach(function (e) {
+        w.forEach(function (e) {
           return e.classList.remove("active");
-        }), v[t].classList.add("active"), w.forEach(function (e) {
+        }), w[t].classList.add("active"), f.forEach(function (e) {
           return e.classList.remove("open");
-        }), w[t].classList.add("open");
+        }), f[t].classList.add("open");
       });
     });
-    var f = document.getElementById("btn-login"),
-        g = document.getElementById("btn-registr"),
-        h = document.getElementById("btn-auth"),
-        y = document.getElementById("auth-cont"),
-        E = document.getElementById("auth-close"),
-        L = document.getElementById("registr-cont"),
-        b = document.getElementById("regist-close");
 
-    function _(e) {
+    var g = document.getElementById("btn-login"),
+        h = document.getElementById("btn-registr"),
+        y = document.getElementById("btn-auth"),
+        E = document.getElementById("auth-cont"),
+        L = document.getElementById("auth-close"),
+        b = document.getElementById("registr-cont"),
+        _ = document.getElementById("regist-close");
+
+    function B(e) {
       e.classList.remove("open"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
     }
 
-    function B(e) {
+    function k(e) {
       e.classList.add("open"), html.style.overflowX = "hidden", html.style.overflowY = "hidden";
     }
 
-    f.addEventListener("click", function () {
-      return B(y);
-    }), g.addEventListener("click", function () {
-      _(y), B(L);
+    g.addEventListener("click", function () {
+      return k(E);
     }), h.addEventListener("click", function () {
-      _(L), B(y);
-    }), E.addEventListener("click", function () {
-      return _(y);
-    }), b.addEventListener("click", function () {
-      return _(L);
+      B(E), k(b);
+    }), y.addEventListener("click", function () {
+      B(b), k(E);
+    }), L.addEventListener("click", function () {
+      return B(E);
+    }), _.addEventListener("click", function () {
+      return B(b);
     });
-    var k = document.querySelector(".footer .navigation .navigation__tel-callback"),
-        S = document.getElementById("call-cont"),
+    var S = document.querySelector(".footer .navigation .navigation__tel-callback"),
+        P = document.getElementById("call-cont"),
         I = document.getElementById("call-close");
-    k.addEventListener("click", function () {
-      return B(S);
+    S.addEventListener("click", function () {
+      return k(P);
     }), I.addEventListener("click", function () {
-      return _(S);
+      return B(P);
     });
-    var P = document.getElementById("review-btn");
+    var V = document.getElementById("review-btn");
 
-    if (P) {
+    if (V) {
       var _e = document.getElementById("review-cont"),
           _t = document.getElementById("review-close");
 
-      P.addEventListener("click", function () {
-        return B(_e);
+      V.addEventListener("click", function () {
+        return k(_e);
       }), _t.addEventListener("click", function () {
-        return _(_e);
+        return B(_e);
       });
     }
 
-    var V = document.getElementById("quest-btn");
+    var A = document.getElementById("quest-btn");
 
-    if (V) {
+    if (A) {
       var _e2 = document.getElementById("quest-cont"),
           _t2 = document.getElementById("quest-close");
 
-      V.addEventListener("click", function () {
-        return B(_e2);
+      A.addEventListener("click", function () {
+        return k(_e2);
       }), _t2.addEventListener("click", function () {
-        return _(_e2);
+        return B(_e2);
       });
     }
 
-    Object(r["default"])(), Object(c["default"])();
+    Object(r["default"])(), Object(c["default"])(), Object(a["default"])();
   });
 }]);
