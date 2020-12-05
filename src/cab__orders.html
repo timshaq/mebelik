@@ -2,7 +2,7 @@
 <html lang="ru" id="html">
 <head>
 
-	<title>Cab (address)</title>
+	<title>Cab (orders)</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -46,10 +46,10 @@
 				        <a href="#" class="cabinet__swiper-slide swiper-slide ">
 					       Профиль
 					    </a>
-				        <a href="#" class="cabinet__swiper-slide swiper-slide current-page">
+				        <a href="#" class="cabinet__swiper-slide swiper-slide">
 					        Адрес доставки
 					    </a>
-				        <a href="#" class="cabinet__swiper-slide swiper-slide">
+				        <a href="#" class="cabinet__swiper-slide swiper-slide current-page">
 					        Мои заказы
 					    </a>
 				        <a href="#" class="cabinet__swiper-slide swiper-slide">
@@ -68,23 +68,32 @@
 				</div>
 			</nav>
 
-			<form class="cabinet__content fix-cont">
+			<div class="cabinet__content fix-cont">
 				<h1 class="cabinet__title">
-					Адрес доставки
+					Мои заказы
 				</h1>
-				<div class="cabinet__row">
-					<input type="text" class="cabinet__input input45" placeholder="Регион/Область">
-					<input type="text" class="cabinet__input input45" placeholder="Город/Населенный пункт">
-					<input type="text" class="cabinet__input input60" placeholder="Улица">
-					<div class="cabinet__row row50">
-						<input type="text" class="cabinet__input" placeholder="Дом">
-						<input type="text" class="cabinet__input" placeholder="Квартира">
+				<div class="cabinet__order-row">
+					<div class="cabinet__order-header">
+						<div class="cabinet__order-info">
+							<div class="cabinet__order-info-title">
+								Заказ №-0003
+							</div>
+							<span class="cabinet__order-info-subtitle">
+								от 28 сентября 2020
+							</span>
+						</div>
+						<div class="cabinet__order-info">
+							<div class="cabinet__order-info-title align-right">
+								26 289.-
+							</div>
+							<span class="cabinet__order-info-subtitle">
+								Ожидаемая дата доставки: 5 октября 2020
+							</span>
+						</div>
 					</div>
+					@@include('html/cabinet/order1.html')
 				</div>
-				<button class="cabinet__submit">
-					Сохранить
-				</button>
-			</form>
+			</div>
 			
 		</div>
 

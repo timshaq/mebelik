@@ -418,7 +418,11 @@ main {
 }
 
 .header.active .header__navigation-bg {
-  padding: 20px 0;
+  padding: 10px 0;
+}
+
+.header.active .header__row.inform {
+  padding: 10px 0;
 }
 
 @media (max-width: 1199px) {
@@ -2824,6 +2828,9 @@ main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 10px 0 20px 0;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 @media (max-width: 699px) {
@@ -2841,16 +2848,8 @@ main {
 
 .product-line__colors-label {
   position: relative;
-}
-
-.product-line__colors-label:not(:first-child) {
-  margin-left: 15px;
-}
-
-@media (max-width: 699px) {
-  .product-line__colors-label:not(:first-child) {
-    margin-left: 0;
-  }
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 699px) {
@@ -7902,6 +7901,69 @@ main {
   font-size: 16px;
   line-height: 155%;
   color: var(--white);
+}
+
+.cabinet__order-row {
+  border-radius: 5px;
+  border: 1px solid var(--black05);
+}
+
+.cabinet__order-header {
+  border-radius: 5px;
+  background-color: var(--gray);
+  padding: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cabinet__order-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cabinet__order-info-title {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--black);
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.cabinet__order-info-title.align-right {
+  text-align: right;
+}
+
+.cabinet__order-info-subtitle {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
 }
 
 .popup-cont {
