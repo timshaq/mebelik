@@ -13,12 +13,21 @@
 	& .header__search-submit
 		width: 48px
 		height: 48px
+		display: flex
+		justify-content: center
+		align-items: center
 	& .header__search-label
 		width: calc(100% - 48px)
 	& .header__search-input,
 	& .header__search-input::placeholder
 		background-color: var(--white)
 		color: var(--black)
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
 		@media(max-width:$tab)
 			font-size: 14px
 	& .header__search-input::placeholder
@@ -59,13 +68,34 @@
 	&__input-num-cont
 		width: 140px
 		display: flex
-		justify-content: flex-end
+		justify-content: space-between
 		align-items: center
 		margin-right: 30px
-		& input
+		background-color: var(--gray)
+		border-radius: 10px
+		& .basket-item-amount-btn-minus,
+		& .basket-item-amount-btn-plus
+			background: #FFFFFF
+			border-radius: 8px
+			width: 34px
+			height: 34px
+		& .basket-item-amount-filed-block
+			width: 29%
+		& .basket-item-amount-filed
 			width: 100%
-			border-radius: 10px
-			border: 1px solid var(--black)
+			font-family: Open Sans
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 150%
+			color: var(--black60)
+			&::placeholder
+				font-family: Open Sans
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				line-height: 150%
+				color: var(--black60)
 		@media(max-width:$tab)
 			margin: 0
 	& .variants__price
@@ -190,6 +220,7 @@
 		align-items: center
 		text-transform: uppercase
 		border-radius: 7px
+		padding: 10px 0
 		@media(max-width:$tab)
 			font-size: 18px
 	&__product-title
