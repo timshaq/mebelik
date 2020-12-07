@@ -70,6 +70,12 @@
 					justify-content: space-between
 					& div
 						width: 45%
+						@media(max-width:$mob)
+							width: 100%
+					& .product-line__btn
+						display: flex
+						justify-content: center
+						align-items: center
 		@media(max-width:$tab)
 			padding: 10px
 		@media(max-width:$mob)
@@ -226,7 +232,7 @@
 			@media(max-width:$mob)
 				padding: 0
 				order: -2
-				margin-top: 15px
+				margin-top: 0
 				margin-bottom: 7px
 				font-size: 12px
 	&__slide-inform
@@ -328,7 +334,7 @@
 			border: none
 			padding: 0
 			order: -1
-			margin: 0 0 10px 0
+			margin: 15px 0 0 0
 	&__options-title
 		font-family: Open Sans
 		font-style: normal
@@ -347,7 +353,7 @@
 		@media(max-width:$mob)
 			justify-content: flex-start
 			flex-wrap: wrap
-			margin: 0
+			margin: 10px 0 0 0
 	&__colors-label
 		position: relative
 		margin-right: 15px
