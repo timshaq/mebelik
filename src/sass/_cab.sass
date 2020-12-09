@@ -25,6 +25,8 @@
 			background-color: var(--gray)
 			padding: 7px 0
 	&__swiper-container
+		&.fix-cont
+			min-width: 0
 	&__swiper-wrapper
 		display: flex
 		flex-direction: column
@@ -116,25 +118,21 @@
 			flex-direction: column
 			&.wish
 				flex-direction: row
-	&__input
-		border-radius: 5px
+	&__input,
+	&__input::placeholder,
+	&__order-info-subtitle
 		font-family: Open Sans
 		font-style: normal
 		font-weight: normal
 		font-size: 14px
 		line-height: 150%
 		color: var(--black60)
+	&__input
+		border-radius: 5px
 		width: 30%
 		background-color: var(--gray)
 		padding: 13px
 		margin-bottom: 30px
-		&::placeholder
-			font-family: Open Sans
-			font-style: normal
-			font-weight: normal
-			font-size: 14px
-			line-height: 150%
-			color: var(--black60)
 		&.calendar
 			position: relative
 			&:before
@@ -198,12 +196,6 @@
 		&.align-right
 			text-align: right
 	&__order-info-subtitle
-		font-family: Open Sans
-		font-style: normal
-		font-weight: normal
-		font-size: 14px
-		line-height: 150%
-		color: var(--black60)
 	& .product-line__slide
 		margin-bottom: 30px
 		@media(max-width:$tab)

@@ -7,12 +7,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   function n(i) {
     if (t[i]) return t[i].exports;
-    var s = t[i] = {
+    var l = t[i] = {
       i: i,
       l: !1,
       exports: {}
     };
-    return e[i].call(s.exports, s, s.exports, n), s.l = !0, s.exports;
+    return e[i].call(l.exports, l, l.exports, n), l.l = !0, l.exports;
   }
 
   n.m = e, n.c = t, n.d = function (e, t, i) {
@@ -33,10 +33,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     if (n.r(i), Object.defineProperty(i, "default", {
       enumerable: !0,
       value: e
-    }), 2 & t && "string" != typeof e) for (var s in e) {
-      n.d(i, s, function (t) {
+    }), 2 & t && "string" != typeof e) for (var l in e) {
+      n.d(i, l, function (t) {
         return e[t];
-      }.bind(null, s));
+      }.bind(null, l));
     }
     return i;
   }, n.n = function (e) {
@@ -61,29 +61,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 }, function (e, t, n) {
   "use strict";
 
-  n.r(t), t["default"] = function () {
-    var e = document.querySelector("#cab-slider .swiper-container");
-    new Swiper(e, {
-      spaceBetween: 0,
-      simulateTouch: !1,
-      breakpoints: {
-        320: {
-          width: null,
-          slidesPerView: 2.5,
-          simulateTouch: !0
-        },
-        650: {
-          width: null,
-          slidesPerView: 5.5,
-          simulateTouch: !0
-        },
-        1200: {
-          width: 270,
-          simulateTouch: !1
-        }
-      }
-    });
-  };
+  n.r(t), t["default"] = function () {};
 }, function (e, t, n) {
   "use strict";
 
@@ -93,15 +71,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     var t = document.getElementById("price-from"),
         n = document.getElementById("price-to"),
         i = +document.getElementById("price-cont").getAttribute("data-min"),
-        s = +document.getElementById("price-cont").getAttribute("data-max"),
-        l = ("" + s).split("").length;
+        l = +document.getElementById("price-cont").getAttribute("data-max"),
+        s = ("" + l).split("").length;
     noUiSlider.create(e, {
-      start: [i + 2e3, s - 5e3],
+      start: [i + 2e3, l - 5e3],
       connect: [!0, !1, !0],
       padding: [0, 17],
       range: {
         min: [0],
-        max: [s]
+        max: [l]
       },
       format: {
         to: function to(e) {
@@ -114,9 +92,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }), e.noUiSlider.on("update", function (e) {
       t.value = e[0], n.value = e[1];
     }), t.addEventListener("input", function (n) {
-      t.value.length > l && (t.value = +t.value.substring(0, t.value.length - (t.value.length - l))), t.value > s && (t.value = s), t.value < 1 && (t.value = i), e.noUiSlider.set([t.value, null]);
+      t.value.length > s && (t.value = +t.value.substring(0, t.value.length - (t.value.length - s))), t.value > l && (t.value = l), t.value < 1 && (t.value = i), e.noUiSlider.set([t.value, null]);
     }), n.addEventListener("input", function (t) {
-      n.value.length > l && (n.value = +n.value.substring(0, n.value.length - (n.value.length - l))), n.value > s && (n.value = s), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
+      n.value.length > s && (n.value = +n.value.substring(0, n.value.length - (n.value.length - s))), n.value > l && (n.value = l), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
     });
     var o = document.getElementById("filter-btn"),
         r = document.getElementById("sort-btn"),
@@ -175,18 +153,18 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         t = Array.prototype.slice.call(e),
         n = document.querySelectorAll(".product-description__tabs-title"),
         i = Array.prototype.slice.call(n),
-        s = document.querySelectorAll(".product-description__item-title"),
-        l = Array.prototype.slice.call(s);
+        l = document.querySelectorAll(".product-description__item-title"),
+        s = Array.prototype.slice.call(l);
     i.forEach(function (e, n) {
-      var s = i;
+      var l = i;
       e.addEventListener("click", function () {
-        s.forEach(function (e) {
+        l.forEach(function (e) {
           e.classList.remove("active");
-        }), s[n].classList.add("active"), t.forEach(function (e) {
+        }), l[n].classList.add("active"), t.forEach(function (e) {
           e.classList.remove("active");
         }), t[n].classList.add("active");
       });
-    }), l.forEach(function (e, n) {
+    }), s.forEach(function (e, n) {
       e.addEventListener("click", function () {
         t[n].classList.contains("active-mob") ? t[n].classList.remove("active-mob") : t[n].classList.add("active-mob");
       });
@@ -434,8 +412,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   n.r(t);
   var i = n(5),
-      s = n(0),
-      l = n(6),
+      l = n(0),
+      s = n(6),
       o = n(3),
       r = n(2),
       c = n(4),
@@ -443,102 +421,124 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   document.addEventListener("DOMContentLoaded", function () {
     var e,
         t = document.getElementById("header");
-    e = window.innerWidth > 0 ? window.innerWidth : screen.width, window.addEventListener("resize", function (t) {
-      e = window.innerWidth > 0 ? window.innerWidth : screen.width, console.log("resize"), console.log(e);
+    var n = document.querySelector("#cab-slider .swiper-container"),
+        d = new Swiper(n, {
+      spaceBetween: 0,
+      breakpoints: {
+        320: {
+          width: null,
+          slidesPerView: 2.5
+        },
+        650: {
+          width: null,
+          slidesPerView: 5.5
+        },
+        1200: {
+          width: 270
+        }
+      }
+    });
+
+    function u() {
+      console.log("getVW"), console.log(e), e >= 1200 ? (d.destroy(!1, !0), console.log("destroy")) : (d.init(), console.log("init"));
+    }
+
+    e = window.innerWidth > 0 ? window.innerWidth : screen.width, u(), window.addEventListener("resize", function (t) {
+      e = window.innerWidth > 0 ? window.innerWidth : screen.width, u();
     }), Object(i["default"])(), Object(o["default"])(e), window.addEventListener("scroll", function (e) {
       window.scrollY;
-      Object(s["default"])();
-    }), Object(s["default"])(), Object(l["default"])();
+      Object(l["default"])();
+    }), Object(l["default"])(), Object(s["default"])();
     document.querySelectorAll(".header__nav-item").forEach(function (t) {
       t.addEventListener("click", function (n) {
         if (e <= 1199 && (n.preventDefault(), console.log("ev"), console.log(n.target), e <= 768)) if (n.preventDefault(), n.target === this || n.target === this.children[0]) console.log("this"), console.log(this), t.classList.contains("open") ? t.classList.remove("open") : t.classList.add("open");else if (n.target.classList.contains("header__more-title-link") || n.target.classList.contains("header__more-title")) {
           var i;
           "A" === n.target.tagName && (i = n.target.getAttribute("href")), "H2" === n.target.tagName && (i = n.target.children[0].getAttribute("href")), i && (location.href = i);
         } else if (n.target.classList.contains("header__more-list") || n.target.classList.contains("header__more-list-title-link") || n.target.classList.contains("header__more-list-title")) {
-          var s = n.target;
-          "A" === s.tagName && (s = s.parentElement.parentElement.parentElement), "H2" === s.tagName && (s = s.parentElement.parentElement), s.classList.contains("open") ? s.classList.remove("open") : s.classList.add("open");
+          var l = n.target;
+          "A" === l.tagName && (l = l.parentElement.parentElement.parentElement), "H2" === l.tagName && (l = l.parentElement.parentElement), l.classList.contains("open") ? l.classList.remove("open") : l.classList.add("open");
         } else (n.target.classList.contains("header__more-link") || n.target.classList.contains("header__more-subtitle")) && ("H3" === n.target.tagName && (location.href = n.target.children[0].getAttribute("href")), "A" === n.target.tagName && (location.href = n.target.getAttribute("href")));
       });
     });
     document.getElementById("burger-btn").addEventListener("click", function () {
       t.classList.contains("menu-open") ? (t.classList.remove("menu-open"), t.classList.remove("active"), t.classList.remove("not-search")) : (t.classList.add("menu-open"), t.classList.add("active"), t.classList.add("not-search"));
     });
-    var n = document.getElementById("catalog-tab"),
-        d = document.getElementById("help-tab"),
-        u = document.getElementById("login-tab"),
-        p = document.getElementById("catalog-tab-list"),
-        m = document.getElementById("help-tab-list"),
-        v = document.getElementById("login-tab-cont"),
-        w = [n, d, u],
-        f = [p, m, v];
-    w.forEach(function (e, t) {
+    var p = document.getElementById("catalog-tab"),
+        m = document.getElementById("help-tab"),
+        v = document.getElementById("login-tab"),
+        w = document.getElementById("catalog-tab-list"),
+        f = document.getElementById("help-tab-list"),
+        g = document.getElementById("login-tab-cont"),
+        h = [p, m, v],
+        y = [w, f, g];
+    h.forEach(function (e, t) {
       e.addEventListener("click", function () {
-        w.forEach(function (e) {
+        h.forEach(function (e) {
           return e.classList.remove("active");
-        }), w[t].classList.add("active"), f.forEach(function (e) {
+        }), h[t].classList.add("active"), y.forEach(function (e) {
           return e.classList.remove("open");
-        }), f[t].classList.add("open");
+        }), y[t].classList.add("open");
       });
     });
 
-    var g = document.getElementById("btn-login"),
-        h = document.getElementById("btn-registr"),
-        y = document.getElementById("btn-auth"),
-        E = document.getElementById("auth-cont"),
-        L = document.getElementById("auth-close"),
-        b = document.getElementById("registr-cont"),
-        _ = document.getElementById("regist-close");
+    var E = document.getElementById("btn-login"),
+        L = document.getElementById("btn-registr"),
+        b = document.getElementById("btn-auth"),
+        _ = document.getElementById("auth-cont"),
+        B = document.getElementById("auth-close"),
+        k = document.getElementById("registr-cont"),
+        S = document.getElementById("regist-close");
 
-    function B(e) {
+    function P(e) {
       e.classList.remove("open"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
     }
 
-    function k(e) {
+    function I(e) {
       e.classList.add("open"), html.style.overflowX = "hidden", html.style.overflowY = "hidden";
     }
 
-    g.addEventListener("click", function () {
-      return k(E);
-    }), h.addEventListener("click", function () {
-      B(E), k(b);
-    }), y.addEventListener("click", function () {
-      B(b), k(E);
+    E.addEventListener("click", function () {
+      return I(_);
     }), L.addEventListener("click", function () {
-      return B(E);
-    }), _.addEventListener("click", function () {
-      return B(b);
+      P(_), I(k);
+    }), b.addEventListener("click", function () {
+      P(k), I(_);
+    }), B.addEventListener("click", function () {
+      return P(_);
+    }), S.addEventListener("click", function () {
+      return P(k);
     });
-    var S = document.querySelector(".footer .navigation .navigation__tel-callback"),
-        P = document.getElementById("call-cont"),
-        I = document.getElementById("call-close");
-    S.addEventListener("click", function () {
-      return k(P);
-    }), I.addEventListener("click", function () {
-      return B(P);
+    var V = document.querySelector(".footer .navigation .navigation__tel-callback"),
+        A = document.getElementById("call-cont"),
+        O = document.getElementById("call-close");
+    V.addEventListener("click", function () {
+      return I(A);
+    }), O.addEventListener("click", function () {
+      return P(A);
     });
-    var V = document.getElementById("review-btn");
+    var q = document.getElementById("review-btn");
 
-    if (V) {
+    if (q) {
       var _e = document.getElementById("review-cont"),
           _t = document.getElementById("review-close");
 
-      V.addEventListener("click", function () {
-        return k(_e);
+      q.addEventListener("click", function () {
+        return I(_e);
       }), _t.addEventListener("click", function () {
-        return B(_e);
+        return P(_e);
       });
     }
 
-    var A = document.getElementById("quest-btn");
+    var x = document.getElementById("quest-btn");
 
-    if (A) {
+    if (x) {
       var _e2 = document.getElementById("quest-cont"),
           _t2 = document.getElementById("quest-close");
 
-      A.addEventListener("click", function () {
-        return k(_e2);
+      x.addEventListener("click", function () {
+        return I(_e2);
       }), _t2.addEventListener("click", function () {
-        return B(_e2);
+        return P(_e2);
       });
     }
 

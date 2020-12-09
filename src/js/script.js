@@ -14,11 +14,50 @@ document.addEventListener("DOMContentLoaded", function () {
 	var header = document.getElementById('header');
 	var getVW;
 
+		const sliderCabinet = document.querySelector('#cab-slider .swiper-container')
+
+		const cabinetTabs = new Swiper(sliderCabinet, {
+			spaceBetween: 0,
+			// simulateTouch: false,
+			breakpoints: {
+				320: {
+					width: null,
+					slidesPerView: 2.5,
+					// simulateTouch: true,
+				},
+				650: {
+					width: null,
+					slidesPerView: 5.5,
+					// simulateTouch: true,
+				},
+				1200: {
+					width: 270,
+					// simulateTouch: false,
+				},
+
+			},
+
+		})
+
+	function toggleCabTabs() {
+	  		console.log('getVW')
+	  		console.log(getVW)
+	  	if (getVW >= 1200) {
+	  		cabinetTabs.destroy(false,true)
+	  		console.log('destroy')
+	  	} else {
+	  		cabinetTabs.init()
+	  		console.log('init')
+	  	}
+	}
+	
 	if (window.innerWidth > 0) {
 		 getVW = window.innerWidth
 	} else {
 		 getVW = screen.width;
 	}
+
+	toggleCabTabs()
 
 	window.addEventListener('resize', function(event){
 		if (window.innerWidth > 0) {
@@ -26,8 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else {
 			 getVW = screen.width;
 		}
-	  console.log('resize')
-	  console.log(getVW)
+		toggleCabTabs()
+	  // console.log('resize')
+	  // console.log(getVW)
 	});
 
 	sliders();
