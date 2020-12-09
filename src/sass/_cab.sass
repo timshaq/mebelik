@@ -114,6 +114,8 @@
 				width: 48%
 		@media(max-width:$mob)
 			flex-direction: column
+			&.wish
+				flex-direction: row
 	&__input
 		border-radius: 5px
 		font-family: Open Sans
@@ -202,3 +204,9 @@
 		font-size: 14px
 		line-height: 150%
 		color: var(--black60)
+	& .product-line__slide
+		margin-bottom: 30px
+		@media(max-width:$tab)
+			width: 30%
+		@media(max-width:$mob)
+			width: 48%

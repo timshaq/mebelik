@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+
+	<title>Cab (wishlist)</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css">
+	<script src="lib/swiper/swiper-bundle.min.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+
+	<script src="js/script.min.js"></script>
+
+</head>
+
+<body id="body">
+
+@@include('html/header.html')
+
+<main>
+
+
+<section class="cabinet">
+	<div class="cabinet__fix-cont fix-cont">
+		
+		<ul class="breadscrumb fix-cont">
+			<li class="breadscrumb-item">
+				Главная
+			</li>
+			<li class="breadscrumb-item">
+				Каталог
+			</li>
+			<li class="breadscrumb-item">
+				Спальня
+			</li>
+		</ul>
+
+		<div class="cabinet__wrapper">
+			<nav class="cabinet__ways" id="cab-slider">
+				<div class="cabinet__swiper-container swiper-container fix-cont">
+				    <div class="cabinet__swiper-wrapper swiper-wrapper">
+				        <a href="#" class="cabinet__swiper-slide swiper-slide ">
+					       Профиль
+					    </a>
+				        <a href="#" class="cabinet__swiper-slide swiper-slide current-page">
+					        Адрес доставки
+					    </a>
+				        <a href="#" class="cabinet__swiper-slide swiper-slide">
+					        Мои заказы
+					    </a>
+				        <a href="#" class="cabinet__swiper-slide swiper-slide">
+					       История заказов
+					    </a>
+				        <a href="#" class="cabinet__swiper-slide swiper-slide">
+					        Избранное
+					    </a>
+				        <a href="#" class="cabinet__swiper-slide swiper-slide prelast">
+					       Подписка
+					    </a>
+				        <a href="#" class="cabinet__swiper-slide swiper-slide exit">
+					       Выход
+					    </a>
+				    </div>
+				</div>
+			</nav>
+
+			<div class="cabinet__content fix-cont">
+				<h1 class="cabinet__title">
+					Избранное
+				</h1>
+				<div class="cabinet__row wish">
+					@@include('html/catalog/product-list__items.html')
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+</section>
+
+
+</main>
+
+@@include('html/footer.html')
+@@include('html/arrow-up.html')
+@@include('html/autoriz.html')
+@@include('html/registr.html')
+@@include('html/call.html')
+
+</body>
+
+
+
+</html>
