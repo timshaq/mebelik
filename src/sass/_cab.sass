@@ -178,12 +178,9 @@
 		background-color: var(--gray)
 		padding: 15px
 		display: flex
-		justify-content: space-between
-	&__order-info
-		display: flex
-		flex-direction: column
 		justify-content: flex-start
 		align-items: flex-start
+		margin-bottom: 20px
 	&__order-info-title
 		font-family: Oswald
 		font-style: normal
@@ -202,3 +199,86 @@
 			width: 30%
 		@media(max-width:$mob)
 			width: 48%
+	&__order-inform
+
+	&__order-inform-header
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 21px
+		color: var(--black)
+		padding: 10px 15px
+		background-color: var(--gray)
+	&__order-inform-content
+	&__order-inform-row
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		padding: 15px
+		&.hr-b
+			position: relative
+			&:before
+				content: ''
+				width: calc(100% - 30px)
+				height: 1px
+				background-color: var(--black10)
+				position: absolute
+				left: 50%
+				bottom: 0
+				transform: translateX(-50%)
+		&.pd60
+			padding-left: 45px
+	&__order-inform-col
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+		&.center
+			align-items: center
+	&__order-inform-name
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-bottom: 5px
+	&__order-inform-value
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: var(--black)
+	&__order-inform-repeat
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 21px
+		border-radius: 5px
+		background-color: var(--blue)
+		padding: 10px 30px
+		color: var(--white)
+		margin-bottom: 13px
+	&__order-inform-cancel
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+	&__order-detail-btn,
+	&__order-inform-link
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--blue)
+		text-decoration-line: underline
+	&__order-detail
+
+	&__order-detail-item
+
