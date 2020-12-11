@@ -229,6 +229,8 @@
 				transform: translateX(-50%)
 		&.pd60
 			padding-left: 45px
+		&.align-center
+			align-items: center
 	&__order-inform-col
 		display: flex
 		flex-direction: column
@@ -236,6 +238,16 @@
 		justify-content: flex-start
 		&.center
 			align-items: center
+		&.th
+			width: 48%
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-direction: row
+			&.justify-center
+				justify-content: center
+			&.justify-start
+				justify-content: flex-start
 	&__order-inform-name
 		font-family: Open Sans
 		font-style: normal
@@ -244,6 +256,10 @@
 		line-height: 150%
 		color: var(--black60)
 		margin-bottom: 5px
+		&.tab
+			display: none
+			@media(max-width:$tab)
+				display: inline
 	&__order-inform-value
 		font-family: Oswald
 		font-style: normal
@@ -278,7 +294,23 @@
 		line-height: 150%
 		color: var(--blue)
 		text-decoration-line: underline
+	&__order-inform-phcont
+		width: 100px
+		height: 100px
+		margin-right: 20px
+	&__order-inform-title-link
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: var(--blue)
+	&__order-inform-param
+		display: flex
+		flex-direction: column
 	&__order-detail
-
+		&.hidden
+			display: none
 	&__order-detail-item
-
+		&.hidden
+			display: none

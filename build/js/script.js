@@ -66,7 +66,21 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 }, function (e, t, n) {
   "use strict";
 
-  n.r(t), t["default"] = function () {};
+  n.r(t), t["default"] = function () {
+    var e = document.getElementById("toggle-detail");
+
+    if (e) {
+      var _t = document.getElementById("detail-cont"),
+          _n = document.getElementById("toggle-shipment-detail"),
+          i = document.getElementById("shipment-detail");
+
+      e.addEventListener("click", function () {
+        _t.classList.contains("hidden") ? (_t.classList.remove("hidden"), e.innerText = "Скрыть") : (_t.classList.add("hidden"), e.innerText = "Показать все");
+      }), _n.addEventListener("click", function () {
+        i.classList.contains("hidden") ? (i.classList.remove("hidden"), _n.innerText = "Скрыть") : (i.classList.add("hidden"), _n.innerText = "Показать все");
+      });
+    }
+  };
 }, function (e, t, n) {
   "use strict";
 
@@ -111,21 +125,21 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       d.style.overflowX = "hidden", d.style.overflowY = "hidden";
     }
 
-    function p() {
+    function m() {
       d.style.overflowX = "hidden", d.style.overflowY = "scroll";
     }
 
     o.addEventListener("click", function () {
       return a.classList.add("open"), void u();
     }), r.addEventListener("click", function () {
-      return a.classList.remove("open"), void p();
+      return a.classList.remove("open"), void m();
     }), c.addEventListener("click", function () {
-      c.classList.contains("active") ? (c.classList.remove("active"), p()) : (u(), c.classList.add("active"));
+      c.classList.contains("active") ? (c.classList.remove("active"), m()) : (u(), c.classList.add("active"));
     });
-    var m = document.querySelectorAll(".filter__item"),
-        v = Array.prototype.slice.call(m),
-        w = document.querySelectorAll(".filter__item-title");
-    Array.prototype.slice.call(w).forEach(function (e, t) {
+    var p = document.querySelectorAll(".filter__item"),
+        v = Array.prototype.slice.call(p),
+        g = document.querySelectorAll(".filter__item-title");
+    Array.prototype.slice.call(g).forEach(function (e, t) {
       e.addEventListener("click", function () {
         v[t].classList.contains("hide") ? v[t].classList.remove("hide") : v[t].classList.add("hide");
       });
@@ -468,14 +482,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     document.getElementById("burger-btn").addEventListener("click", function () {
       t.classList.contains("menu-open") ? (t.classList.remove("menu-open"), t.classList.remove("active"), t.classList.remove("not-search")) : (t.classList.add("menu-open"), t.classList.add("active"), t.classList.add("not-search"));
     });
-    var p = document.getElementById("catalog-tab"),
-        m = document.getElementById("help-tab"),
+    var m = document.getElementById("catalog-tab"),
+        p = document.getElementById("help-tab"),
         v = document.getElementById("login-tab"),
-        w = document.getElementById("catalog-tab-list"),
-        g = document.getElementById("help-tab-list"),
+        g = document.getElementById("catalog-tab-list"),
+        w = document.getElementById("help-tab-list"),
         f = document.getElementById("login-tab-cont"),
-        h = [p, m, v],
-        y = [w, g, f];
+        h = [m, p, v],
+        y = [g, w, f];
     h.forEach(function (e, t) {
       e.addEventListener("click", function () {
         h.forEach(function (e) {
@@ -492,9 +506,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         _ = document.getElementById("auth-cont"),
         B = document.getElementById("auth-close"),
         k = document.getElementById("registr-cont"),
-        S = document.getElementById("regist-close");
+        I = document.getElementById("regist-close");
 
-    function I(e) {
+    function S(e) {
       e.classList.remove("open"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
     }
 
@@ -505,45 +519,45 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     E.addEventListener("click", function () {
       return P(_);
     }), L.addEventListener("click", function () {
-      I(_), P(k);
+      S(_), P(k);
     }), b.addEventListener("click", function () {
-      I(k), P(_);
+      S(k), P(_);
     }), B.addEventListener("click", function () {
-      return I(_);
-    }), S.addEventListener("click", function () {
-      return I(k);
+      return S(_);
+    }), I.addEventListener("click", function () {
+      return S(k);
     });
     var V = document.querySelector(".footer .navigation .navigation__tel-callback"),
-        A = document.getElementById("call-cont"),
-        O = document.getElementById("call-close");
+        x = document.getElementById("call-cont"),
+        A = document.getElementById("call-close");
     V.addEventListener("click", function () {
-      return P(A);
-    }), O.addEventListener("click", function () {
-      return I(A);
+      return P(x);
+    }), A.addEventListener("click", function () {
+      return S(x);
     });
-    var q = document.getElementById("review-btn");
+    var O = document.getElementById("review-btn");
 
-    if (q) {
+    if (O) {
       var _e = document.getElementById("review-cont"),
-          _t = document.getElementById("review-close");
+          _t2 = document.getElementById("review-close");
 
-      q.addEventListener("click", function () {
+      O.addEventListener("click", function () {
         return P(_e);
-      }), _t.addEventListener("click", function () {
-        return I(_e);
+      }), _t2.addEventListener("click", function () {
+        return S(_e);
       });
     }
 
-    var x = document.getElementById("quest-btn");
+    var q = document.getElementById("quest-btn");
 
-    if (x) {
+    if (q) {
       var _e2 = document.getElementById("quest-cont"),
-          _t2 = document.getElementById("quest-close");
+          _t3 = document.getElementById("quest-close");
 
-      x.addEventListener("click", function () {
+      q.addEventListener("click", function () {
         return P(_e2);
-      }), _t2.addEventListener("click", function () {
-        return I(_e2);
+      }), _t3.addEventListener("click", function () {
+        return S(_e2);
       });
     }
 

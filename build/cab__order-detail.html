@@ -2,7 +2,7 @@
 <html lang="ru" id="html">
 <head>
 
-	<title>Cab (orders)</title>
+	<title>Cab (order detail)</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -2222,11 +2222,11 @@
 								</div>
 							</div>
 							<div class="cabinet__order-inform-row">
-								<button type="button" class="cabinet__order-detail-btn">
-									Скрыть
+								<button type="button" class="cabinet__order-detail-btn" id="toggle-detail">
+									Показать все
 								</button>
 							</div>
-						<div class="cabinet__order-detail">
+						<div class="cabinet__order-detail hidden" id="detail-cont">
 							
 							<div class="cabinet__order-detail-item">
 								<h3 class="cabinet__order-inform-header">
@@ -2276,9 +2276,6 @@
 											<span class="cabinet__order-inform-name">
 												Статус отгрузки: Ожидает обработки
 											</span>
-											<a href="#" class="cabinet__order-inform-link">
-												Показать все
-											</a>
 										</div>
 									</div>
 								</div>
@@ -2288,12 +2285,179 @@
 								<h3 class="cabinet__order-inform-header">
 									Содержимое заказа
 								</h3>
+								<div class="cabinet__order-inform-content">
+									<div class="cabinet__order-inform-row hr-b">
+										<div class="cabinet__order-inform-col hr-b th">
+											<span class="cabinet__order-inform-name">
+												Наименование:
+											</span>
+										</div>
+										<div class="cabinet__order-inform-col hr-b th justify-center">
+											<span class="cabinet__order-inform-name">
+												Кол-во:
+											</span>
+										</div>
+									</div>
+									<div class="cabinet__order-inform-row hr-b align-center">
+										<div class="cabinet__order-inform-col hr-b th justify-center">
+											<div class="cabinet__order-inform-phcont">
+												<img src="img/catalog__01.svg" alt="" class="cabinet__order-inform-ph">
+											</div>
+											<div class="cabinet__order-inform-param">
+												<a href="#" class="cabinet__order-inform-title-link">
+													Кровать без подъёмного механизма Соренто
+												</a>
+												<span class="cabinet__order-inform-name">
+													Цвет: дуб Бонифаций, дуб Бордо
+												</span>
+												<span class="cabinet__order-inform-name">
+													Размер: 160х200
+												</span>
+											</div>
+										</div>
+										<div class="cabinet__order-inform-col hr-b th justify-center">
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Кол-во:
+												</span>
+												1 шт.
+											</span>
+										</div>
+									</div>
+									<div class="cabinet__order-inform-row">
+										<button type="button" class="cabinet__order-inform-link" id="toggle-shipment-detail">
+											Показать все
+										</button>
+									</div>
+								</div>
+							</div>
+							
+							<div class="cabinet__order-detail-item hidden" id="shipment-detail">
+								<h3 class="cabinet__order-inform-header">
+									Состав отгрузки
+								</h3>
+								<div class="cabinet__order-inform-content">
+									<div class="cabinet__order-inform-row hr-b">
+										<div class="cabinet__order-inform-col hr-b th">
+											<span class="cabinet__order-inform-name">
+												Наименование:
+											</span>
+										</div>
+										<div class="cabinet__order-inform-col hr-b th">
+											<span class="cabinet__order-inform-name">
+												Цена:
+											</span>
+											<span class="cabinet__order-inform-name">
+												Скидка:
+											</span>
+											<span class="cabinet__order-inform-name">
+												Кол-во:
+											</span>
+											<span class="cabinet__order-inform-name">
+												Сумма:
+											</span>
+										</div>
+									</div>
+									<div class="cabinet__order-inform-row hr-b align-center">
+										<div class="cabinet__order-inform-col hr-b th justify-start">
+											<div class="cabinet__order-inform-phcont">
+												<img src="img/catalog__01.svg" alt="" class="cabinet__order-inform-ph">
+											</div>
+											<div class="cabinet__order-inform-param">
+												<a href="#" class="cabinet__order-inform-title-link">
+													Кровать без подъёмного механизма Соренто
+												</a>
+												<span class="cabinet__order-inform-name">
+													Цвет: дуб Бонифаций, дуб Бордо
+												</span>
+												<span class="cabinet__order-inform-name">
+													Размер: 160х200
+												</span>
+											</div>
+										</div>
+										<div class="cabinet__order-inform-col hr-b th">
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Цена:
+												</span>
+												16 199.-
+											</span>
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Скидка:
+												</span>
+												20%
+											</span>
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Кол-во:
+												</span>
+												1 шт.
+											</span>
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Сумма:
+												</span>
+												16 199.-
+											</span>
+										</div>
+									</div>
+									<div class="cabinet__order-inform-row  align-center">
+										<div class="cabinet__order-inform-col hr-b th justify-start">
+											<div class="cabinet__order-inform-phcont">
+												<img src="img/catalog__01.svg" alt="" class="cabinet__order-inform-ph">
+											</div>
+											<div class="cabinet__order-inform-param">
+												<a href="#" class="cabinet__order-inform-title-link">
+													Кровать без подъёмного механизма Соренто
+												</a>
+												<span class="cabinet__order-inform-name">
+													Цвет: дуб Бонифаций, дуб Бордо
+												</span>
+												<span class="cabinet__order-inform-name">
+													Размер: 160х200
+												</span>
+											</div>
+										</div>
+										<div class="cabinet__order-inform-col hr-b th">
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Цена:
+												</span>
+												16 199.-
+											</span>
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Скидка:
+												</span>
+												20%
+											</span>
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Кол-во:
+												</span>
+												1 шт.
+											</span>
+											<span class="cabinet__order-inform-value">
+												<span class="cabinet__order-inform-name tab">
+													Сумма:
+												</span>
+												16 199.-
+											</span>
+										</div>
+									</div>
+								</div>
 							</div>
 
 						</div>
 					</div>
 					
 				</div>
+			</div>
+			<div class="cabinet__order-inform-row">
+				<a href="#" class="cabinet__order-inform-link">
+					Вернуться к списку заказов
+				</a>
 			</div>
 			
 		</div>
