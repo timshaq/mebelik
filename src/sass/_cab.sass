@@ -216,6 +216,9 @@
 		justify-content: space-between
 		align-items: flex-start
 		padding: 15px
+		&.tab-dis
+			@media(max-width:$tab)
+				display: none
 		&.hr-b
 			position: relative
 			&:before
@@ -231,11 +234,19 @@
 			padding-left: 45px
 		&.align-center
 			align-items: center
+		@media(max-width:$tab)
+			flex-wrap: wrap
 	&__order-inform-col
 		display: flex
 		flex-direction: column
 		align-items: flex-start
 		justify-content: flex-start
+		&.btn-cont
+			align-items: center
+			@media(max-width:$tab)
+				width: 100%
+				flex-direction: row
+				margin-top: 30px
 		&.center
 			align-items: center
 		&.th
@@ -246,8 +257,16 @@
 			flex-direction: row
 			&.justify-center
 				justify-content: center
+				@media(max-width:$tab)
+					justify-content: flex-end
 			&.justify-start
 				justify-content: flex-start
+			&.tab-100
+				@media(max-width:$tab)
+					width: 100%
+			&.tab-wrap
+				@media(max-width:$tab)
+					flex-wrap: wrap
 	&__order-inform-name
 		font-family: Open Sans
 		font-style: normal
@@ -267,6 +286,9 @@
 		font-size: 16px
 		line-height: 24px
 		color: var(--black)
+		&.tab12
+			@media(max-width:$tab)
+				width: 48%
 	&__order-inform-repeat
 		font-family: Oswald
 		font-style: normal
@@ -278,6 +300,9 @@
 		padding: 10px 30px
 		color: var(--white)
 		margin-bottom: 13px
+		@media(max-width:$tab)
+			margin-bottom: 0
+			margin-right: 25px
 	&__order-inform-cancel
 		font-family: Open Sans
 		font-style: normal
@@ -285,6 +310,18 @@
 		font-size: 14px
 		line-height: 150%
 		color: var(--black60)
+	&__order-inform-status
+		border-radius: 5px
+		padding: 10px 35px
+		display: flex
+		justify-content: center
+		align-items: center
+		color: var(--white)
+		font-family: Oswald
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 21px
 	&__order-detail-btn,
 	&__order-inform-link
 		font-family: Open Sans
