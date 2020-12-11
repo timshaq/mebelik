@@ -54,13 +54,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   n.r(t), t["default"] = function () {
     var e = document.getElementById("arrow-up");
-    header.classList.remove("search"), window.scrollY >= 200 ? (header.classList.add("active"), header.classList.add("not-search"), e.classList.add("active")) : (header.classList.remove("active"), header.classList.remove("not-search"), e.classList.remove("active")), e.addEventListener("click", function () {
-      return window.scrollTo(0, 0);
-    });
-    var t = document.getElementById("catalog-btn"),
+    header.classList.remove("search"), window.scrollY >= 200 ? (header.classList.add("active"), header.classList.add("not-search"), e.classList.add("active")) : (header.classList.remove("active"), header.classList.remove("not-search"), e.classList.remove("active"));
+    var t = document.getElementById("toggle-catalog-btn"),
         n = document.getElementById("header-nav");
-    t.addEventListener("click", function (e) {
-      console.log(e.target), console.log("click catalog"), t.classList.contains("active") ? (n.classList.remove("active-pc"), t.classList.remove("active"), console.log("true")) : (n.classList.add("active-pc"), t.classList.add("active"), console.log("false"));
+    t.onclick = function (e) {
+      t.classList.contains("active") ? (n.classList.remove("active-pc"), t.classList.remove("active")) : (n.classList.add("active-pc"), t.classList.add("active"));
+    }, e.addEventListener("click", function () {
+      return window.scrollTo(0, 0);
     });
   };
 }, function (e, t, n) {

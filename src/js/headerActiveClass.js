@@ -14,24 +14,20 @@ export default function() {
 		arrowUp.classList.remove('active')
 	}
 
-	arrowUp.addEventListener('click', () => window.scrollTo(0, 0))
-
-	const headerCatalogBtn = document.getElementById('catalog-btn')
+	const headerCatalogBtn = document.getElementById('toggle-catalog-btn')
 	const headerNav = document.getElementById('header-nav')
 
-	headerCatalogBtn.addEventListener('click', function(ev) {
 
-		console.log(ev.target)
-		console.log('click catalog')
+	headerCatalogBtn.onclick = function(ev) {
 		if (headerCatalogBtn.classList.contains('active')) {
 			headerNav.classList.remove('active-pc')
 			headerCatalogBtn.classList.remove('active')
-		console.log('true')
 		} else {
 			headerNav.classList.add('active-pc')
 			headerCatalogBtn.classList.add('active')
-		console.log('false')
 		}
-	})
+	}
+
+	arrowUp.addEventListener('click', () => window.scrollTo(0, 0))
 
 }
