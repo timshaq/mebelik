@@ -173,6 +173,28 @@
 	&__order-row
 		border-radius: 5px
 		border: 1px solid var(--black05)
+		&.toggle
+			margin-bottom: 20px
+			cursor: pointer
+			& .cabinet__order-header
+				position: relative
+				margin-bottom: 0
+				&:before
+					content: url('../img/filter__arrow.svg')
+					position: absolute
+					top: 50%
+					right: 15px
+					transform: rotate(180deg) translateY(50%)
+			& .cabinet__order-inform
+				display: none
+			&.open
+				padding-bottom: 15px
+				& .cabinet__order-inform
+					display: block
+				& .cabinet__order-header
+					margin-bottom: 15px
+					&:before
+						transform: rotate(0deg) translateY(-50%)
 	&__order-header
 		border-radius: 5px
 		background-color: var(--gray)
@@ -357,6 +379,11 @@
 		line-height: 150%
 		color: var(--blue)
 		text-decoration-line: underline
+	&__order-inform-link
+		&.detail-link
+			font-weight: 600
+			padding-left: 15px
+			text-decoration-line: none
 	&__order-inform-phcont
 		width: 100px
 		height: 100px
@@ -383,3 +410,8 @@
 			display: none
 	& .btn-more
 		width: 100%
+	&__order-inform-item
+		display: flex
+		flex-direction: column
+	&__order-inform-item-title
+			padding-left: 15px

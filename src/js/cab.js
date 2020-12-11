@@ -26,8 +26,21 @@ if (toggleDetail) {
 			toggleShipment.innerText = 'Показать все'
 		}
 	})
-	
+
 }
+
+const toggleRowNL = document.querySelectorAll('.cabinet__order-row.toggle')
+const toggleRowList = Array.prototype.slice.call(toggleRowNL);
+
+toggleRowList.forEach(toggleRow => {
+	const toggleHeader = toggleRow.querySelector('.cabinet__order-header')
+	toggleHeader.addEventListener('click', function() {
+		toggleRow.classList.contains('open')
+		? toggleRow.classList.remove('open')
+		: toggleRow.classList.add('open')
+	})
+})
+
 
 
 }

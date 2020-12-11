@@ -69,10 +69,13 @@
 			</nav>
 
 			<div class="cabinet__content fix-cont">
+				<a href="#" class="cabinet__order-inform-link">
+					История заказов
+				</a>
 				<h1 class="cabinet__title">
 					Мои заказы
 				</h1>
-				<div class="cabinet__order-row">
+				<div class="cabinet__order-row toggle">
 					<div class="cabinet__order-header">
 						<span class="cabinet__order-info-title">
 							Заказ №-0003
@@ -82,61 +85,202 @@
 						</span>
 					</div>
 					<div class="cabinet__order-inform">
-						<div class="cabinet__order-inform-header">
-							Информация о заказе
-						</div>
 						<div class="cabinet__order-inform-content">
-							<div class="cabinet__order-inform-row">
-								<div class="cabinet__order-inform-col">
-									<span class="cabinet__order-inform-name">
-										ФИО:
-									</span>
-									<span class="cabinet__order-inform-value">
-										Владислав Наумов
-									</span>
+							<div class="cabinet__order-inform-item">
+								<div class="cabinet__order-inform-name cabinet__order-inform-item-title">
+									Оплата
 								</div>
-								<div class="cabinet__order-inform-col">
-									<span class="cabinet__order-inform-name">
-										Текущий статус, от 28.09.2020:
-									</span>
-									<span class="cabinet__order-inform-value">
-										Принят, ожидается оплата
-									</span>
-								</div>
-								<div class="cabinet__order-inform-col">
-									<span class="cabinet__order-inform-name">
-										Сумма:
-									</span>
-									<span class="cabinet__order-inform-value">
-										26 289.-
-									</span>
-								</div>
-								<div class="cabinet__order-inform-col center">
-									<button type="button" class="cabinet__order-inform-repeat">
-										Повторить заказ
-									</button>
-									<button type="button" class="cabinet__order-inform-cancel">
-										Отменить
-									</button>
-								</div>
-							</div>
-							<div class="cabinet__order-inform-row">
-								<button type="button" class="cabinet__order-detail-btn">
-									Скрыть
-								</button>
-							</div>
-						<div class="cabinet__order-detail">
-							<div class="cabinet__order-detail-item">
-								<div class="cabinet__order-inform-header">
-									Параметры оплаты
-								</div>
-								<div class="cabinet__order-inform-content">
-									<div class="cabinet__order-inform-row">
-										
+								<div class="cabinet__order-inform-row hr-b">
+									<div class="cabinet__order-inform-col">
+										<span class="cabinet__order-inform-value">
+											Счет №4/1 от 28.09.2020, Наличный расчет
+										</span>
+										<span class="cabinet__order-inform-name">
+											Сумма к оплате по счету: 26 289.-
+										</span>
+										<a href="#" class="cabinet__order-inform-link">
+											Сменить способ оплаты
+										</a>
 									</div>
-									
+									<div class="cabinet__order-inform-col th justify-start">
+										<span class="cabinet__order-inform-status" style="background-color: #FF5D46">
+											Не оплачено
+										</span>
+									</div>
 								</div>
+								
 							</div>
+							<div class="cabinet__order-inform-item">
+								<div class="cabinet__order-inform-name cabinet__order-inform-item-title">
+									Доставка
+								</div>
+								<div class="cabinet__order-inform-row">
+									<div class="cabinet__order-inform-col">
+										<span class="cabinet__order-inform-value">
+											Счет №4/1 от 28.09.2020, Наличный расчет
+										</span>
+										<span class="cabinet__order-inform-name">
+											Статус доставки: 
+											<span class="cabinet__order-inform-value">
+												ожидает обработки
+											</span>
+										</span>
+										<span class="cabinet__order-inform-name">
+											Служба доставки: Доставка курьером
+										</span>
+									</div>
+									<div class="cabinet__order-inform-col th justify-start">
+										<span class="cabinet__order-inform-status" style="background-color: #FF5D46">
+											Не отгружено
+										</span>
+									</div>
+								</div>
+								
+							</div>
+
+							<a href="#" class="cabinet__order-inform-link detail-link">
+								Подробнее о заказе
+							</a>
+						</div>
+					</div>
+					
+				</div>
+				<div class="cabinet__order-row toggle">
+					<div class="cabinet__order-header">
+						<span class="cabinet__order-info-title">
+							Заказ №-0003
+							от 28 сентября 2020,
+							2 товара на сумму
+							26 289.-
+						</span>
+					</div>
+					<div class="cabinet__order-inform">
+						<div class="cabinet__order-inform-content">
+							<div class="cabinet__order-inform-item">
+								<div class="cabinet__order-inform-name cabinet__order-inform-item-title">
+									Оплата
+								</div>
+								<div class="cabinet__order-inform-row hr-b">
+									<div class="cabinet__order-inform-col">
+										<span class="cabinet__order-inform-value">
+											Счет №4/1 от 28.09.2020, Наличный расчет
+										</span>
+										<span class="cabinet__order-inform-name">
+											Сумма к оплате по счету: 26 289.-
+										</span>
+										<a href="#" class="cabinet__order-inform-link">
+											Сменить способ оплаты
+										</a>
+									</div>
+									<div class="cabinet__order-inform-col th justify-start">
+										<span class="cabinet__order-inform-status" style="background-color: #FF5D46">
+											Не оплачено
+										</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="cabinet__order-inform-item">
+								<div class="cabinet__order-inform-name cabinet__order-inform-item-title">
+									Доставка
+								</div>
+								<div class="cabinet__order-inform-row">
+									<div class="cabinet__order-inform-col">
+										<span class="cabinet__order-inform-value">
+											Счет №4/1 от 28.09.2020, Наличный расчет
+										</span>
+										<span class="cabinet__order-inform-name">
+											Статус доставки: 
+											<span class="cabinet__order-inform-value">
+												ожидает обработки
+											</span>
+										</span>
+										<span class="cabinet__order-inform-name">
+											Служба доставки: Доставка курьером
+										</span>
+									</div>
+									<div class="cabinet__order-inform-col th justify-start">
+										<span class="cabinet__order-inform-status" style="background-color: #FF5D46">
+											Не отгружено
+										</span>
+									</div>
+								</div>
+								
+							</div>
+
+							<a href="#" class="cabinet__order-inform-link detail-link">
+								Подробнее о заказе
+							</a>
+						</div>
+					</div>
+					
+				</div>
+				<div class="cabinet__order-row toggle">
+					<div class="cabinet__order-header">
+						<span class="cabinet__order-info-title">
+							Заказ №-0003
+							от 28 сентября 2020,
+							2 товара на сумму
+							26 289.-
+						</span>
+					</div>
+					<div class="cabinet__order-inform">
+						<div class="cabinet__order-inform-content">
+							<div class="cabinet__order-inform-item">
+								<div class="cabinet__order-inform-name cabinet__order-inform-item-title">
+									Оплата
+								</div>
+								<div class="cabinet__order-inform-row hr-b">
+									<div class="cabinet__order-inform-col">
+										<span class="cabinet__order-inform-value">
+											Счет №4/1 от 28.09.2020, Наличный расчет
+										</span>
+										<span class="cabinet__order-inform-name">
+											Сумма к оплате по счету: 26 289.-
+										</span>
+										<a href="#" class="cabinet__order-inform-link">
+											Сменить способ оплаты
+										</a>
+									</div>
+									<div class="cabinet__order-inform-col th justify-start">
+										<span class="cabinet__order-inform-status" style="background-color: #FF5D46">
+											Не оплачено
+										</span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="cabinet__order-inform-item">
+								<div class="cabinet__order-inform-name cabinet__order-inform-item-title">
+									Доставка
+								</div>
+								<div class="cabinet__order-inform-row">
+									<div class="cabinet__order-inform-col">
+										<span class="cabinet__order-inform-value">
+											Счет №4/1 от 28.09.2020, Наличный расчет
+										</span>
+										<span class="cabinet__order-inform-name">
+											Статус доставки: 
+											<span class="cabinet__order-inform-value">
+												ожидает обработки
+											</span>
+										</span>
+										<span class="cabinet__order-inform-name">
+											Служба доставки: Доставка курьером
+										</span>
+									</div>
+									<div class="cabinet__order-inform-col th justify-start">
+										<span class="cabinet__order-inform-status" style="background-color: #FF5D46">
+											Не отгружено
+										</span>
+									</div>
+								</div>
+								
+							</div>
+
+							<a href="#" class="cabinet__order-inform-link detail-link">
+								Подробнее о заказе
+							</a>
 						</div>
 					</div>
 					

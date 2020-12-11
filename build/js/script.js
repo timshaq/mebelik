@@ -80,6 +80,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         i.classList.contains("hidden") ? (i.classList.remove("hidden"), _n.innerText = "Скрыть") : (i.classList.add("hidden"), _n.innerText = "Показать все");
       });
     }
+
+    var t = document.querySelectorAll(".cabinet__order-row.toggle");
+    Array.prototype.slice.call(t).forEach(function (e) {
+      e.querySelector(".cabinet__order-header").addEventListener("click", function () {
+        e.classList.contains("open") ? e.classList.remove("open") : e.classList.add("open");
+      });
+    });
   };
 }, function (e, t, n) {
   "use strict";
@@ -500,15 +507,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       });
     });
 
-    var E = document.getElementById("btn-login"),
-        L = document.getElementById("btn-registr"),
+    var L = document.getElementById("btn-login"),
+        E = document.getElementById("btn-registr"),
         b = document.getElementById("btn-auth"),
         _ = document.getElementById("auth-cont"),
         B = document.getElementById("auth-close"),
         k = document.getElementById("registr-cont"),
-        I = document.getElementById("regist-close");
+        S = document.getElementById("regist-close");
 
-    function S(e) {
+    function I(e) {
       e.classList.remove("open"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
     }
 
@@ -516,48 +523,48 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       e.classList.add("open"), html.style.overflowX = "hidden", html.style.overflowY = "hidden";
     }
 
-    E.addEventListener("click", function () {
+    L.addEventListener("click", function () {
       return P(_);
-    }), L.addEventListener("click", function () {
-      S(_), P(k);
+    }), E.addEventListener("click", function () {
+      I(_), P(k);
     }), b.addEventListener("click", function () {
-      S(k), P(_);
+      I(k), P(_);
     }), B.addEventListener("click", function () {
-      return S(_);
-    }), I.addEventListener("click", function () {
-      return S(k);
+      return I(_);
+    }), S.addEventListener("click", function () {
+      return I(k);
     });
     var V = document.querySelector(".footer .navigation .navigation__tel-callback"),
-        x = document.getElementById("call-cont"),
-        A = document.getElementById("call-close");
+        A = document.getElementById("call-cont"),
+        x = document.getElementById("call-close");
     V.addEventListener("click", function () {
-      return P(x);
-    }), A.addEventListener("click", function () {
-      return S(x);
+      return P(A);
+    }), x.addEventListener("click", function () {
+      return I(A);
     });
-    var O = document.getElementById("review-btn");
+    var q = document.getElementById("review-btn");
 
-    if (O) {
+    if (q) {
       var _e = document.getElementById("review-cont"),
           _t2 = document.getElementById("review-close");
 
-      O.addEventListener("click", function () {
+      q.addEventListener("click", function () {
         return P(_e);
       }), _t2.addEventListener("click", function () {
-        return S(_e);
+        return I(_e);
       });
     }
 
-    var q = document.getElementById("quest-btn");
+    var O = document.getElementById("quest-btn");
 
-    if (q) {
+    if (O) {
       var _e2 = document.getElementById("quest-cont"),
           _t3 = document.getElementById("quest-close");
 
-      q.addEventListener("click", function () {
+      O.addEventListener("click", function () {
         return P(_e2);
       }), _t3.addEventListener("click", function () {
-        return S(_e2);
+        return I(_e2);
       });
     }
 
