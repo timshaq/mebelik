@@ -16,4 +16,22 @@ export default function() {
 
 	arrowUp.addEventListener('click', () => window.scrollTo(0, 0))
 
+	const headerCatalogBtn = document.getElementById('catalog-btn')
+	const headerNav = document.getElementById('header-nav')
+
+	headerCatalogBtn.addEventListener('click', function(ev) {
+
+		console.log(ev.target)
+		console.log('click catalog')
+		if (headerCatalogBtn.classList.contains('active')) {
+			headerNav.classList.remove('active-pc')
+			headerCatalogBtn.classList.remove('active')
+		console.log('true')
+		} else {
+			headerNav.classList.add('active-pc')
+			headerCatalogBtn.classList.add('active')
+		console.log('false')
+		}
+	})
+
 }

@@ -7,12 +7,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   function n(i) {
     if (t[i]) return t[i].exports;
-    var l = t[i] = {
+    var s = t[i] = {
       i: i,
       l: !1,
       exports: {}
     };
-    return e[i].call(l.exports, l, l.exports, n), l.l = !0, l.exports;
+    return e[i].call(s.exports, s, s.exports, n), s.l = !0, s.exports;
   }
 
   n.m = e, n.c = t, n.d = function (e, t, i) {
@@ -33,10 +33,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     if (n.r(i), Object.defineProperty(i, "default", {
       enumerable: !0,
       value: e
-    }), 2 & t && "string" != typeof e) for (var l in e) {
-      n.d(i, l, function (t) {
+    }), 2 & t && "string" != typeof e) for (var s in e) {
+      n.d(i, s, function (t) {
         return e[t];
-      }.bind(null, l));
+      }.bind(null, s));
     }
     return i;
   }, n.n = function (e) {
@@ -57,6 +57,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     header.classList.remove("search"), window.scrollY >= 200 ? (header.classList.add("active"), header.classList.add("not-search"), e.classList.add("active")) : (header.classList.remove("active"), header.classList.remove("not-search"), e.classList.remove("active")), e.addEventListener("click", function () {
       return window.scrollTo(0, 0);
     });
+    var t = document.getElementById("catalog-btn"),
+        n = document.getElementById("header-nav");
+    t.addEventListener("click", function (e) {
+      console.log(e.target), console.log("click catalog"), t.classList.contains("active") ? (n.classList.remove("active-pc"), t.classList.remove("active"), console.log("true")) : (n.classList.add("active-pc"), t.classList.add("active"), console.log("false"));
+    });
   };
 }, function (e, t, n) {
   "use strict";
@@ -71,15 +76,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     var t = document.getElementById("price-from"),
         n = document.getElementById("price-to"),
         i = +document.getElementById("price-cont").getAttribute("data-min"),
-        l = +document.getElementById("price-cont").getAttribute("data-max"),
-        s = ("" + l).split("").length;
+        s = +document.getElementById("price-cont").getAttribute("data-max"),
+        l = ("" + s).split("").length;
     noUiSlider.create(e, {
-      start: [i + 2e3, l - 5e3],
+      start: [i + 2e3, s - 5e3],
       connect: [!0, !1, !0],
       padding: [0, 17],
       range: {
         min: [0],
-        max: [l]
+        max: [s]
       },
       format: {
         to: function to(e) {
@@ -92,13 +97,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }), e.noUiSlider.on("update", function (e) {
       t.value = e[0], n.value = e[1];
     }), t.addEventListener("input", function (n) {
-      t.value.length > s && (t.value = +t.value.substring(0, t.value.length - (t.value.length - s))), t.value > l && (t.value = l), t.value < 1 && (t.value = i), e.noUiSlider.set([t.value, null]);
+      t.value.length > l && (t.value = +t.value.substring(0, t.value.length - (t.value.length - l))), t.value > s && (t.value = s), t.value < 1 && (t.value = i), e.noUiSlider.set([t.value, null]);
     }), n.addEventListener("input", function (t) {
-      n.value.length > s && (n.value = +n.value.substring(0, n.value.length - (n.value.length - s))), n.value > l && (n.value = l), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
+      n.value.length > l && (n.value = +n.value.substring(0, n.value.length - (n.value.length - l))), n.value > s && (n.value = s), n.value < 1 && (n.value = i), e.noUiSlider.set([null, n.value]);
     });
     var o = document.getElementById("filter-btn"),
-        r = document.getElementById("sort-btn"),
-        c = document.getElementById("filter-close"),
+        c = document.getElementById("sort-btn"),
+        r = document.getElementById("filter-close"),
         a = document.getElementById("filter"),
         d = document.getElementById("html");
 
@@ -112,10 +117,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
     o.addEventListener("click", function () {
       return a.classList.add("open"), void u();
-    }), c.addEventListener("click", function () {
-      return a.classList.remove("open"), void p();
     }), r.addEventListener("click", function () {
-      r.classList.contains("active") ? (r.classList.remove("active"), p()) : (u(), r.classList.add("active"));
+      return a.classList.remove("open"), void p();
+    }), c.addEventListener("click", function () {
+      c.classList.contains("active") ? (c.classList.remove("active"), p()) : (u(), c.classList.add("active"));
     });
     var m = document.querySelectorAll(".filter__item"),
         v = Array.prototype.slice.call(m),
@@ -153,25 +158,25 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         t = Array.prototype.slice.call(e),
         n = document.querySelectorAll(".product-description__tabs-title"),
         i = Array.prototype.slice.call(n),
-        l = document.querySelectorAll(".product-description__item-title"),
-        s = Array.prototype.slice.call(l);
+        s = document.querySelectorAll(".product-description__item-title"),
+        l = Array.prototype.slice.call(s);
     i.forEach(function (e, n) {
-      var l = i;
+      var s = i;
       e.addEventListener("click", function () {
-        l.forEach(function (e) {
+        s.forEach(function (e) {
           e.classList.remove("active");
-        }), l[n].classList.add("active"), t.forEach(function (e) {
+        }), s[n].classList.add("active"), t.forEach(function (e) {
           e.classList.remove("active");
         }), t[n].classList.add("active");
       });
-    }), s.forEach(function (e, n) {
+    }), l.forEach(function (e, n) {
       e.addEventListener("click", function () {
         t[n].classList.contains("active-mob") ? t[n].classList.remove("active-mob") : t[n].classList.add("active-mob");
       });
     });
     var o = document.querySelector(".product-preview .gallery-thumbs"),
-        r = document.querySelector(".product-preview .gallery-top"),
-        c = document.querySelector(".product-preview .gallery-top .swiper-button-next"),
+        c = document.querySelector(".product-preview .gallery-top"),
+        r = document.querySelector(".product-preview .gallery-top .swiper-button-next"),
         a = document.querySelector(".product-preview .gallery-top .swiper-button-prev");
     var d = new Swiper(o, {
       breakpoints: {
@@ -188,7 +193,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         }
       }
     });
-    new Swiper(r, {
+    new Swiper(c, {
       spaceBetween: 0,
       slidesPerView: 1,
       thumbs: {
@@ -203,7 +208,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         },
         699: {
           navigation: {
-            nextEl: c,
+            nextEl: r,
             prevEl: a
           }
         }
@@ -412,11 +417,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   n.r(t);
   var i = n(5),
-      l = n(0),
-      s = n(6),
+      s = n(0),
+      l = n(6),
       o = n(3),
-      r = n(2),
-      c = n(4),
+      c = n(2),
+      r = n(4),
       a = n(1);
   document.addEventListener("DOMContentLoaded", function () {
     var e,
@@ -440,23 +445,23 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     });
 
     function u() {
-      console.log("getVW"), console.log(e), e >= 1200 ? (d.destroy(!1, !0), console.log("destroy")) : (d.init(), console.log("init"));
+      console.log("getVW"), console.log(e), e >= 1200 ? (n && d.destroy(!1, !0), console.log("destroy")) : (n && d.init(), console.log("init"));
     }
 
     e = window.innerWidth > 0 ? window.innerWidth : screen.width, u(), window.addEventListener("resize", function (t) {
       e = window.innerWidth > 0 ? window.innerWidth : screen.width, u();
     }), Object(i["default"])(), Object(o["default"])(e), window.addEventListener("scroll", function (e) {
       window.scrollY;
-      Object(l["default"])();
-    }), Object(l["default"])(), Object(s["default"])();
+      Object(s["default"])();
+    }), Object(s["default"])(), Object(l["default"])();
     document.querySelectorAll(".header__nav-item").forEach(function (t) {
       t.addEventListener("click", function (n) {
         if (e <= 1199 && (n.preventDefault(), console.log("ev"), console.log(n.target), e <= 768)) if (n.preventDefault(), n.target === this || n.target === this.children[0]) console.log("this"), console.log(this), t.classList.contains("open") ? t.classList.remove("open") : t.classList.add("open");else if (n.target.classList.contains("header__more-title-link") || n.target.classList.contains("header__more-title")) {
           var i;
           "A" === n.target.tagName && (i = n.target.getAttribute("href")), "H2" === n.target.tagName && (i = n.target.children[0].getAttribute("href")), i && (location.href = i);
         } else if (n.target.classList.contains("header__more-list") || n.target.classList.contains("header__more-list-title-link") || n.target.classList.contains("header__more-list-title")) {
-          var l = n.target;
-          "A" === l.tagName && (l = l.parentElement.parentElement.parentElement), "H2" === l.tagName && (l = l.parentElement.parentElement), l.classList.contains("open") ? l.classList.remove("open") : l.classList.add("open");
+          var s = n.target;
+          "A" === s.tagName && (s = s.parentElement.parentElement.parentElement), "H2" === s.tagName && (s = s.parentElement.parentElement), s.classList.contains("open") ? s.classList.remove("open") : s.classList.add("open");
         } else (n.target.classList.contains("header__more-link") || n.target.classList.contains("header__more-subtitle")) && ("H3" === n.target.tagName && (location.href = n.target.children[0].getAttribute("href")), "A" === n.target.tagName && (location.href = n.target.getAttribute("href")));
       });
     });
@@ -467,10 +472,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         m = document.getElementById("help-tab"),
         v = document.getElementById("login-tab"),
         w = document.getElementById("catalog-tab-list"),
-        f = document.getElementById("help-tab-list"),
-        g = document.getElementById("login-tab-cont"),
+        g = document.getElementById("help-tab-list"),
+        f = document.getElementById("login-tab-cont"),
         h = [p, m, v],
-        y = [w, f, g];
+        y = [w, g, f];
     h.forEach(function (e, t) {
       e.addEventListener("click", function () {
         h.forEach(function (e) {
@@ -489,32 +494,32 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         k = document.getElementById("registr-cont"),
         S = document.getElementById("regist-close");
 
-    function P(e) {
+    function I(e) {
       e.classList.remove("open"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
     }
 
-    function I(e) {
+    function P(e) {
       e.classList.add("open"), html.style.overflowX = "hidden", html.style.overflowY = "hidden";
     }
 
     E.addEventListener("click", function () {
-      return I(_);
-    }), L.addEventListener("click", function () {
-      P(_), I(k);
-    }), b.addEventListener("click", function () {
-      P(k), I(_);
-    }), B.addEventListener("click", function () {
       return P(_);
+    }), L.addEventListener("click", function () {
+      I(_), P(k);
+    }), b.addEventListener("click", function () {
+      I(k), P(_);
+    }), B.addEventListener("click", function () {
+      return I(_);
     }), S.addEventListener("click", function () {
-      return P(k);
+      return I(k);
     });
     var V = document.querySelector(".footer .navigation .navigation__tel-callback"),
         A = document.getElementById("call-cont"),
         O = document.getElementById("call-close");
     V.addEventListener("click", function () {
-      return I(A);
-    }), O.addEventListener("click", function () {
       return P(A);
+    }), O.addEventListener("click", function () {
+      return I(A);
     });
     var q = document.getElementById("review-btn");
 
@@ -523,9 +528,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           _t = document.getElementById("review-close");
 
       q.addEventListener("click", function () {
-        return I(_e);
-      }), _t.addEventListener("click", function () {
         return P(_e);
+      }), _t.addEventListener("click", function () {
+        return I(_e);
       });
     }
 
@@ -536,12 +541,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           _t2 = document.getElementById("quest-close");
 
       x.addEventListener("click", function () {
-        return I(_e2);
-      }), _t2.addEventListener("click", function () {
         return P(_e2);
+      }), _t2.addEventListener("click", function () {
+        return I(_e2);
       });
     }
 
-    Object(r["default"])(), Object(c["default"])(), Object(a["default"])();
+    Object(c["default"])(), Object(r["default"])(), Object(a["default"])();
   });
 }]);

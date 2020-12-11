@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	  		console.log('getVW')
 	  		console.log(getVW)
 	  	if (getVW >= 1200) {
-	  		cabinetTabs.destroy(false,true)
+	  		if (sliderCabinet) cabinetTabs.destroy(false,true)
 	  		console.log('destroy')
 	  	} else {
-	  		cabinetTabs.init()
+	  		if (sliderCabinet) cabinetTabs.init()
 	  		console.log('init')
 	  	}
 	}
