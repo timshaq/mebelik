@@ -376,6 +376,9 @@ main {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .breadscrumb-item {
@@ -385,6 +388,7 @@ main {
   font-size: 14px;
   line-height: 150%;
   color: var(--black60);
+  white-space: nowrap;
 }
 
 .breadscrumb-item:not(:first-child) {
@@ -394,6 +398,16 @@ main {
 
 .breadscrumb-item:not(:first-child):before {
   content: '/';
+}
+
+.breadscrumb-item a {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
+  white-space: nowrap;
 }
 
 /*    </GLOBAL>    */

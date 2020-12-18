@@ -207,6 +207,7 @@ main
 
 .breadscrumb
 	display: flex
+	flex-wrap: wrap
 .breadscrumb-item
 	font-family: Open Sans
 	font-style: normal
@@ -214,9 +215,18 @@ main
 	font-size: 14px
 	line-height: 150%
 	color: var(--black60)
+	white-space: nowrap
 	&:not(:first-child)
 		margin-left: 5px
 		position: relative
 		&:before
 			content: '/'
+	& a
+		font-family: Open Sans
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		white-space: nowrap
 /*    </GLOBAL>    */
