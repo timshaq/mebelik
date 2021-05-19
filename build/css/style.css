@@ -1257,6 +1257,9 @@ main {
             transform: none;
     position: static;
     display: none;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, 1fr);
   }
 }
 
@@ -1303,7 +1306,7 @@ main {
           align-items: center;
   position: -webkit-sticky;
   position: sticky;
-  top: 30px;
+  top: 0;
   right: 30px;
 }
 
@@ -1311,6 +1314,18 @@ main {
   .header__more-col.sale {
     display: none;
   }
+}
+
+.header__more-lists {
+  width: calc(100% - 360px);
+  display: grid;
+  grid-gap: 120px;
+  row-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+.header__more-lists.without-sale {
+  width: 100%;
 }
 
 .header__more-list:not(:last-child) {
