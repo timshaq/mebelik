@@ -90,7 +90,7 @@
 	// 	visibility: visible
 	// 	z-index: 10
 	// 	transition: all linear 0s
-	@media(min-width:$mob+1)
+	@media(min-width:$tab+1)
 		&__btn,
 		&__slide-presence,
 		&__options
@@ -180,31 +180,67 @@
 		@media(max-width:$tab)
 			width: 196px
 			height: 160px
+			display: none
 		@media(max-width:$mob)
 			width: 120px
 			height: 80px
 			display: none
 	&__phcont-slider
 		min-width: 0
+		@media(min-width: 1200px)
+			height: 195px
+			& .swiper-container
+				height: 195px
+				padding-bottom: 15px
+			& .swiper-pagination
+				width: 100%
+				height: 100%
+				display: flex
+				flex: 1 1 auto
+			& .swiper-pagination-bullet
+				display: block
+				width: 100%
+				height: 100%
+				position: relative
+				background: transparent
+				&:before
+					content: ''
+					width: 100%
+					height: 4px
+					border-radius: 5px
+					position: absolute
+					bottom: 0
+					left: 0
+					background: #F2F2F2
+			& .swiper-pagination-bullet-active
+				background: transparent
+				opacity: 1
+				&:before
+					background: var(--blue)
+			& .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+				margin: 0
+		@media(min-width: $tab)
+			height: 180px
+			& .swiper-container
+				height: 180px
+				padding-bottom: 20px
 		& .swiper-pagination-bullet
-			width: 40px
-			height: 4px
-			background: #F2F2F2
-			opacity: 1
-			border-radius: 5px
 			@media(max-width:$mob)
 				width: 5px
 				height: 5px
 				background-color: var(--black20)
 		& .swiper-pagination-bullet-active
-			background: var(--blue)
-			backdrop-filter: blur(15px)
-			opacity: 1
+			@media(max-width:$tab)
+				background: var(--blue)
+				backdrop-filter: blur(15px)
+				opacity: 1
 		& .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
-			@media(max-width:$mob)
-				bottom: 0
+			bottom: 0
 	&__phcont-slide
 	&__slide-info
+		margin-top: 10px
+		@media(min-width: 1200px)
+			margin-top: 30px
 		@media(max-width:$mob)
 			display: flex
 			flex-direction: column

@@ -130,7 +130,7 @@ const productLineInsideSliders = new Swiper('.product-line__phcont-slider .swipe
     el: '.swiper-pagination',
     type: 'bullets',
     clickable: true,
-    dynamicBullets: true,
+    // dynamicBullets: true,
   },
 	breakpoints: {
 		0: {
@@ -140,6 +140,36 @@ const productLineInsideSliders = new Swiper('.product-line__phcont-slider .swipe
 		},
 	},
 })
+
+
+var simulateClick = function (elem) {
+	// Create our event (with options)
+	var evt = new MouseEvent('click', {
+		bubbles: true,
+		cancelable: true,
+		view: window
+	});
+	// If cancelled, don't dispatch our event
+	var canceled = !elem.dispatchEvent(evt);
+};
+// console.log(productLineInsideSliders)
+productLineInsideSliders.forEach(slider => {
+	slider.pagination.bullets.forEach( (el,ind) => {
+		el.addEventListener('mouseover', function() {
+			slider.slideTo(ind+1)
+		})
+	})
+})
+
+
+// const nl = document.querySelectorAll('.product-line__phcont-slider .swiper-pagination-bullet')
+// const bulletList = Array.prototype.slice.call(nl);
+
+// bulletList.forEach(bul => {
+// 	bul.addEventListener('hover', function() {
+//       simulateClick(this)
+//     })
+// })
 
 
 const brandsSlider = new Swiper('.brands__slider', {
