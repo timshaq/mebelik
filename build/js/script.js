@@ -346,6 +346,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     new Swiper(".product-line__phcont-slider .swiper-container", {
       slidesPerView: 1,
       slideClass: "swiper-slide-inside",
+      lazy: !0,
       pagination: {
         el: ".swiper-pagination",
         type: "bullets",

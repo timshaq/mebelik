@@ -126,6 +126,7 @@ productLinelist.forEach(line => {
 const productLineInsideSliders = new Swiper('.product-line__phcont-slider .swiper-container', {
   slidesPerView: 1,
   slideClass: 'swiper-slide-inside',
+  lazy: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',

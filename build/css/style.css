@@ -2736,6 +2736,12 @@ main {
   bottom: 0;
 }
 
+.product-line__phcont-slide {
+  min-width: 100%;
+  background-size: contain;
+  background-position: center;
+}
+
 .product-line__slide-info {
   margin-top: 10px;
 }
